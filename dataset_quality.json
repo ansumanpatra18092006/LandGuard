@@ -1,0 +1,25 @@
+{
+  "rows": 1987,
+  "unique_project_codes": 1987,
+  "missing_revised_date": 352,
+  "known_schedule_revision_labels": 1635,
+  "positive_schedule_revision_labels": 1287,
+  "negative_or_not_later_labels": 348,
+  "retrospective_training_eligible": 1634,
+  "flag_original_date_far_future": 3,
+  "flag_revised_before_original": 63,
+  "missing_expenditure": 277,
+  "missing_revised_cost": 918,
+  "top_sectors": {
+    "Roads & Highways": 1149,
+    "Railways": 263,
+    "Coal": 115,
+    "Oil & Gas": 93,
+    "Transmission & Distribution": 67,
+    "Healthcare": 44,
+    "Electricity Generation": 38,
+    "Water Resources": 32,
+    "Education": 31,
+    "Urban Public Transport": 29
+  }
+}

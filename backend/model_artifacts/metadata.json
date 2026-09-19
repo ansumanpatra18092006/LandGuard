@@ -1,0 +1,267 @@
+{
+  "model_name": "Random Forest",
+  "training_data_kind": "OFFICIAL_PAIMANA_LONGITUDINAL_BASELINE",
+  "source": "MoSPI PAIMANA public dashboard monthly snapshots",
+  "data_period": "2025-07 to 2026-02 labelled; source history extends beyond the test horizon",
+  "target_definition": "Schedule completion date moves later within the next 3 months",
+  "features": [
+    "sector_name",
+    "original_cost_crore",
+    "expenditure_crore",
+    "days_to_original_deadline",
+    "original_deadline_passed",
+    "expenditure_to_original_cost_pct"
+  ],
+  "selection_metric": "validation_f1",
+  "probability_threshold": 0.65,
+  "calibration_method": "Platt scaling on the 2026-01 validation month",
+  "probability_kind": "CALIBRATED",
+  "train_split": "2025-07 through 2025-12",
+  "validation_split": "2026-01",
+  "test_split": "2026-02 (future labels observed through the following 3 monthly snapshots)",
+  "train_rows": 5302,
+  "validation_rows": 1690,
+  "test_rows": 1919,
+  "metrics": {
+    "accuracy": 0.8249088066701407,
+    "balanced_accuracy": 0.8259850120334197,
+    "precision": 0.8603104212860311,
+    "recall": 0.7870182555780934,
+    "f1": 0.8220338983050848,
+    "roc_auc": 0.906663275133759
+  },
+  "confusion_matrix": [
+    [
+      807,
+      126
+    ],
+    [
+      210,
+      776
+    ]
+  ],
+  "all_model_metrics": {
+    "Logistic Regression": {
+      "validation": {
+        "accuracy": 0.744378698224852,
+        "balanced_accuracy": 0.7590658553892904,
+        "precision": 0.6551410373066424,
+        "recall": 0.9314359637774903,
+        "f1": 0.7692307692307693,
+        "roc_auc": 0.8668587172581723,
+        "confusion_matrix": [
+          [
+            538,
+            379
+          ],
+          [
+            53,
+            720
+          ]
+        ]
+      },
+      "test_at_0_5": {
+        "accuracy": 0.7415320479416363,
+        "balanced_accuracy": 0.7363512541062549,
+        "precision": 0.683933933933934,
+        "recall": 0.9239350912778904,
+        "f1": 0.7860224331320104,
+        "roc_auc": 0.8442862453774058,
+        "confusion_matrix": [
+          [
+            512,
+            421
+          ],
+          [
+            75,
+            911
+          ]
+        ]
+      }
+    },
+    "Random Forest": {
+      "validation": {
+        "accuracy": 0.8366863905325443,
+        "balanced_accuracy": 0.84077388300056,
+        "precision": 0.7833523375142531,
+        "recall": 0.888745148771022,
+        "f1": 0.8327272727272728,
+        "roc_auc": 0.934112163376554,
+        "confusion_matrix": [
+          [
+            727,
+            190
+          ],
+          [
+            86,
+            687
+          ]
+        ]
+      },
+      "test_at_0_5": {
+        "accuracy": 0.8243877019280875,
+        "balanced_accuracy": 0.823519084981814,
+        "precision": 0.8129218900675024,
+        "recall": 0.8549695740365112,
+        "f1": 0.833415719228868,
+        "roc_auc": 0.906663275133759,
+        "confusion_matrix": [
+          [
+            739,
+            194
+          ],
+          [
+            143,
+            843
+          ]
+        ]
+      }
+    },
+    "Gradient Boosting": {
+      "validation": {
+        "accuracy": 0.8384615384615385,
+        "balanced_accuracy": 0.8369246417743894,
+        "precision": 0.8263707571801566,
+        "recall": 0.8188874514877102,
+        "f1": 0.8226120857699805,
+        "roc_auc": 0.9027313600652331,
+        "confusion_matrix": [
+          [
+            784,
+            133
+          ],
+          [
+            140,
+            633
+          ]
+        ]
+      },
+      "test_at_0_5": {
+        "accuracy": 0.8186555497655029,
+        "balanced_accuracy": 0.8194389187097391,
+        "precision": 0.8459869848156182,
+        "recall": 0.7910750507099391,
+        "f1": 0.8176100628930818,
+        "roc_auc": 0.8826714409014521,
+        "confusion_matrix": [
+          [
+            791,
+            142
+          ],
+          [
+            206,
+            780
+          ]
+        ]
+      }
+    },
+    "XGBoost": {
+      "validation": {
+        "accuracy": 0.8201183431952662,
+        "balanced_accuracy": 0.8272334698472577,
+        "precision": 0.7497337593184239,
+        "recall": 0.9107373868046572,
+        "f1": 0.822429906542056,
+        "roc_auc": 0.9118243724615253,
+        "confusion_matrix": [
+          [
+            682,
+            235
+          ],
+          [
+            69,
+            704
+          ]
+        ]
+      },
+      "test_at_0_5": {
+        "accuracy": 0.822303282959875,
+        "balanced_accuracy": 0.8206264987423066,
+        "precision": 0.7950594693504117,
+        "recall": 0.8813387423935092,
+        "f1": 0.8359788359788359,
+        "roc_auc": 0.8901692287958536,
+        "confusion_matrix": [
+          [
+            709,
+            224
+          ],
+          [
+            117,
+            869
+          ]
+        ]
+      }
+    }
+  },
+  "delay_duration_model": {
+    "model_name": "Random Forest Regressor",
+    "target_definition": "Conditional schedule-extension magnitude in days when a later schedule date appears within the next 3 months",
+    "features": [
+      "sector_name",
+      "original_cost_crore",
+      "expenditure_crore",
+      "days_to_original_deadline",
+      "original_deadline_passed",
+      "expenditure_to_original_cost_pct"
+    ],
+    "selection_metric": "validation_mae_days",
+    "train_positive_events": 1346,
+    "validation_positive_events": 773,
+    "test_positive_events": 986,
+    "likely_range_error_days": 287,
+    "metrics": {
+      "mae_days": 240.88848065714168,
+      "median_ae_days": 137.47561635872447,
+      "rmse_days": 450.0222848403968,
+      "r2": 0.5492484486612914
+    },
+    "all_model_metrics": {
+      "Random Forest Regressor": {
+        "validation": {
+          "mae_days": 218.6216148560359,
+          "median_ae_days": 106.3409623870009,
+          "rmse_days": 440.27936356689486,
+          "r2": 0.582236620556152
+        },
+        "test": {
+          "mae_days": 240.88848065714166,
+          "median_ae_days": 137.47561635872447,
+          "rmse_days": 450.02228484039676,
+          "r2": 0.5492484486612915
+        }
+      },
+      "Gradient Boosting Regressor": {
+        "validation": {
+          "mae_days": 236.27718252199412,
+          "median_ae_days": 126.407526635294,
+          "rmse_days": 416.4457204796342,
+          "r2": 0.6262419849747923
+        },
+        "test": {
+          "mae_days": 244.27487534170245,
+          "median_ae_days": 137.2342310943019,
+          "rmse_days": 419.2804335551241,
+          "r2": 0.6087283506875354
+        }
+      },
+      "Extra Trees Regressor": {
+        "validation": {
+          "mae_days": 227.42787459630816,
+          "median_ae_days": 120.79670981595291,
+          "rmse_days": 446.38202305491546,
+          "r2": 0.570575221923769
+        },
+        "test": {
+          "mae_days": 244.89194795011144,
+          "median_ae_days": 137.20097085260576,
+          "rmse_days": 452.6203957236498,
+          "r2": 0.5440287823905534
+        }
+      }
+    },
+    "disclaimer": "Conditional impact model trained only on observed positive schedule-extension events. It estimates extension magnitude if slippage occurs; it does not guarantee an exact delay duration."
+  },
+  "sklearn_version": "1.9.1",
+  "disclaimer": "Real-data infrastructure schedule-slip baseline trained on official MoSPI PAIMANA monthly snapshots. It is not yet a land-acquisition-specific validated government deployment model; LandGuard's compensation, possession, approval and dispute indicators remain separate operational decision-support inputs."
+}

@@ -1,0 +1,824 @@
+sr_no,sector_name,line_ministry,project_code,project_name,original_cost_crore,revised_cost_crore,expenditure_crore,original_end_date,revised_date,delay_days,schedule_revised_later,source_snapshot,source_url
+1,Real Estate,Department for Promotion of Industry & Internal Trade,701657,Tumakuru Node - Phase 1 - Roads and Services Development,1702,,153.26,2026-09-21,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+2,Real Estate,Department for Promotion of Industry & Internal Trade,701658,Krishnapatnam Node - Phase 1 - Roads and Services Development,2139,,503.39,2028-02-15,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+3,Education,Department of Higher Education,602098,"Construction of Permanent Campus for IIM Jammu Phase-1 at Jagti, Nagrota, Jammu, J&K",425,500.91,484.52,2023-06-30,2025-11-30,884.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+4,Education,Department of Higher Education,602099,Establishment of Permanent campus Phase 1 of IIM Sirmaur,393,454.78,327.78,2023-10-31,2026-02-28,851.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+5,Education,Department of Higher Education,605292,"Construction of Permanent Campus of Indian Institute of Management [IIM] Amritsar, Punjab, Phase-I",348,,290.39,2023-06-30,2025-12-31,915.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+6,Education,Department of Higher Education,606013,Additional Campus  of NITPatna,499,,444.87,2024-07-31,2026-01-31,549.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+7,Education,Department of Higher Education,606112,Tezpur University Projects,154,,125.03,2023-11-08,2025-12-31,784.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+8,Education,Department of Higher Education,606431,CONSTRUCTION OF PERMANENT CAMPUS FOR IIT PALAKKAD UNDER PHASE 1A,1006,1217.4,652.05,2022-06-07,2026-06-30,1484.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+9,Education,Department of Higher Education,606479,Banaras Hindu University [ Kayakalp of Institute of Medical Sciences],246,,199.71,2022-09-30,2026-03-31,1278.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+10,Education,Department of Higher Education,609019,"HEFA projects on development of student hostels, playgrounds, departmental buildings, class room complex and other campus facilities in IIT Kharagpur",500,442.0,390.6,2023-03-31,2026-03-31,1096.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+11,Education,Department of Higher Education,609736,"Construction of Sikkim University Campus Phase-I Package-II at Yangang, South Sikkim",314,,238.22,2025-01-04,2026-03-31,451.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+12,Education,Department of Higher Education,609996,Construction of Precast housing and hostels at IIT Hyderabad,262,,194.13,2024-10-23,2026-01-01,435.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+13,Education,Department of Higher Education,610315,IISER BERHAMPUR,1229,843.09,835.6,2021-03-31,2026-06-30,1917.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+14,Education,Department of Higher Education,610940,"Additional Infrastructure at IISc Bangalore-RCC Monolithic for Men Hostel S14, Women Hostel S11 , Postdoctoral Hostel S12 2 Block , International Hostel S 12 , D&E Block S 12  2 Block FR.",420,420.41,367.76,2024-03-31,2025-12-31,640.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+15,Education,Department of Higher Education,611957,"Phase III A works at IIT Indore [03 Hostels, 01 Studio Apartment, 01 Housing, Heavy & Sophisticated lab complex, Academic POD and  Infrastructure for center of excellence]",496,,38.62,2027-02-19,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+16,Education,Department of Higher Education,611963,"Construction & Development of Infrastructural Facilities in the main campus of NIT Uttarakhand at Sumari, Pauri Garhwal",651,,195.52,2027-09-30,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+17,Education,Department of Higher Education,612128,Hostel blocks & dining hall block,167,,85.92,2026-03-26,2026-03-26,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+18,Education,Department of Higher Education,612135,Hostel 4 -Earlier Known as Hostel 20,182,,158.23,2025-09-30,2025-12-31,92.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+19,Education,Department of Higher Education,612851,"Phase 1B - Construction of Academic Block, Hostel, Residential Tower, Directors Residence and External Development works at National Institute of Technology, Delhi Campus on Engineering, Procurement and Construction basis",333,336.42,296.45,2025-09-30,2026-01-31,123.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+20,Education,Department of Higher Education,612876,"Construction of Permanent Campus for NIT Mizoram at Lengpui, Aizawl",474,474.23,167.55,2029-12-31,2029-12-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+21,Education,Department of Higher Education,612877,Establishment of NIT Puducherry Permanent Campus [Phase-I and Phase-II],618,544.34,529.94,2024-12-31,2025-08-31,243.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+22,Education,Department of Higher Education,612883,Establishment of Permanent Campus of NIT SIkkim at Khamdong-Gangtok District,686,610.76,121.56,2028-02-12,2026-12-31,-408.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+23,Education,Department of Higher Education,612885,Construction and Developement of National Institute of Technology Meghalaya Permanent Campus at Sohra,495,,422.07,2022-03-31,2025-07-31,1218.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+24,Education,Department of Higher Education,612894,"Construction of Permanent Campus of Central University of Himachal Pradesh at Dehra, District - Kangra, [H.P.] on Engineering. Procurement and Construction [EPC Mode 1] Basis.",252,300.45,183.56,2024-11-18,2025-11-30,377.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+25,Education,Department of Higher Education,612898,Construction of Permanent Campus of National Institute of Technology Arunachal Pradesh,593,,550.61,2026-08-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+26,Education,Department of Higher Education,612916,"Construction of permanent campus of Central University of Gujarat at Village kundhela, Dist. Vadodara, Gujarat.",491,,314.51,2025-03-31,2026-03-31,365.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+27,Education,Department of Higher Education,613008,Construction of Permanent Campus of Central Tribal University of Andhra Pradesh Phase-1,305,,19.96,2027-06-26,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+28,Education,Department of Higher Education,613013,Establishment of NIT Nagaland,276,,261.24,2025-12-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+29,Education,Department of Higher Education,616886,Delhi University Eastern Campus at Surajmal Vihar,373,,28.63,2026-10-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+30,Education,Department of Higher Education,617221,"Construction of Girls Hostel 400 seater, Boys Hostel 600 seater, Academic Block, International Hostel 100 seater, VC Residence and Purchase of Equipment",211,,20.89,2027-10-03,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+31,Education,Department of Higher Education,617877,Phase B of Construction of Permanent Campus of IIT Bhilai,1189,,,2028-10-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+32,Education,Department of Higher Education,617878,Phase B of Construction of Permanent Campus of IIT Palakkad,1527,,,2028-10-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+33,Education,Department of Sports,400081,"National Sports University [NSU], Imphal [Manipur]",906,611.74,559.27,2024-08-26,2025-11-16,447.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+34,Telecommunication,Department of Telecommunications,400013,Saturation 4G mobile coverage of Uncovered Villages through USOF,26316,30620.0,9791.8,2024-06-20,2026-03-31,649.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+35,Telecommunication,Department of Telecommunications,617413,Mobile connectivity in Left Wing Extremism [LWE] affected areas-Phase 1 Upgradation,1885,,100.0,2025-05-08,2026-03-31,327.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+36,Telecommunication,Department of Telecommunications,701593,4G Services by BSNL,28466,19592.0,8471.19,2024-03-31,2026-03-31,730.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+37,Telecommunication,Department of Telecommunications,701597,Provision of 4G Mobile Services in Uncovered Villages of Arunachal Pradesh and 2 Districts of Assam,1255,,284.04,2023-04-30,2026-03-31,1066.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+38,Telecommunication,Department of Telecommunications,701598,Provision of 4G based Mobile Services in Uncovered Villages and National Highways of Meghalaya,972,,208.25,2022-03-03,2026-03-31,1489.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+39,Telecommunication,Department of Telecommunications,701599,Mobile connectivity in Left Wing Extremism [LWE] affected areas-Phase2,1578,,628.29,2023-03-31,2026-03-30,1095.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+40,Telecommunication,Department of Telecommunications,701600,354 Uncovered Villages Scheme,337,301.13,235.96,2021-10-27,2025-08-31,1404.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+41,Telecommunication,Department of Telecommunications,701602,"Provision of 4G based mobile services in 7,287 uncovered villages of 44 Aspirational District across 5 states of Andhra Pradesh, Chhattisgarh, Jharkhand, Maharashtra & Odisha",3685,,1203.48,2023-11-19,2026-05-19,912.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+42,Telecommunication,Department of Telecommunications,704495,"502 Aspirational District Scheme in Four states - Bihar, Madhya Pradesh, Rajastha and Uttar Pradesh",422,228.94,142.01,2022-03-16,2025-12-21,1376.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+43,Telecommunication,Department of Telecommunications,706775,BharatNet,61109,188000.0,46431.5,2023-08-31,2027-03-31,1308.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+44,Telecommunication,Department of Telecommunications,709749,PHASE-I OF CONSOLIDATION OF EXISTING CDR DATA CENTERS AND NIB-P3 DATA CENTERS WITH STATE OF THE ART,461,,166.02,2021-06-18,2025-12-31,1657.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+45,Telecommunication,Department of Telecommunications,709856,MPLS-IP BASED ACCESS AND AGGREGATION NETWORK [MAAN] IN BSNL ALONG WITH TEST AND MEASURING EQUIPMENT,645,,377.59,2024-08-31,2025-11-30,456.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+46,Telecommunication,Department of Telecommunications,709857,"Planning, Engineering, Supply, Installation, Testing, Commissioning, Integration & Annual Maintenance of 4G mobile network at 1 Lakh sites on PAN India basis including Mumbai & Delhi LSA on turnkey basis under Phase IX.2 Project.",24545,,8472.04,2025-06-21,2026-03-31,283.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+47,Telecommunication,Department of Telecommunications,709858,OPTICAL TRANSPORT NETWORK [OTN] PH-4 IN BSNL,811,,786.86,2025-08-15,2025-11-30,107.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+48,Telecommunication,Department of Telecommunications,709859,SETTING UP OF PHYSICAL INFRASTRUCTURE FOR THE NATIONAL INSTITUTE OF COMMUNICATION FINANCE [NICF] AT GHITORNI,248,,236.91,2020-02-17,2025-10-31,2083.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+49,Waste & Water,"Department of Water Resources, River Development & GR",616594,Interception & Diversion with Rehabilitation of sewerage scheme at Agra under Hybrid annuity based PPP model-Namami Gange Programme,842,,208.64,2025-04-30,2025-12-31,245.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+50,Waste & Water,"Department of Water Resources, River Development & GR",616600,Interception and Diversion and STP works in Bhagalpur  under Hybrid annuity based PPP mode-Namami Gange Programme,413,,126.67,2025-02-06,2025-12-31,328.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+51,Waste & Water,"Department of Water Resources, River Development & GR",616604,Pollution Abatement works for River Ganga at Hooghly Chinsurah- Municipal Town  Interception & Diversion with STP,155,,96.17,2025-03-30,2025-12-31,276.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+52,Waste & Water,"Department of Water Resources, River Development & GR",616605,Pollution Abatement Works for River Kali Meerut under Meerut Municipality  Interception & Diversion with  STP,691,,34.79,2024-12-31,2027-05-11,861.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+53,Waste & Water,"Department of Water Resources, River Development & GR",616611,Sewage Treatment Plant  100MLD  and Sewerage Network 288 km in Digha-Patna under Hybrid annuity based PPP mode-Namami Gange Programme,824,,396.71,2025-12-30,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+54,Waste & Water,"Department of Water Resources, River Development & GR",616612,Sewage Treatment Plant  50MLD  and Sewerage Network 150 km in Kankarbagh-Patna under Hybrid annuity based PPP mode-Namami Gange Programme,579,,171.79,2025-12-30,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+55,Waste & Water,"Department of Water Resources, River Development & GR",616615,"Sewer Network,  SPS and STP at Begusarai",230,,261.82,2025-04-30,2025-12-31,245.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+56,Waste & Water,"Department of Water Resources, River Development & GR",616616,"Sewer Networks,  SPS and STP at Hajipur",305,,346.46,2025-06-30,2025-12-31,184.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+57,Water Resources,"Department of Water Resources, River Development & GR",400093,Saryu Nahar CADWM Project,1673,,22.24,2019-12-31,2026-03-31,2282.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+58,Water Resources,"Department of Water Resources, River Development & GR",400095,Gosikhurd CADWM Project,744,,365.86,2019-12-31,2026-06-30,2373.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+59,Water Resources,"Department of Water Resources, River Development & GR",400096,Omkareshwar CADWM Project,648,648.09,203.06,2019-12-31,2026-03-31,2282.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+60,Water Resources,"Department of Water Resources, River Development & GR",400097,Sardar Sarovar CADWM Project,5022,6670.31,4957.08,2019-12-31,2026-03-31,2282.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+61,Water Resources,"Department of Water Resources, River Development & GR",400100,Sardar Gouthu Latchanna Thotapalli Barrage Project,353,1023.24,869.11,2019-12-31,2026-06-30,2373.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+62,Water Resources,"Department of Water Resources, River Development & GR",400101,Gundlakamma project,397,697.39,619.09,2019-12-31,2027-03-31,2647.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+63,Water Resources,"Department of Water Resources, River Development & GR",400102,Sri Ram Sagar Project Stage - II,736,949.87,940.7,2019-12-31,2026-03-31,2282.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+64,Water Resources,"Department of Water Resources, River Development & GR",400103,Indiramma Flood Flow Canal Project,1331,5940.09,4491.08,2019-12-31,2026-12-31,2557.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+65,Water Resources,"Department of Water Resources, River Development & GR",400104,Punpun Barrage Project,571,658.12,447.68,2019-12-31,2026-03-31,2282.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+66,Water Resources,"Department of Water Resources, River Development & GR",400105,Urmodi Irrigation Project,581,895.81,713.46,2022-06-30,2026-12-31,1645.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+67,Water Resources,"Department of Water Resources, River Development & GR",400107,Sulwade-Jamphal-Kanoli Lift Irrigation Scheme,2408,,2579.27,2023-06-30,2027-06-30,1461.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+68,Water Resources,"Department of Water Resources, River Development & GR",400109,Purna Barrage-2 [Ner Dhamana] Medium Irrigation Project,848,888.43,690.49,2020-06-30,2026-06-30,2191.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+69,Water Resources,"Department of Water Resources, River Development & GR",400111,Kelo Irrigation Project,460,727.04,616.93,2019-12-31,2026-06-30,2373.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+70,Water Resources,"Department of Water Resources, River Development & GR",400112,Jigaon Irrigation Project,7223,,9035.2,2028-06-30,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+71,Water Resources,"Department of Water Resources, River Development & GR",400115,Bargi Diversion Project Phase - IV [km. 154 to km 197],751,893.35,783.1,2019-12-31,2026-03-31,2282.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+72,Water Resources,"Department of Water Resources, River Development & GR",400116,Bargi Diversion Project Phase - III [km. 104 to km 154],1229,1399.7,1937.25,2019-12-31,2026-03-31,2282.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+73,Water Resources,"Department of Water Resources, River Development & GR",603945,Integrated Anandpur Barrage Project,567,2990.05,2715.12,2019-12-31,2026-06-30,2373.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+74,Water Resources,"Department of Water Resources, River Development & GR",613787,Jamrani Dam Multipurpose Project,2584,,968.52,2029-06-28,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+75,Water Resources,"Department of Water Resources, River Development & GR",617422,Bodwad Parisar Sinchan Yojna,1924,,1770.13,2027-07-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+76,Water Resources,"Department of Water Resources, River Development & GR",701370,Borolia Irrigation Project,256,,44.7,2022-12-31,2026-03-31,1186.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+77,Water Resources,"Department of Water Resources, River Development & GR",701372,Sardar Sarovar Project,20718,33412.5,31860.9,2019-12-31,2026-03-31,2282.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+78,Water Resources,"Department of Water Resources, River Development & GR",701376,"Subernarekha   Multipurpose Project, Jharkhand",3808,9579.58,5790.29,2019-12-31,2026-03-31,2282.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+79,Water Resources,"Department of Water Resources, River Development & GR",701377,Upper Tunga Irrigation Project,770,1606.07,1515.32,2019-12-31,2026-03-31,2282.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+80,Water Resources,"Department of Water Resources, River Development & GR",701383,Waghur Project,1059,1758.51,1557.64,2019-12-31,2026-03-31,2282.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+81,Water Resources,"Department of Water Resources, River Development & GR",701386,Gosikhurd Project,7196,12770.1,13837.8,2019-12-31,2028-06-30,3104.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+82,Water Resources,"Department of Water Resources, River Development & GR",701391,Aruna Medium Irrigation Project,210,1472.14,1705.83,2019-12-31,2025-12-31,2192.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+83,Water Resources,"Department of Water Resources, River Development & GR",701395,Morna [Gureghar] Irrigation Project,220,,115.2,2025-12-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+84,Water Resources,"Department of Water Resources, River Development & GR",701396,Lower Pedhi Project,256,1480.7,1324.98,2019-12-31,2026-06-30,2373.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+85,Water Resources,"Department of Water Resources, River Development & GR",701398,Nardave Medium Irrigation Project,211,781.85,623.5,2019-12-31,2026-06-30,2373.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+86,Water Resources,"Department of Water Resources, River Development & GR",701399,Kudali Irrigation Project,382,,239.03,2025-12-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+87,Water Resources,"Department of Water Resources, River Development & GR",701400,Thoubal Multipurpose Project,1449,1822.24,1837.91,2019-12-31,2026-03-31,2282.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+88,Water Resources,"Department of Water Resources, River Development & GR",701404,Kanupur Irrigation Project,989,2301.28,2712.75,2019-12-31,2026-06-30,2373.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+89,Water Resources,"Department of Water Resources, River Development & GR",701405,J. Chokka Rao Devadula Lift Irrigation Scheme,8201,14730.0,4664.8,2019-12-31,2025-12-31,2192.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+90,Water Resources,"Department of Water Resources, River Development & GR",701406,Rajiv Bhima Lift Irrigation Scheme,1402,2509.66,1839.76,2019-12-31,2026-03-31,2282.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+91,Water Resources,"Department of Water Resources, River Development & GR",701408,Madhya Ganga canal Phase-II,1061,4417.21,4552.44,2019-12-31,2025-12-31,2192.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+92,Water Resources,"Department of Water Resources, River Development & GR",701410,Relining of  Rajasthan feeder and Sirhind Feeder canal,1441,2462.16,3012.69,2021-06-30,2026-06-30,1826.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+93,Water Resources,"Department of Water Resources, River Development & GR",701411,Shahpur Kandi Dam Project,2286,2715.7,2169.72,2022-06-30,2025-10-31,1219.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+94,Water Resources,"Department of Water Resources, River Development & GR",701412,North Koel Reservoir Project,1622,2430.76,151.04,2021-03-31,2026-03-31,1826.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+95,Water Resources,"Department of Water Resources, River Development & GR",701415,Polavaram Irrigation Project,10151,55548.9,25291.6,2022-04-30,2026-03-31,1431.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+96,Aviation & Aviation Infrastructure,Ministry of Civil Aviation,400010,"Construction of Terminal Building & Associated works at Leh Airport, Ladakh",480,640.0,483.12,2021-09-14,2026-07-31,1781.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+97,Aviation & Aviation Infrastructure,Ministry of Civil Aviation,611047,"Construction of NTB complex including apron, taxi track and other associated civil works and electrical & mechanical installations towards Tawi River side at CA Jammu.",861,861.37,229.1,2026-06-21,2026-06-21,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+98,Aviation & Aviation Infrastructure,Ministry of Civil Aviation,611495,Development of New Civil Enclave at Bagdogra Airport,1549,1549.0,340.78,2027-01-03,2027-01-03,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+99,Aviation & Aviation Infrastructure,Ministry of Civil Aviation,611570,"SITC of ATM Automation System and ASMGCS [Including SMR & MLAT] for Mumbai, Navi Mumbai, Jewar [earlier MOPA, without ASMGCS], HIAL & BIAL",500,,339.1,2025-09-11,2026-08-31,354.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+100,Aviation & Aviation Infrastructure,Ministry of Civil Aviation,611602,"Modernization of Chennai Airport, Phase II, Part 2",1207,,193.59,2025-07-31,2026-06-30,334.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+101,Aviation & Aviation Infrastructure,Ministry of Civil Aviation,612063,"Construction of New Terminal Building, Second Link Taxi Track, Apron Expansion, and associated works at Prayagraj Airport- On Design & Build Basis.",219,274.38,215.51,2024-11-19,2025-10-15,330.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+102,Aviation & Aviation Infrastructure,Ministry of Civil Aviation,612183,Development of New Civil Enclave at Bihta,1413,,,2027-09-30,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+103,Aviation & Aviation Infrastructure,Ministry of Civil Aviation,612194,Development of New Civil Enclave and associated works at Darbhanga Airport,912,,227.32,2026-07-11,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+104,Aviation & Aviation Infrastructure,Ministry of Civil Aviation,612786,"Construction of New Domestic Terminal Building Building and miscellaneous works including maintenance, operations and AICMC at Kadapa Airport",266,,76.65,2026-01-27,2026-03-31,63.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+105,Aviation & Aviation Infrastructure,Ministry of Civil Aviation,612787,Construction of New Domestic Terminal Building and Miscellaneous works at Hubli Airport,320,,89.99,2026-01-21,2026-03-31,69.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+106,Aviation & Aviation Infrastructure,Ministry of Civil Aviation,612788,Construction of New Domestic Terminal Building and Miscellaneous Works at Belagavi Airport.,322,,140.51,2026-01-02,2026-02-01,30.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+107,Aviation & Aviation Infrastructure,Ministry of Civil Aviation,612789,"Development of additional RESA on either end on Runway 10-28  at Calicut Airport.  Construction of embankment with slope protection, drainage system and associated works for additional RESA on either end on Runway 10-28",485,,96.26,2025-09-28,2026-03-16,169.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+108,Aviation & Aviation Infrastructure,Ministry of Civil Aviation,612791,"Re-Construction of Rigid portions of Secondary Runway, K and  A Taxiway and Strengthening of C Taxiway at NSCBI Airport Kolkata.",328,,109.61,2025-02-10,2026-08-31,567.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+109,Aviation & Aviation Infrastructure,Ministry of Civil Aviation,612793,"Widening of basic strip at Western Side of Runway Chainage 80m to 920m i/c slope stabilization Measures [Balance work] of uphill and Improvement of Storm Water Drainage System at Pakyong Airport, Sikkim on design & build basis [EPC] with integrated 10 years maintenance.",323,,38.7,2026-02-06,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+110,Aviation & Aviation Infrastructure,Ministry of Civil Aviation,701101,"Construction of New Domestic Terminal Building [Phase-I and II] and other allied structures at JPNI Airport, Patna",1217,1216.9,1137.89,2023-07-31,2025-11-30,853.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+111,Aviation & Aviation Infrastructure,Ministry of Civil Aviation,701105,Goa Airport Terminal Building Extension Project,256,255.69,154.3,2021-12-09,2026-01-15,1498.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+112,Aviation & Aviation Infrastructure,Ministry of Civil Aviation,701107,Construction of New Integrated Terminal Building and associated works including apron to park 3 code E type of aircraft or 6 code C type of aircraft at Vijayawada Airport.,612,611.8,523.14,2022-09-05,2026-03-31,1303.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+113,Aviation & Aviation Infrastructure,Ministry of Civil Aviation,701113,"Development of Lal Bahadur Shastri International airport, Varanasi including C/o New Terminal Building, Apron Extension, Runway Extension, PTT and allied works.",2870,,384.32,2027-07-20,2027-07-20,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+114,Aviation & Aviation Infrastructure,Ministry of Civil Aviation,701121,Construction of New  Domestic Terminal Building  at Rajahmundry Airport.,347,,109.62,2025-08-14,2026-03-31,229.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+115,Aviation & Aviation Infrastructure,Ministry of Civil Aviation,701122,Development of New Integrated Civil Enclave at Agra Airport,579,,111.83,2026-07-04,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+116,Aviation & Aviation Infrastructure,Ministry of Civil Aviation,701126,"Development of Dholera International Greenfield Airport , Gujarat",1305,1551.0,739.77,2026-06-30,2026-06-30,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+117,Aviation & Aviation Infrastructure,Ministry of Civil Aviation,701127,Construction of New Passenger Terminal Building for Domestic Operations at Jodhpur Airport.,480,480.0,323.18,2024-11-18,2026-01-31,439.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+118,Aviation & Aviation Infrastructure,Ministry of Civil Aviation,701128,Construction of New Integrated Passenger Terminal Building at Udaipur Airport,887,887.0,416.67,2026-03-10,2026-10-03,207.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+119,Aviation & Aviation Infrastructure,Ministry of Civil Aviation,706718,C/o NITB Imphal Airport,499,499.0,156.06,2024-07-13,2026-12-31,901.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+120,Aviation & Aviation Infrastructure,Ministry of Civil Aviation,706724,Guwahati Airport New Integrated Terminal Building Construction Project,1712,,2456.07,2025-03-31,2025-11-30,244.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+121,Coal,Ministry of Coal,400018,HURA C OCP,859,,451.93,2029-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+122,Coal,Ministry of Coal,400033,BHATADI EXPANSION OC,581,,80.95,2028-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+123,Coal,Ministry of Coal,400073,KONAR EXPANSION OCP,799,,429.65,2032-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+124,Coal,Ministry of Coal,400074,KARO EXPANSION OCP,908,,269.26,2029-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+125,Coal,Ministry of Coal,400136,SANGHMITRA OC,2660,,6.59,2032-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+126,Coal,Ministry of Coal,400138,CHANDRAGUPT OCP,974,,440.75,2032-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+127,Coal,Ministry of Coal,400139,KOTRE BASANTPUR PACHMO OCP,861,625.4,455.95,2032-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+128,Coal,Ministry of Coal,400142,Pachwara South Coal Block,2243,,1231.67,2028-09-30,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+129,Coal,Ministry of Coal,400144,PORDA CHIMTAPANI OCP [10 MTY],2310,,88.94,2029-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+130,Coal,Ministry of Coal,400145,CHHAL OC SEAM III [6 MTY],611,,580.56,2022-03-31,2025-12-31,1371.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+131,Coal,Ministry of Coal,400148,AMADAND OCP[4.0MTY],869,,278.42,2021-03-31,2027-03-31,2191.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+132,Coal,Ministry of Coal,400149,BAROUD OC EXPANSION [3.0-10.0M,2310,,939.29,2029-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+133,Coal,Ministry of Coal,400150,RPR MAGADH EXP OCP,7254,,1600.77,2028-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+134,Coal,Ministry of Coal,400151,NORTH URIMARI EXPANSION OCP,779,,696.05,2029-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+135,Coal,Ministry of Coal,400152,RAMPUR BATURA OCP [4.0MTY],1249,,498.36,2026-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+136,Coal,Ministry of Coal,400153,EPR ROHINI - KARKETTA OCP,1020,,84.74,2028-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+137,Coal,Ministry of Coal,400154,EPR PUNDI OCP,713,,236.58,2027-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+138,Coal,Ministry of Coal,400155,EPR ASHOK OC,2898,,185.06,2031-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+139,Coal,Ministry of Coal,400156,EPR AMRAPALI OCP,5136,,1189.84,2028-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+140,Coal,Ministry of Coal,400160,RAJRAPPA RCE OCP,511,,488.69,2016-03-31,2027-03-31,4017.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+141,Coal,Ministry of Coal,400162,BLOCK B EXPANSION  [3.5 TO 8.0,999,,476.83,2023-03-31,2027-03-31,1461.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+142,Coal,Ministry of Coal,400165,SUBHADRA OCP,1694,,1324.37,2032-04-23,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+143,Coal,Ministry of Coal,400166,SIARMAL OCP,5195,,3460.35,2029-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+144,Coal,Ministry of Coal,400172,CHITRA EAST OC,514,,230.12,2026-03-31,2028-03-31,731.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+145,Coal,Ministry of Coal,400173,MOHANPUR EXPANSION OC -PHASE I,889,,117.17,2026-03-31,2030-03-31,1461.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+146,Coal,Ministry of Coal,400177,AMALGAMATED YEKONA I & YEKONA,727,,539.9,2025-03-31,2026-03-31,365.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+147,Coal,Ministry of Coal,400178,DINESH[MAKARDHOKRA-III] OC,823,,622.29,2027-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+148,Coal,Ministry of Coal,400180,BONJEMEHARI EXPANSION OCP,570,570.11,82.77,2026-03-31,2030-03-31,1461.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+149,Coal,Ministry of Coal,400181,NAKRAKONDA KUMARDIH- B OCP,503,502.67,71.34,2029-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+150,Coal,Ministry of Coal,400182,SIDULI [OC & UG],535,535.17,5.28,2027-03-31,2030-03-31,1096.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+151,Coal,Ministry of Coal,400183,BALARAM EXPANSION OCP,3504,,924.23,2029-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+152,Coal,Ministry of Coal,400185,GOPALJI KANIHA OCP [10 TO 30 M,8416,6107.87,1742.12,2030-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+153,Coal,Ministry of Coal,400186,TILABONI UG,749,749.07,52.86,2029-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+154,Coal,Ministry of Coal,400187,INTEGRATED LAKHANPUR-BELPAHAR-,2435,,1840.93,2027-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+155,Coal,Ministry of Coal,400312,JHANJRA EXPANSION UG,1210,,542.09,2029-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+156,Coal,Ministry of Coal,400313,Master Plan for Jharia and Raniganj Coalfields,2662,,792.45,2019-08-11,2028-12-31,3430.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+157,Coal,Ministry of Coal,400315,SONEPUR BAZARI EXPANSION OCP [,5366,,586.07,2029-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+158,Coal,Ministry of Coal,400321,NIGAHI EXPANSION [15 TO 25 MTP,1730,,841.25,2025-03-31,2028-03-31,1096.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+159,Coal,Ministry of Coal,400352,JHARKHAND-LAIYO OCP,765,,145.81,2031-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+160,Coal,Ministry of Coal,400353,DHUPTALA OC [SASTI UG TO OC ],711,,169.24,2028-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+161,Coal,Ministry of Coal,400354,DIPKA EXPANSION OCP [40 MTY],5241,,2847.64,2029-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+162,Coal,Ministry of Coal,400369,BINA KAKRI AMALGAMATION EXPANS,836,,812.73,2024-03-31,2027-03-31,1095.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+163,Coal,Ministry of Coal,400392,BHARATPUR RE-ORGANIZATION OCP,2839,,1673.58,2029-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+164,Coal,Ministry of Coal,400424,GEVRA OC [70 MTY],11816,,6710.57,2023-03-31,2027-03-31,1461.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+165,Coal,Ministry of Coal,400425,MOONIDIH XV SEAM UG,1230,,633.27,2019-03-31,2026-05-31,2618.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+166,Coal,Ministry of Coal,611016,2.0 MTPA BHOJUDIH NLW WASHERY,385,,357.14,2020-09-30,2025-12-31,1918.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+167,Coal,Ministry of Coal,611017,2.5 MTPA PATHERDIH NLW WASHERY,334,,148.72,2018-04-30,2026-03-31,2892.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+168,Coal,Ministry of Coal,611864,AMALAGAMATED NTST KUJAMA OCP 8.5MTY,4012,,414.41,2030-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+169,Coal,Ministry of Coal,612816,ITAPARA OCP,929,,69.49,2030-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+170,Coal,Ministry of Coal,613793,SHYAMSUNDARPUR UG INCLUDING SA,484,,60.99,2026-03-31,2028-03-31,731.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+171,Coal,Ministry of Coal,613794,PARASEA-BELBAID UG PROJECT,389,,132.48,2028-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+172,Coal,Ministry of Coal,613798,AMERA OC RCE [1.0 MTY],336,,88.24,2026-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+173,Coal,Ministry of Coal,613799,AMGAON OC RCE [1.0 MTY],316,,188.72,2026-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+174,Coal,Ministry of Coal,613800,JAGANNATHPUR OC RCE PROJECT,459,,274.35,2025-03-31,2026-03-31,365.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+175,Coal,Ministry of Coal,613801,MAHAMAYA OCP [1.50 MTY],410,,182.83,2026-03-31,2028-03-31,731.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+176,Coal,Ministry of Coal,613802,KANCHAN OC EXP,371,,144.61,2026-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+177,Coal,Ministry of Coal,613803,JHIRIA WEST OCP [1.5 MTY],367,,34.1,2029-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+178,Coal,Ministry of Coal,613804,RPR TAWA-III UG 0.84 MTY,314,,6.84,2027-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+179,Coal,Ministry of Coal,613808,MURAIDIH UG PROJECT,340,,191.0,2014-04-30,2026-12-31,4628.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+180,Coal,Ministry of Coal,615183,KHADIA EXPANSION [10 TO 16 MTP,492,,247.06,2025-03-31,2027-03-31,730.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+181,Coal,Ministry of Coal,615184,SAONER UG MINE -1 EXPANSION 1.,229,,143.48,2028-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+182,Coal,Ministry of Coal,615185,AMALGAMATED DHANKASA & JAMUNIA,399,,93.52,2027-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+183,Coal,Ministry of Coal,615186,SASTI  EXPANSION OPENCAST,319,,91.6,2026-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+184,Coal,Ministry of Coal,615187,RPR OF VISHNUPURI UG TO OC,221,,,2029-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+185,Coal,Ministry of Coal,615188,NEW MAJRI UG TO OC 3 MTY COST,402,,60.07,2027-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+186,Coal,Ministry of Coal,615189,MAKARDHOKRA EXPN OC 4.9 MTY,362,,77.54,2026-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+187,Coal,Ministry of Coal,615190,SINGHORI DEEP OC MIN 2.0 MTY,336,,26.98,2029-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+188,Coal,Ministry of Coal,615191,KATKONA RO UG MINE,329,,61.34,2029-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+189,Coal,Ministry of Coal,615192,GOKUL EXTENSION OC MINE,310,,45.87,2026-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+190,Coal,Ministry of Coal,615193,BASUNDHARA WEST EXTENSION OPEN,479,,274.63,2019-03-31,2029-03-31,3653.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+191,Coal,Ministry of Coal,615194,URDHAN EXPANSION OC COST PLUS,207,,27.19,2031-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+192,Coal,Ministry of Coal,615195,SHARDA UG MINE,166,,5.12,2028-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+193,Coal,Ministry of Coal,615199,KOLGAON EXPANSION DEEP OC MINE,199,,10.55,2027-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+194,Coal,Ministry of Coal,615206,GANDHIGRAM UG MINE,414,,14.41,2026-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+195,Coal,Ministry of Coal,615330,BALLARPUR NORTH WEST OC MINE,361,,0.02,2029-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+196,Coal,Ministry of Coal,615331,GADEGAON OC 3 MTY,497,,0.08,2030-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+197,Coal,Ministry of Coal,615349,TAPIN SOUTH EXPN,230,,22.02,2028-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+198,Coal,Ministry of Coal,615818,Jawahar Khani Open Cast Mine,298,,46.95,2025-03-31,2027-03-31,730.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+199,Coal,Ministry of Coal,615820,TIKAK EXTENSION OCP,160,,81.47,2031-07-04,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+200,Coal,Ministry of Coal,615821,TIRAP OCP,289,,105.61,2030-11-27,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+201,Coal,Ministry of Coal,615822,SIRKA OC,223,,140.58,2028-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+202,Coal,Ministry of Coal,615843,TETARIAKHAR OC,244,,49.54,2025-03-31,2027-03-31,730.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+203,Coal,Ministry of Coal,615857,Naini Coal Mine,494,,491.33,2026-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+204,Coal,Ministry of Coal,615858,Kalyanikhani Opencast Project,384,,284.06,2026-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+205,Coal,Ministry of Coal,615859,Kakathiya Khani Opencast - III Project Phase - I,414,,397.55,2026-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+206,Coal,Ministry of Coal,615860,Godavarikhani Coal Mine - 5,607,,191.78,2025-03-31,2026-03-31,365.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+207,Coal,Ministry of Coal,615861,Indaram Opencast Project,425,,405.0,2025-03-31,2026-03-31,365.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+208,Coal,Ministry of Coal,615862,Goleti Opencast Mine,346,,76.19,2026-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+209,Coal,Ministry of Coal,615863,Venkatesh Khani Coal Mine,484,,477.14,2026-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+210,Coal,Ministry of Coal,615864,Ramagundam OC-II Extension Project,490,,405.54,2026-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+211,Coal,Ministry of Coal,615865,Kakatiyakhani OC - 2 Project,442,,230.28,2025-03-31,2026-03-31,365.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+212,Coal,Ministry of Coal,615914,GHONSA EXPANSION DEEP OC MINE,185,,14.48,2029-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+213,Coal,Ministry of Coal,615916,AMLG GAURI PAUNI EXPANSION OC,1225,,80.14,2030-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+214,Coal,Ministry of Coal,615917,GAURIDEEP/GAURI CENTRAL OCP 7.,973,,0.67,2030-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+215,Coal,Ministry of Coal,615918,RPR OF BHANEGAON OC,405,,12.39,2028-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+216,Coal,Ministry of Coal,615919,N. EXTN. MUNGOLI NIRGUDA D OCP,1025,,175.93,2029-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+217,Coal,Ministry of Coal,615982,NILJAI EXPANSION DEEP  OCP,320,,185.91,2022-03-31,2026-03-31,1461.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+218,Coal,Ministry of Coal,616044,UKNI DEEP OC MINE -COST PLUS,237,,165.76,2021-03-31,2026-03-31,1826.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+219,Coal,Ministry of Coal,616050,AMALGAMATED INDER-KAMPTEE DEEP,236,,131.81,2024-03-31,2026-03-31,730.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+220,Coal,Ministry of Coal,616223,ADASA UG TO OC MINE,316,,208.63,2024-03-31,2026-03-31,730.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+221,Coal,Ministry of Coal,616225,CHUPERBHITA SIMLONG OCP MDO 6,979,,,2037-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+222,Coal,Ministry of Coal,616226,INTEGRATED KULDA GARJANBAHAL O,3564,,592.57,2033-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+223,Coal,Ministry of Coal,616229,AMAL GONDEGAON GHATROHANA EXPN,669,,1.19,2029-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+224,Coal,Ministry of Coal,616230,PARASCOLE JAMBAD OCP,1194,,9.53,2037-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+225,Coal,Ministry of Coal,616231,BHUBANESWARI EXPN OCP 50 MTY,5366,,468.15,2033-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+226,Coal,Ministry of Coal,616232,HINGULA II OC EXPN PH III 15 M,1562,,272.99,2029-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+227,Coal,Ministry of Coal,616233,BALABHADRA OCP,978,,212.94,2030-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+228,Coal,Ministry of Coal,616234,PELMA OC MDO,1725,,15.66,2033-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+229,Coal,Ministry of Coal,616236,JARANGDIH EXPN. OCP 1.5 MTY,414,,85.6,2029-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+230,Coal,Ministry of Coal,616253,BLOCK E OCP,5851,,20.32,2029-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+231,Coal,Ministry of Coal,617233,WAGHODA UG MINE [1.02 MTY],379,,,2030-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+232,Coal,Ministry of Coal,617278,KOLARPIMPRI EXPANSION OC [2.5,630,,,2030-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+233,Coal,Ministry of Coal,617287,KUSMUNDA OC EXPANSION PROJECT,4517,,782.97,2030-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+234,Coal,Ministry of Coal,617288,MANIKPUR OC EXPANSION PROJECT,383,,113.03,2029-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+235,Coal,Ministry of Coal,617416,"Revised Jharia Master Plan for Dealing with Fire, Subsidence & Rehabilitation of affected families in Jharia Coalfield- Reg.",5940,,1.31,2028-12-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+236,Electricity Generation,Ministry of Coal,400231,NLC Talabira Thermal Power Project,27213,,2550.76,2030-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+237,Electricity Generation,Ministry of Coal,400259,Ghatampur Thermal Power Plant 3 X 660 MW,17238,21780.9,20711.5,2020-11-26,2026-03-25,1945.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+238,Electricity Generation,Ministry of Coal,612819,300 MW SPP part of 510 MW CPSU scheme,1813,1813.0,1393.34,2024-09-27,2025-12-31,460.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+239,Electricity Generation,Ministry of Coal,615327,50 MW Solar PP Minedout Area,218,,164.7,2025-03-31,2025-12-31,275.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+240,Electricity Generation,Ministry of Coal,617299,50 MW Wind Power Project,384,,319.71,2025-06-30,2026-01-31,215.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+241,Electricity Generation,Ministry of Coal,617730,600 MW Khavda Solar Power Project,3336,,738.34,2026-06-30,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+242,Railways,Ministry of Coal,400203,Dharamjaigarh-Korba,1686,,439.98,2026-12-31,2026-08-31,-122.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+243,Railways,Ministry of Coal,400416,Shivpur-Kathautia New Rail [BG] Line [49 km] [Package II of Tori-Shivpur-Kathautia line],1800,2564.34,1489.74,2025-06-30,2026-06-30,365.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+244,Healthcare,Ministry of Health & Family Welfare,617882,"Setting up IT Infrastructure including Network Security and Hosting at AIIMS, New Delhi",358,,,2026-09-10,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+245,Healthcare,Ministry of Health & Family Welfare,617883,"Redevelopment of Residential colonies at Ayur Vigyan Nagar and West Ansari Nagar campuses of AIIMS, New Delhi",4441,,24.68,2027-06-02,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+246,Healthcare,Ministry of Health & Family Welfare,701167,AIIMS Kashmir at Awantipora Jammu & Kashmir,1828,2160.84,1354.55,2025-12-02,2026-06-30,210.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+247,Healthcare,Ministry of Health & Family Welfare,701171,AIIMS Bibinagar,1028,1365.95,818.46,2026-06-30,2026-06-30,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+248,Healthcare,Ministry of Health & Family Welfare,701173,AIIMS Majra Rewari Haryana,1299,1646.43,349.41,2026-12-31,2026-12-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+249,Construction,Ministry of Housing & Urban Affairs,617412,"Construction of One Tower of Office Complex  and another Tower of Residential quarters  consisting of 10Nos. Type-V, 10Nos. Type-VI & 1No.Type-VII Quarters i/c internal water supply, sanitary installation and all development and bulk services, Horticulture works on EPC Mode-I basis i/c comprehensive operation  and maintenance of Civil, E&M services for 7 years after completion of original construction work for Ranga Reddy, Secunderabad, Medchal, AuditI, Audit-II Commissionerates of Central Tax at Khajaguda, Serilingampally, Hyderabad.",644,,108.53,2027-09-27,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+250,Inland Waterways,Ministry of Housing & Urban Affairs,702668,Chennai Metro Rail Phase-II Development Project,63246,,29336.0,2029-08-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+251,Real Estate,Ministry of Housing & Urban Affairs,400188,Redevelopment of Seven General Pool Residential Accommodation [GPRA] Colonies in Delhi,32850,,0.0,2025-12-31,2025-12-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+252,Real Estate,Ministry of Housing & Urban Affairs,701719,Rehablitation in Junavadaj Area Smart City Project,539,,39.63,2022-07-07,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+253,Real Estate,Ministry of Housing & Urban Affairs,701766,Green Building Development Project,151,,18.95,2023-11-23,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+254,Real Estate,Ministry of Housing & Urban Affairs,707229,"Integrated Command control Center [ICCC] - Construction and Development of Integrated Command Control Center with Security, Surveillance, ITMS, Connecting  Port, Ship Service, Smart Solid Waste Management, Smart Public Transport System",210,,,2023-05-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+255,Urban Public Transport,Ministry of Housing & Urban Affairs,617206,Delhi Metro Rail Phase-IV [Rithala - Kundli Corridor],6231,,72.41,2029-01-02,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+256,Urban Public Transport,Ministry of Housing & Urban Affairs,617207,Delhi Metro Rail Phase-IV [2 Corridors],8400,,55.92,2029-03-27,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+257,Urban Public Transport,Ministry of Housing & Urban Affairs,617225,PCMC To Nigdi- Extension Of North South Corridor Of Phase-1,910,,167.3,2027-01-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+258,Urban Public Transport,Ministry of Housing & Urban Affairs,617226,Pune Metro Phase-1 Extension line towards south from Swargate to Katraj,2955,,23.12,2029-03-04,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+259,Urban Public Transport,Ministry of Housing & Urban Affairs,617327,Thane Integral Ring Metro Rail Project,12200,,8.7,2029-09-30,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+260,Urban Public Transport,Ministry of Housing & Urban Affairs,618971,Pune Metro Rail Project Phase-2 Corridor 2A Vanaz to Chandani Chowk and Corridor 2B Ramwadi to Wagholi/Vitthalwadi,3626,,0.41,2029-07-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+261,Urban Public Transport,Ministry of Housing & Urban Affairs,701745,New Suburba Station Development Project,263,,17.62,2022-07-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+262,Urban Public Transport,Ministry of Housing & Urban Affairs,701991,Kalyan Station Precinct Imporvement Project,600,,272.42,2023-07-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+263,Urban Public Transport,Ministry of Housing & Urban Affairs,702625,Bhopal Metro Rail Project,6941,,3715.92,2022-11-29,2028-06-30,2040.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+264,Urban Public Transport,Ministry of Housing & Urban Affairs,702626,Indore Metro Rail Project,7501,,4293.14,2022-11-29,2028-12-31,2224.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+265,Urban Public Transport,Ministry of Housing & Urban Affairs,702627,Patna Metro Rail Project,13366,13365.8,4670.21,2024-02-26,2027-06-30,1220.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+266,Urban Public Transport,Ministry of Housing & Urban Affairs,702628,Kanpur Metro Rail Project,11076,,9084.56,2024-05-26,2027-03-31,1039.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+267,Urban Public Transport,Ministry of Housing & Urban Affairs,702629,Agra Metro Rail Project,8380,,6059.58,2024-05-26,2027-06-30,1130.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+268,Urban Public Transport,Ministry of Housing & Urban Affairs,702630,Surat Metro Rail Project,12020,,8040.59,2024-03-31,2026-06-30,821.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+269,Urban Public Transport,Ministry of Housing & Urban Affairs,702631,"Ahmedabad Metro Rail Project, Phase-II",5384,,4332.87,2024-03-31,2025-12-31,640.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+270,Urban Public Transport,Ministry of Housing & Urban Affairs,702632,DMRTS Phase - IV [3 Priority Corridors],24949,,18022.1,2025-03-31,2026-03-31,365.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+271,Urban Public Transport,Ministry of Housing & Urban Affairs,702633,Delhi-Ghaziabad-Meerut Regional Rapid Transit System [RRTS] corridor,30274,30274.0,27060.7,2025-06-30,2025-12-15,168.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+272,Urban Public Transport,Ministry of Housing & Urban Affairs,702635,Construction of Bangalore Metro Rail Project Phase 2.,26405,30695.1,29668.0,2021-03-22,2026-09-30,2018.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+273,Urban Public Transport,Ministry of Housing & Urban Affairs,702637,Mumbai Metro Line 3,23136,37276.0,32562.3,2023-03-31,2025-08-31,884.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+274,Urban Public Transport,Ministry of Housing & Urban Affairs,702639,Ahmedabad Metro Rail Project [Phase-I],10773,12924.5,12216.4,2018-03-31,2026-01-31,2863.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+275,Urban Public Transport,Ministry of Housing & Urban Affairs,702658,Nagpur Metro Rail Phase II Development Project,6708,,1346.18,2027-12-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+276,Urban Public Transport,Ministry of Housing & Urban Affairs,702664,Kochi Metro Rail Phase 2 Development  Project,1957,,477.04,2026-11-20,2026-11-20,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+277,Urban Public Transport,Ministry of Housing & Urban Affairs,702665,Construction Bangalore Metro Rail Project Phase-2A & 2B,14788,14788.1,9048.22,2026-06-30,2026-06-30,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+278,Waste & Water,Ministry of Housing & Urban Affairs,702355,Storm water drainag Development Project,210,,,2024-03-20,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+279,Waste & Water,Ministry of Housing & Urban Affairs,702674,"ESR - 8 nos., distribution system - 216 Km, new house service connections - 38760 nos. upgrading of feeder mains, pumping station etc. - Phase II",172,,88.86,2023-03-31,2026-01-31,1037.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+280,Waste & Water,Ministry of Housing & Urban Affairs,702699,Muzaffarpur Storm Water Drainage Phase-I Project,159,,60.5,2023-10-31,2026-01-31,823.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+281,Waste & Water,Ministry of Housing & Urban Affairs,702734,Sewerage Management Scheme Part-3 Implementation,278,,218.89,2023-09-30,2026-03-30,912.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+282,Waste & Water,Ministry of Housing & Urban Affairs,702735,Sewerage Management Scheme Part-3 Implementation,213,,168.14,2023-03-31,2026-01-31,1037.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+283,Waste & Water,Ministry of Housing & Urban Affairs,702741,Dhanbad Water Supply Infrastructure Project,217,,129.16,2023-03-31,2026-03-30,1095.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+284,Waste & Water,Ministry of Housing & Urban Affairs,702742,SAAP-3 Water Supply Infrastructure SAAP-3 Project,159,,87.5,2023-10-31,2026-03-30,881.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+285,Waste & Water,Ministry of Housing & Urban Affairs,702746,Augmentation and Strenghthning of Urban Water Supply Phase 1 - SAAP 3,278,,186.5,2023-03-31,2026-03-31,1096.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+286,Waste & Water,Ministry of Housing & Urban Affairs,702760,Belgavi Improvement in Sewerage System Project,163,,85.71,2023-07-31,2025-12-31,884.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+287,Waste & Water,Ministry of Housing & Urban Affairs,702764,24/7 water supply under AMRUT for Davanagere,175,,93.18,2023-03-31,2025-12-31,1006.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+288,Waste & Water,Ministry of Housing & Urban Affairs,702793,Indore Water Supply Infrastructure Project,287,,252.5,2023-03-31,2025-12-31,1006.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+289,Waste & Water,Ministry of Housing & Urban Affairs,702798,Jabalpur Sewerage Management and Treatment Infrastructure Project,362,,322.31,2023-03-31,2025-12-31,1006.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+290,Waste & Water,Ministry of Housing & Urban Affairs,702808,Satna Sewerage Management and Treatment Infrastructure Project,192,215.89,191.79,2024-03-31,2025-12-31,640.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+291,Waste & Water,Ministry of Housing & Urban Affairs,702810,Singrauli Sewerage Management and Treatment Infrastructure Project,402,,357.68,2023-03-31,2025-12-31,1006.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+292,Waste & Water,Ministry of Housing & Urban Affairs,702833,Kalyan-Dombivali Water Supply Infrastructure Project,194,,130.6,2023-10-31,2025-12-31,792.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+293,Waste & Water,Ministry of Housing & Urban Affairs,702840,Mira-Bhayandar Water Supply Infrastructure Project,205,,186.13,2023-03-31,2025-12-31,1006.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+294,Waste & Water,Ministry of Housing & Urban Affairs,702842,Nagpur Water Supply Infrastructure Project,274,,266.11,2023-03-31,2025-12-31,1006.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+295,Waste & Water,Ministry of Housing & Urban Affairs,702851,Pune Water Supply Infrastructure Project,236,,184.98,2023-03-31,2025-10-31,945.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+296,Waste & Water,Ministry of Housing & Urban Affairs,702854,Solapur Sewerage Management Infrastructure Project,180,,155.01,2023-03-31,2025-12-31,1006.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+297,Waste & Water,Ministry of Housing & Urban Affairs,702948,Jaunpur Sewerage Management Infrastructure Project,236,,205.84,2023-06-30,2025-12-31,915.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+298,Waste & Water,Ministry of Housing & Urban Affairs,702949,Jhansi Water Supply Infrastructure Phase-II Project,562,,485.91,2023-07-31,2025-12-31,884.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+299,Waste & Water,Ministry of Housing & Urban Affairs,703021,Jalandhar Water Supply Infrastructure Project,259,,161.02,2023-08-28,2026-03-30,945.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+300,Waste & Water,Ministry of Housing & Urban Affairs,703057,Patiala Water Supply Infrastructure Part-2 Project,287,,213.64,2023-10-31,2025-12-30,791.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+301,Waste & Water,Ministry of Housing & Urban Affairs,707267,Upgradation of Sewerage system in Gandhinagar City,200,,100.0,2023-06-30,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+302,Healthcare,Ministry of Labour and Employment,612167,"Construction of 350 beds + 50 Super Specialty beds ESIC Hospital Sheelanagar, Visakhapatnam, Andhra Pradesh",384,,105.0,2025-10-09,2026-01-09,92.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+303,Healthcare,Ministry of Labour and Employment,612178,"Construction of 100 Bedded ESIC Hospital building and 32 Nos Residential Quarters at Vallam Vadangal, SIPCOT, Sriperumbudur",153,177.01,107.83,2025-06-12,2026-01-31,233.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+304,Healthcare,Ministry of Labour and Employment,612185,C/o Construction of 200 bedded [Up-gradable to 300 bedded] ESI Hospital at Surat Gujarat.,209,,185.96,2025-06-03,2026-01-15,226.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+305,Healthcare,Ministry of Labour and Employment,612186,350 Bedded [Upgradable to 500 beds] ESI Hospital at Sanand,558,,60.66,2026-03-04,2027-05-08,430.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+306,Healthcare,Ministry of Labour and Employment,612188,"Construction of 200 Bedded [Upgradable to 500 Bedded including 50 beds of SST] ESIC Hospital at Bibewadi, Pune",429,,282.09,2025-09-19,2026-02-21,155.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+307,Healthcare,Ministry of Labour and Employment,612201,"Construction of 200 bedded ESIC Hospital with 62 Nos Staff quarters , Beltola",143,154.75,101.83,2025-04-12,2026-02-28,322.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+308,Healthcare,Ministry of Labour and Employment,612211,"Demolition, Construction and upgradation of ESI Hospital, Kalol, Gujarat from 50 beds to 150 beds.",206,,31.49,2025-10-05,2026-06-30,268.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+309,Healthcare,Ministry of Labour and Employment,612213,"Construction of 200 Bedded ESIC Hospital at Butibori, Nagpur, Maharashtra.",195,196.7,114.39,2025-08-31,2026-09-30,395.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+310,Healthcare,Ministry of Labour and Employment,612239,Construction of 100 bedded ESIC Hospital & 32 nos. of Staff qtrs at OMPURA J&K.,131,164.93,162.05,2024-09-30,2025-12-31,457.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+311,Healthcare,Ministry of Labour and Employment,612259,CONSTRUCTION OF 300 BEDDED HOSPITAL AT HARIDWAR,102,297.63,321.82,2024-10-30,2026-03-31,517.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+312,Healthcare,Ministry of Labour and Employment,612513,"Construction of 100 Bedded ESI Hospital at Duburi, Odisha.",165,,16.4,2027-06-09,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+313,Healthcare,Ministry of Labour and Employment,612745,"Construction of 200 bed ESI Hospital at Bommasandra, Karnataka",278,,27.8,2027-01-12,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+314,Healthcare,Ministry of Labour and Employment,612748,"Construction of 100 bed ESI Hospital and Staff Quarters [32 Nos.] at Harohalli, Karnataka",151,,0.0,2027-02-28,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+315,Healthcare,Ministry of Labour and Employment,616691,"Upgradation & Extension of ESIC Hospital and Construction of PG Hostel / Staff Housing for ESIC Hospital at Andheri, Mumbai",260,,210.12,2025-08-15,2025-12-31,138.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+316,Construction,Ministry of Mines,617280,"Construction of Basement + Ground Floor+ 10 Storeyed building for State of the Art Director General, GSI Building at plot No.GN-40, Sector-V, Salt Lake, Kolkata",255,,85.9,2026-08-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+317,Metals & Mining,Ministry of Mines,400141,Expansion of Alumina Refinery Plant with addition of 5th Stream having capacity enhancement of 1.0 Million Tonee Per Annum,4103,5677.4,4310.44,2022-12-31,2025-09-30,1004.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+318,Metals & Mining,Ministry of Mines,400299,Pottangi Bauxite Mines Project,1381,1960.77,650.04,2025-03-31,2026-05-31,426.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+319,Metals & Mining,Ministry of Mines,400426,Expansion of Malanjkhand Copper Project,1856,,947.42,2020-04-30,2026-04-30,2191.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+320,Metals & Mining,Ministry of Mines,709830,CONVERSION OF FLAT BOTTOM SETTLERS AND WASHERS WITH A SINGLE TRAIN OF HRDS AND DCWS IN STREAMS 1 AND,355,581.0,163.55,2026-11-30,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+321,Metals & Mining,Ministry of Mines,709831,SOURCING OF BAUXITE ARRANGEMENT FOR 5TH STREAM ALUMINA REFINERY FROM SOUTH BLOCK MINING LEASE OF PANCHPATMAILI MINES,483,,414.75,2025-05-31,2026-06-30,395.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+322,Metals & Mining,Ministry of Mines,709832,25.5 MW WIND POWER PROJECT AT KAYATHAR IN TAMILNADU,166,,135.0,2025-03-31,2026-03-31,365.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+323,Energy Storage,Ministry of Petroleum & Natural Gas,400012,Kandla Gorakhpur LPG Pipeline,10088,10088.0,8135.69,2021-12-30,2025-12-31,1462.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+324,Energy Storage,Ministry of Petroleum & Natural Gas,400035,"Grass Root Rail-fed Depot at Sekerkote, Agartala as resitement of existing Dharmanagar Depot",656,656.0,519.02,2025-09-30,2026-06-30,273.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+325,Energy Storage,Ministry of Petroleum & Natural Gas,400043,Laying of POL Pipelines in Common Corridor for proposed grass root terminal at Vallur [Chennai],829,829.0,338.15,2026-05-31,2026-05-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+326,Energy Storage,Ministry of Petroleum & Natural Gas,400077,"Grass root POL Terminal at Vallur, Chennai",827,887.71,649.51,2024-12-31,2026-03-31,455.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+327,Energy Storage,Ministry of Petroleum & Natural Gas,400078,New Mundra Panipat Crude Oil Pipeline,9028,9028.0,7357.45,2024-12-19,2026-06-30,558.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+328,Energy Storage,Ministry of Petroleum & Natural Gas,400235,"Setting up a common user Petroleum Terminal at Jammu, J&K for resitement of existing PSU OMC's Depots from Jammu City",677,715.89,559.45,2025-03-31,2026-01-31,306.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+329,Energy Storage,Ministry of Petroleum & Natural Gas,400301,Multi Product Pipeline from Irugur to Devangonthi,678,1732.0,838.07,2017-02-25,2026-09-30,3504.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+330,Energy Storage,Ministry of Petroleum & Natural Gas,604833,"Andheri Residential Towers, Mumbai",281,389.67,243.11,2025-05-31,2026-06-30,395.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+331,Energy Storage,Ministry of Petroleum & Natural Gas,604852,"Grass-root Terminal at Mirzapur, Uttar Pradesh",980,980.45,234.6,2026-11-30,2026-11-30,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+332,Energy Storage,Ministry of Petroleum & Natural Gas,616235,Construction of Aviation Fuel farm Facilities at Bhogapuram Airport,240,240.0,72.26,2026-03-31,2026-03-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+333,Energy Storage,Ministry of Petroleum & Natural Gas,617829,LPG Bottling Plant at Mualkhang,226,225.71,12.81,2027-11-03,2027-11-03,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+334,Energy Storage,Ministry of Petroleum & Natural Gas,617839,Capacity Augmentation of Kandla LPG Import Terminal [KLIT] from 0.6 MMTPA to 2.5 MMTPA,357,,12.6,2026-07-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+335,Energy Storage,Ministry of Petroleum & Natural Gas,701263,Rajasthan Refinery Project,43129,79459.0,62888.3,2022-10-31,2026-03-31,1247.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+336,Energy Storage,Ministry of Petroleum & Natural Gas,701343,Srikakulam Angul Gas Pipeline Project,2658,2810.0,2282.98,2022-07-22,2025-12-31,1258.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+337,Energy Storage,Ministry of Petroleum & Natural Gas,701349,Paradip-Numaligarh Crude Oil Pipeline [PNCPL] & Crude Oil Import Terminal [COIT] at Paradip,10228,11407.0,10063.2,2024-07-27,2026-03-31,612.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+338,Energy Storage,Ministry of Petroleum & Natural Gas,709754,"Construction of LPG Facilities at Kamardanga, Assam",156,156.36,70.91,2027-07-04,2027-07-04,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+339,Energy Storage,Ministry of Petroleum & Natural Gas,709755,"Setting up of new rail fed POL facility at Kamardanga, Assam",384,384.04,150.78,2027-07-04,2027-07-04,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+340,Energy Storage,Ministry of Petroleum & Natural Gas,709759,"Petrochemical evacuation marketing terminal at Barmer, Rajasthan",461,461.05,153.07,2026-12-06,2026-12-06,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+341,Oil & Gas,Ministry of Petroleum & Natural Gas,400087,Redevelopment of Sobhasan Complex,886,1286.67,876.84,2026-02-28,2026-02-28,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+342,Oil & Gas,Ministry of Petroleum & Natural Gas,400119,Life Extension of 48 well platforms of Mumbai High & Heera Fields,3191,3375.9,3122.39,2018-04-30,2026-03-31,2892.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+343,Oil & Gas,Ministry of Petroleum & Natural Gas,400120,KG-DWN-98/2 Cluster - II Development Project - NELP Block,34012,34012.0,32250.0,2020-06-30,2026-06-30,2191.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+344,Oil & Gas,Ministry of Petroleum & Natural Gas,400158,Debottlenecking and Augmentation of Cryogenic facilities at Uran LPG Import Terminal,1165,1629.86,1012.27,2024-02-29,2025-12-31,671.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+345,Oil & Gas,Ministry of Petroleum & Natural Gas,400161,"PP Project, Pata",911,1299.02,1051.0,2024-01-31,2025-12-31,700.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+346,Oil & Gas,Ministry of Petroleum & Natural Gas,400167,Redevelopment of Santhal Field [Onshore-Mehsana Asset],1163,1162.56,1140.98,2026-03-31,2026-03-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+347,Oil & Gas,Ministry of Petroleum & Natural Gas,400168,"500 KTA PDHPP Project, Usar",8797,11256.0,7212.88,2025-04-08,2026-06-30,448.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+348,Oil & Gas,Ministry of Petroleum & Natural Gas,400169,Redevelopment of Linch Field,631,860.04,572.91,2025-03-31,2026-03-31,365.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+349,Oil & Gas,Ministry of Petroleum & Natural Gas,400171,2G Ethanol Biorefinery at Bathinda,1421,1421.46,1207.72,2023-02-18,2026-03-31,1137.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+350,Oil & Gas,Ministry of Petroleum & Natural Gas,604791,Numaligarh Refinery Expansion Project,12366,22494.0,17836.5,2024-07-27,2025-12-31,522.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+351,Oil & Gas,Ministry of Petroleum & Natural Gas,604795,CBR 9 MMTPA Project,31580,36354.0,1397.8,2025-06-02,2028-10-31,1247.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+352,Oil & Gas,Ministry of Petroleum & Natural Gas,604853,"Indian Oil Technology Development and Deployment Centre at R&D Campus-II, Faridabad",2282,3200.0,1850.35,2022-12-31,2026-10-31,1400.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+353,Oil & Gas,Ministry of Petroleum & Natural Gas,604859,Integrated Para Xylene [PX] and Purified Terephthalic Acid [PTA] Project at Paradip Refinery,13805,11783.0,8552.2,2024-01-31,2026-08-31,943.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+354,Oil & Gas,Ministry of Petroleum & Natural Gas,604863,Development of Surface Facilities for production and evacuation of Crude Oil and Natural Gas from Nadua and East Khagorija,683,726.93,491.68,2020-02-29,2025-12-31,2132.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+355,Oil & Gas,Ministry of Petroleum & Natural Gas,607701,"Guwahati Refinery Expansion [1.0 to 1.2 MMTPA] along with installation of CRU, Guwahati Refinery",412,577.0,451.05,2023-10-31,2026-05-31,943.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+356,Oil & Gas,Ministry of Petroleum & Natural Gas,610984,Development of Jharia CBM Block [Phase-1],431,431.0,227.0,2024-01-21,2026-03-31,800.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+357,Oil & Gas,Ministry of Petroleum & Natural Gas,610985,Construction of lube oil blending plant at Rasayani,423,526.26,326.5,2023-12-31,2025-12-31,731.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+358,Oil & Gas,Ministry of Petroleum & Natural Gas,611917,Poly Butadiene Rubber plant at Panipat,1459,2531.44,1418.65,2025-03-31,2026-06-30,456.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+359,Oil & Gas,Ministry of Petroleum & Natural Gas,612790,Power System Upgradation Project,385,385.0,164.35,2025-11-17,2026-05-12,176.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+360,Oil & Gas,Ministry of Petroleum & Natural Gas,612853,Gurdaspur Jammu Pipeline,522,521.9,233.4,2026-07-11,2026-07-11,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+361,Oil & Gas,Ministry of Petroleum & Natural Gas,616254,Visakh Raipur Pipeline Project,2212,2212.0,22.57,2027-09-10,2027-09-10,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+362,Oil & Gas,Ministry of Petroleum & Natural Gas,616858,"Construction of Field Gas Gathering Station at Baghjan area for collection, processing & transportation of natural Gas to be produced from Baghjan Field",431,430.76,331.99,2024-03-31,2025-12-31,640.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+363,Oil & Gas,Ministry of Petroleum & Natural Gas,616879,Demo Bio-ATF Project,364,364.0,39.1,2027-01-16,2027-01-16,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+364,Oil & Gas,Ministry of Petroleum & Natural Gas,616933,Lube Modernization & Bottom Upgradation Project at Mumbai Refinery,4679,4679.0,213.91,2028-03-16,2028-03-16,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+365,Oil & Gas,Ministry of Petroleum & Natural Gas,616950,PRP-VIII [Group-A],1486,1486.4,272.3,2026-02-28,2026-05-15,76.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+366,Oil & Gas,Ministry of Petroleum & Natural Gas,617302,Durgapur - Haldia Pipeline [Section-3B of JHBDPL Project],1740,2493.15,2304.3,2020-12-31,2025-12-31,1826.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+367,Oil & Gas,Ministry of Petroleum & Natural Gas,617304,"Setting up of LPG Plant with Rail Unloading Facility at Hathua, Dist. Gopalganj, Bihar",340,340.15,116.08,2027-03-01,2027-03-01,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+368,Oil & Gas,Ministry of Petroleum & Natural Gas,617818,"City Gas Distribution [CGD] Project in Gajapati, Kandhamal, Boudh, & Sonepur GA",515,514.91,22.2,2030-02-28,2030-02-28,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+369,Oil & Gas,Ministry of Petroleum & Natural Gas,617819,"City Gas Distribution [CGD] Project in Kondagaon, Bastar, Sukma, Narayanpur, Bijapur & Dantewada GA",557,557.04,8.33,2030-06-30,2030-06-30,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+370,Oil & Gas,Ministry of Petroleum & Natural Gas,617822,ATF Pipeline from BPCLs Malkapur POL Installation to  Hyderabad International airport,215,,,2027-09-30,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+371,Oil & Gas,Ministry of Petroleum & Natural Gas,617827,"Pipeline Rehabilitation Project, Phase-II",680,680.0,2.24,2029-12-17,2029-12-17,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+372,Oil & Gas,Ministry of Petroleum & Natural Gas,617828,Siliguri-Jhapa Pipeline Project,267,267.0,1.37,2029-03-29,2029-03-29,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+373,Oil & Gas,Ministry of Petroleum & Natural Gas,617830,C2/C3 Vijaipur Pata Pipeline,1792,,261.13,2027-01-15,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+374,Oil & Gas,Ministry of Petroleum & Natural Gas,617836,Coke Drum Structure Package,635,635.28,58.68,2025-12-31,2025-12-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+375,Oil & Gas,Ministry of Petroleum & Natural Gas,617837,Siliguri Marketing Terminal [SMT] Capacity Augmentation Project,484,484.0,282.21,2025-12-31,2025-12-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+376,Oil & Gas,Ministry of Petroleum & Natural Gas,617838,Augmentation of CCKPL and IDPL Pipelines capacity along with setting up of Palakkad TOP,1130,1130.0,173.9,2028-08-31,2028-08-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+377,Oil & Gas,Ministry of Petroleum & Natural Gas,701228,Kochi - Koottanad - Bangalore - Mangalore Pipeline Phase-II,2915,5909.0,4531.49,2012-12-31,2025-12-31,4748.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+378,Oil & Gas,Ministry of Petroleum & Natural Gas,701289,Capacity Expansion of Panipat Refinery from 15 to 25 MMTPA,34627,36225.0,27366.2,2024-09-30,2026-06-30,638.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+379,Oil & Gas,Ministry of Petroleum & Natural Gas,701324,Barauni Refinery Capacity Expansion from 6.0 to 9.0 MMTPA,14810,16724.0,12327.4,2023-04-30,2026-08-31,1219.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+380,Oil & Gas,Ministry of Petroleum & Natural Gas,701329,Petrochemical and Lube Integration Project at Gujarat Refinery,18936,17825.0,12940.1,2024-08-31,2026-06-30,668.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+381,Oil & Gas,Ministry of Petroleum & Natural Gas,701330,Mehsana-Bhatinda & Bhatinda-Jammu Natural Gas Pipeline,7392,7392.0,6320.0,2024-06-30,2025-12-31,549.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+382,Oil & Gas,Ministry of Petroleum & Natural Gas,701338,City Gas Distribution Maharashtra Natural Gas Limited,5535,5535.0,4011.77,2031-06-08,2031-06-08,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+383,Oil & Gas,Ministry of Petroleum & Natural Gas,701344,Dhamra Haldia Pipeline Project,1031,1125.0,879.9,2022-11-07,2025-12-31,1150.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+384,Oil & Gas,Ministry of Petroleum & Natural Gas,701346,North East Gas Grid,9265,9265.0,6608.95,2024-03-31,2026-03-31,730.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+385,Oil & Gas,Ministry of Petroleum & Natural Gas,701350,Upgradation of Facilities of Numaligarh-Siliguri Product Pipeline [NSPL] for transportation of additional products from existing 1.72 MMTPA to 5.5 MMTPA,860,860.0,636.92,2024-12-20,2025-12-31,376.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+386,Oil & Gas,Ministry of Petroleum & Natural Gas,701354,Mumbai Nagpur Jharsuguda Pipeline Project,7844,8255.0,6710.1,2023-05-14,2025-12-31,962.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+387,Oil & Gas,Ministry of Petroleum & Natural Gas,709750,Laying of new 28 inch Desal Water Pipeline and 10 inch Reject Water Pipeline between CPCL Manali Refinery and CPCL Desalination plant at Ennore,205,205.0,66.22,2025-09-21,2025-12-31,101.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+388,Oil & Gas,Ministry of Petroleum & Natural Gas,709752,HP-COAT [Crude to Olefins and Aromatics Technology] demo unit at Visakh Refinery,160,220.0,99.49,2024-06-30,2026-03-31,639.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+389,Oil & Gas,Ministry of Petroleum & Natural Gas,709753,Haldia Panagarh Pipeline Project,1010,1010.0,699.07,2025-11-08,2026-05-08,181.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+390,Oil & Gas,Ministry of Petroleum & Natural Gas,709757,"CGD Project in Banka, Dumka, Godda, Jamtara, Pakur, Sahibganj GA ID 11A.02",1377,1377.0,347.15,2030-06-30,2030-06-30,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+391,Oil & Gas,Ministry of Petroleum & Natural Gas,709758,"CGD Project in Malda, Birbhum, Murshidabad, Dakshin Dinajpur GA ID 11A.03",2628,2628.0,348.91,2030-06-30,2030-06-30,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+392,Oil & Gas,Ministry of Petroleum & Natural Gas,709760,HP TDAE Unit in Mumbai Refinery,240,240.0,70.12,2026-04-19,2026-04-19,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+393,Oil & Gas,Ministry of Petroleum & Natural Gas,709766,"City Gas Distribution Project at Kurnool, Guntur & Prakasam Districts",1420,1420.0,168.51,2030-03-31,2030-03-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+394,Oil & Gas,Ministry of Petroleum & Natural Gas,709770,City Gas Distribution Project at Pathankot District,151,151.0,8.77,2033-09-30,2033-09-30,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+395,Oil & Gas,Ministry of Petroleum & Natural Gas,709771,"City Gas Distribution Project at Beed, Jalgaon and Jalna Districts",865,865.0,73.18,2031-09-30,2031-09-30,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+396,Oil & Gas,Ministry of Petroleum & Natural Gas,709772,"City Gas Distribution Project at East Mednipore, West Mednipore & Jhargram Districts",609,609.0,58.09,2031-06-30,2031-06-30,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+397,Oil & Gas,Ministry of Petroleum & Natural Gas,709773,"City Gas Distribution Project at Jammu, Udhampur, Reasi, Samba and Kathua Districts",538,538.0,4.11,2032-03-31,2032-03-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+398,Oil & Gas,Ministry of Petroleum & Natural Gas,709774,Revamping/ Augmentation of facilities at existing port terminal at Mangalore,463,500.62,290.86,2025-12-31,2027-06-30,546.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+399,Oil & Gas,Ministry of Petroleum & Natural Gas,709776,Augmentation/Revamping of Facilities at existing Guwahati Terminal at Betkuchi,277,323.09,190.21,2026-09-30,2026-09-30,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+400,Oil & Gas,Ministry of Petroleum & Natural Gas,709777,Installation of Bitumen Manufacturing Unit along with allied facilities at Barauni Refinery,389,340.0,77.72,2025-04-30,2026-10-31,549.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+401,Oil & Gas,Ministry of Petroleum & Natural Gas,709778,Installation of new Biturox Unit along with allied facilities at Gujarat Refinery,328,287.0,172.32,2025-08-08,2026-09-30,418.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+402,Oil & Gas,Ministry of Petroleum & Natural Gas,709779,Capacity Expansion of Digboi Refinery from 0.65 to 1.0 MMTPA,768,740.0,125.07,2026-03-08,2027-07-31,510.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+403,Oil & Gas,Ministry of Petroleum & Natural Gas,709780,Construction of Additional Tankages and Allied Facilities at JNPT Terminal,341,436.14,289.92,2026-08-31,2026-08-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+404,Oil & Gas,Ministry of Petroleum & Natural Gas,709781,Revamping / Augmentation of Facilities at Mathura Bitumen Plant,260,260.12,10.38,2027-06-30,2026-12-31,-181.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+405,Oil & Gas,Ministry of Petroleum & Natural Gas,709782,ATF Pipeline from Jawaharlal Nehru Port Trust to Navi Mumbai International Airport,165,165.0,94.28,2025-08-21,2026-03-31,222.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+406,Oil & Gas,Ministry of Petroleum & Natural Gas,709783,"Installation of Multiple Effect Evaporator [MEE] for ETP-1, 2 & 4 of Panipat Refinery and Petrochemical Complex.",165,247.69,143.78,2023-06-30,2026-06-30,1096.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+407,Oil & Gas,Ministry of Petroleum & Natural Gas,709785,Laying of Natural Gas Pipeline from Hazaribagh to Ranchi [HRPL],202,202.07,61.67,2026-02-08,2026-02-08,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+408,Oil & Gas,Ministry of Petroleum & Natural Gas,709786,"Augmentation/ Revamping of Dimapur Depot, Dimapur",228,227.62,11.41,2027-11-30,2027-11-30,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+409,Oil & Gas,Ministry of Petroleum & Natural Gas,709789,Installation of Independent De- Aromatized Solvents [DAS] production facilities at MR,405,343.0,227.3,2025-07-31,2026-02-20,204.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+410,Oil & Gas,Ministry of Petroleum & Natural Gas,709790,Replacement and Extension of Jetty Pipelines [REJP] at KR,622,621.87,211.67,2026-03-31,2026-03-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+411,Oil & Gas,Ministry of Petroleum & Natural Gas,709791,City Gas Distribution Projects at Alipurduar and Cooch Behar,1017,1017.0,199.62,2030-03-31,2030-03-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+412,Oil & Gas,Ministry of Petroleum & Natural Gas,709792,"City Gas Distribution Projects at Darbhanga, Madhubani, Supaul, Sitamarhi and Sheohar districts",3638,3638.0,428.18,2030-03-31,2030-03-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+413,Oil & Gas,Ministry of Petroleum & Natural Gas,709793,"City Gas Distribution Projects at Gopalganj, Siwan, West Champaran, East Champaran and Deoria districts",3919,3919.0,431.68,2030-06-30,2030-06-30,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+414,Oil & Gas,Ministry of Petroleum & Natural Gas,709794,"City Gas Distribution Projects at Fazilka [except area already authorized], Ganganagar and Hanumangarh districts",3207,3207.0,366.34,2030-06-30,2030-06-30,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+415,Oil & Gas,Ministry of Petroleum & Natural Gas,709795,"City Gas Distribution Projects at Lakhimpur Kheri , Sitapur, Bahraich, Shravasti,Balrampur, Siddharth Nagar & Maharajganj districts",16654,16654.0,630.34,2030-06-30,2030-06-30,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+416,Oil & Gas,Ministry of Petroleum & Natural Gas,709796,City Gas Distribution Projects at the Nilgiris and Erode districts,3685,3685.0,250.98,2030-03-31,2030-03-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+417,Oil & Gas,Ministry of Petroleum & Natural Gas,709797,POL & LOBS Installations with Receipt Pipelines at Rasayani,2585,2585.0,788.46,2026-05-31,2026-05-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+418,Oil & Gas,Ministry of Petroleum & Natural Gas,709798,Ethylene Cracker Project at Bina Refinery including downstream Petrochemical Plants and expansion of Refinery,43367,43367.0,2033.0,2028-05-31,2028-05-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+419,Oil & Gas,Ministry of Petroleum & Natural Gas,709799,Setting up Polypropylene Unit at Kochi Refinery,4460,4460.0,351.85,2027-10-31,2027-10-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+420,Oil & Gas,Ministry of Petroleum & Natural Gas,709800,"CUF POL Depot at Sadashibpur [Meramundali], Odisha",394,393.54,123.06,2026-03-31,2026-03-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+421,Oil & Gas,Ministry of Petroleum & Natural Gas,709837,"Creation of Gas Dehydration  Facilities, Tripura Asset",209,131.51,70.94,2024-05-31,2026-05-31,730.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+422,Oil & Gas,Ministry of Petroleum & Natural Gas,709838,Commercial Polymer Flooding Project in Bechraji field,621,739.02,137.74,2024-11-30,2027-05-31,912.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+423,Oil & Gas,Ministry of Petroleum & Natural Gas,709839,Daman Upside Development Project,4144,6406.9,4694.85,2025-10-31,2026-02-28,120.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+424,Oil & Gas,Ministry of Petroleum & Natural Gas,709840,"Restoration of Gas Terminal, Phase-I [Part-A], Hazira",249,249.43,210.42,2025-02-10,2025-12-31,324.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+425,Oil & Gas,Ministry of Petroleum & Natural Gas,709841,Old Pipe Line Replacement [OPRP] Group-A,173,169.84,154.84,2025-07-18,2026-03-17,242.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+426,Oil & Gas,Ministry of Petroleum & Natural Gas,709842,"Kalol Redevelopment Project, Ahmedabad Asset",1487,1487.41,937.75,2027-03-31,2027-03-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+427,Oil & Gas,Ministry of Petroleum & Natural Gas,709845,"Revamping of SV Stations, Gas Terminal & Kribhco Terminal",837,837.34,301.21,2026-08-31,2026-08-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+428,Oil & Gas,Ministry of Petroleum & Natural Gas,709846,Part Replacement Pipeline Project  [PRPP],1219,1145.1,745.0,2024-05-15,2026-01-31,626.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+429,Oil & Gas,Ministry of Petroleum & Natural Gas,709847,Pipeline Network Project Rudrasagar,345,344.99,220.37,2026-04-27,2026-04-27,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+430,Oil & Gas,Ministry of Petroleum & Natural Gas,709848,MHN TCPP PGC BGC Project [MTPBP],2329,2354.23,1148.9,2026-05-19,2026-05-19,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+431,Oil & Gas,Ministry of Petroleum & Natural Gas,709849,PRP-VIII Group B [NH & BS Asset],2380,3165.53,1806.9,2026-02-28,2026-05-15,76.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+432,Oil & Gas,Ministry of Petroleum & Natural Gas,709850,Borholla GGS Life Extension Project [BLEP],199,198.7,58.92,2026-05-16,2026-05-16,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+433,Oil & Gas,Ministry of Petroleum & Natural Gas,709851,Integrated Development of 4 Contract Areas under DSF-II,6184,6183.79,697.67,2027-04-30,2027-04-30,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+434,Oil & Gas,Ministry of Petroleum & Natural Gas,709864,DCU Revamp Project,370,370.0,271.34,2024-07-17,2026-06-30,713.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+435,Oil & Gas,Ministry of Petroleum & Natural Gas,709865,Power Recovery Turbine [PRT] in PFCCU unit as an Energy Conservation Scheme,294,293.5,97.22,2024-12-31,2025-12-31,365.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+436,Healthcare,"Ministry of Ports, Shipping and Waterways",708662,Establishment of 600 bed super specialty hospital with optional development of Medical college and further expansion on PPP basis.,693,693.0,58.0,2026-06-30,2027-12-31,549.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+437,Inland Waterways,"Ministry of Ports, Shipping and Waterways",611142,Fairway Development in West Bengal Farakka - Kahelgaon,177,197.0,383.41,2023-07-31,2024-04-21,265.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+438,Inland Waterways,"Ministry of Ports, Shipping and Waterways",701565,Jal Marg Vikas Project,5369,5061.15,3577.42,2023-12-31,2025-12-31,731.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+439,Shipping,"Ministry of Ports, Shipping and Waterways",400382,Rewas Port Project,6000,,5999.89,2023-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+440,Shipping,"Ministry of Ports, Shipping and Waterways",609424,"Development of Container Terminal at Tuna-Tekra, Deendayal Port on BOT Basis Under PPP Mode",4244,,817.98,2027-03-13,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+441,Shipping,"Ministry of Ports, Shipping and Waterways",617804,Mechanization of Berth No.14 for handling Containers and other cargo on DBFOT basis - Phase II,153,,24.0,2027-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+442,Shipping,"Ministry of Ports, Shipping and Waterways",701568,Construction of oil jetty No.8 at old kandla through internal resources,100,225.85,186.47,2023-02-03,2024-07-31,544.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+443,Shipping,"Ministry of Ports, Shipping and Waterways",701570,"Replacement and revamping of pipeline projects in oil jetty area, Kandla",171,211.61,137.51,2023-09-30,2025-03-31,548.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+444,Shipping,"Ministry of Ports, Shipping and Waterways",701574,Deepening and Optimization of Inner Harbour facilities including development of Western Dock on BOT basis to handle Cape size vessels,3005,,1277.52,2027-12-31,2028-10-16,290.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+445,Shipping,"Ministry of Ports, Shipping and Waterways",701576,Berth No. 2 [previously Berth 3] of HDC Mechanization Project,298,298.26,457.85,2025-09-30,2026-01-13,105.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+446,Shipping,"Ministry of Ports, Shipping and Waterways",701577,Shalukkhali Liquid Cargo Handling Facility Development Project,254,253.65,9.28,2025-08-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+447,Shipping,"Ministry of Ports, Shipping and Waterways",701586,Setting up of a Floating Storage and Regasification Unit [FSRU] - Mumbai,900,,65.0,2026-11-11,2026-11-11,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+448,"Tourism, Hospitality & Wellness","Ministry of Ports, Shipping and Waterways",707215,National Maritime Heritage Complex [NMHC] Phase-I,573,1238.05,515.97,2024-03-31,2025-09-30,548.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+449,Coal,Ministry of Power,400192,Tubed Coal Mine,1581,,598.62,2026-05-31,2026-05-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+450,Coal,Ministry of Power,603293,Badam Coal Mining project of NTPC,502,784.0,388.29,2056-12-31,2027-04-01,-10867.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+451,Electricity Generation,Ministry of Power,400062,"Raghunathpur Thermal Power Station Phase II [2X660 MW] at Raghunathpur, Purulia, West Bengal",17673,,1458.01,2029-06-30,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+452,Electricity Generation,Ministry of Power,400261,Patratu Thermal Power Station Expansion Project Phase-I [3x800 MW],18668,20302.0,17928.6,2023-03-31,2026-11-30,1340.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+453,Electricity Generation,Ministry of Power,602096,Subansiri Lower HE Project [2000 MW],6285,26075.5,25415.2,2010-09-08,2026-05-31,5744.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+454,Electricity Generation,Ministry of Power,602181,"TEESTA-VI HE PROJECT, SIKKIM [500 MW], executed by LANCO TEESTA HYDRO POWER LIMITED [A wholly owned Subsidiary of NHPC LTD. acquired through NCLT]",5748,5748.04,3887.11,2024-03-07,2027-12-31,1394.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+455,Electricity Generation,Ministry of Power,602182,Dibang Multipurpose Project,31876,,3776.74,2032-02-26,2032-02-26,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+456,Electricity Generation,Ministry of Power,602184,Rammam-III HEPP [3x40 MW],1382,2865.56,1393.94,2019-09-30,2029-03-31,3470.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+457,Electricity Generation,Ministry of Power,602185,Tapovan-Vishnugad HEP [4x130 MW],2978,10907.3,7291.0,2013-03-31,2029-04-30,5874.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+458,Electricity Generation,Ministry of Power,602193,Tehri Pumped Storage Plant Project [4x250 MW],4826,8339.0,8169.51,2022-06-16,2026-01-31,1325.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+459,Electricity Generation,Ministry of Power,602194,Khurja super Thermal Power Plant [2X660 MW],11089,13276.2,12952.0,2024-02-02,2025-09-30,606.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+460,Electricity Generation,Ministry of Power,602195,Vishnugad Pipalkoti Hydro Electric Project [444 MW],3860,6823.72,5328.31,2022-12-15,2027-03-31,1567.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+461,Electricity Generation,Ministry of Power,602525,"Pakal Dul [Drangdhuran] Hydroelectric Project, 1000 MW",8112,12728.0,7785.72,2020-04-27,2026-12-31,2439.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+462,Electricity Generation,Ministry of Power,602532,Kiru HE Project,4288,5409.0,3186.98,2023-09-07,2026-12-31,1211.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+463,Electricity Generation,Ministry of Power,602535,"Ratle HE Project - 850 MW, Ratle Hydroelectric Power Corporation Limited.",5282,,1298.42,2026-02-10,2028-11-28,1022.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+464,Electricity Generation,Ministry of Power,602538,Installation of FGD for 4x210 & 2x250 MW MTPS U 1-6,1037,1106.0,1111.01,2024-01-22,2025-12-31,709.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+465,Electricity Generation,Ministry of Power,602579,Buxar Thermal Power Project [1320 MW],10439,13756.6,12691.9,2024-01-08,2025-12-31,723.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+466,Electricity Generation,Ministry of Power,602582,Dhaulasidh Hydro Electric Project [66 MW],688,1561.21,997.55,2025-11-05,2027-03-31,511.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+467,Electricity Generation,Ministry of Power,602593,Luhri Stage-I Hydro Electric Project [210 MW],1811,4681.64,1818.61,2026-01-19,2030-02-28,1501.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+468,Electricity Generation,Ministry of Power,602633,382 MW Sunni Dam HEP,2615,,495.57,2027-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+469,Electricity Generation,Ministry of Power,602961,Talcher Thermal Power Station Stage III [2 x 660 MW] Expansion,11844,12543.0,5042.25,2027-05-31,2028-03-31,305.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+470,Electricity Generation,Ministry of Power,605155,Kwar HE Project,4526,,1140.08,2026-11-10,2028-03-31,507.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+471,Electricity Generation,Ministry of Power,605156,Rangit-IV HE Project [120 MW]  executed by Jal Power Corporation Ltd. [JPCL] - A wholly owned subsidiary of NHPC Ltd. acquired through NCLT,938,1828.11,1488.78,2024-05-29,2025-12-28,578.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+472,Electricity Generation,Ministry of Power,611509,"Koderma Thermal Power Station Phase II [2X800 MW] At Koderma, Jharkhand",14358,,1450.04,2029-03-14,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+473,Electricity Generation,Ministry of Power,611586,Sunni Dam Hydro Electric Project [382 MW],2615,4540.71,1015.36,2028-04-03,2029-12-31,637.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+474,Electricity Generation,Ministry of Power,611698,240MW Heo HE Project,1939,,64.76,2029-07-29,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+475,Electricity Generation,Ministry of Power,611699,186 MW Tato-I H E Project,1750,,63.73,2029-07-29,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+476,Electricity Generation,Ministry of Power,611930,Lara Super Thermal Power Project Stage-II [2 x 800 MW],15530,16106.0,3131.26,2028-06-30,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+477,Electricity Generation,Ministry of Power,612142,"Singrauli Super Thermal Power Project, Stage-III [2x800 MW]",17195,,2211.69,2030-02-28,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+478,Electricity Generation,Ministry of Power,617188,"Sipat Super Thermal Power Project, Stage-III [1x800 MW]",9791,,963.88,2029-09-30,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+479,Electricity Generation,Ministry of Power,709747,Bagodara Solar Power Project,339,,317.59,2025-12-31,2025-12-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+480,Electricity Generation,Ministry of Power,709748,BIKANER SOLAR POWER PROJECT,5492,,5376.34,2024-04-04,2025-12-31,636.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+481,Transmission & Distribution,Ministry of Power,400005,Transmission Network Expansion in Gujarat to increase its ATC from ISTS Part B,4546,,4318.95,2023-06-12,2025-12-31,933.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+482,Transmission & Distribution,Ministry of Power,602223,Comprehensive Scheme for Strengthening of Transmission and Distribution [T&D] Systems [CSST&DS] in Arunachal Pradesh and Sikkim,4754,9129.32,7778.18,2018-12-19,2027-03-31,3024.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+483,Transmission & Distribution,Ministry of Power,607709,NORTH EASTERN REGION POWER SYSTEM IMPROVEMENT PROJECT [NERPSIP],5111,6700.0,5410.25,2018-12-31,2026-03-31,2647.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+484,Transmission & Distribution,Ministry of Power,611657,Transmission scheme for evacuation of 4.5GW RE injection at Khavda PS under Phase II- Part C,2821,,2783.19,2025-03-31,2025-12-31,275.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+485,Transmission & Distribution,Ministry of Power,611659,Transmission system strengthening scheme for evacuation of power from solar energy zones in Rajasthan[8.1 GW] under phase-II- Part E,1433,1433.0,1418.67,2024-09-30,2025-12-31,457.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+486,Transmission & Distribution,Ministry of Power,611735,Transmission system for evacuation of power from REZ in Rajasthan 20GW under Phase-III Part J,331,,139.02,2025-03-31,2026-07-31,487.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+487,Transmission & Distribution,Ministry of Power,611947,Transmission System for Evacuation of Power from REZ in Rajasthan 20GW under Phase III- Part E2,428,,308.38,2025-06-15,2026-03-31,289.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+488,Transmission & Distribution,Ministry of Power,611948,Transmission system for evacuation of power from REZ in Rajasthan 20 GW under Phase-III part H,2211,,1975.34,2025-04-30,2026-01-31,276.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+489,Transmission & Distribution,Ministry of Power,611949,Transmission system for evacuation of power from REZ in Rajasthan 20 GW under Phase-III part C1,1796,,1580.49,2025-04-30,2026-03-31,335.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+490,Transmission & Distribution,Ministry of Power,611950,Transmission system for evacuation of power from REZ in Rajasthan 20 GW under Phase-III part B1,2191,,2000.84,2025-04-30,2025-12-31,245.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+491,Transmission & Distribution,Ministry of Power,611951,Transmission system for evacuation of power from REZ in Rajasthan 20GW under Phase-III Part E1,689,,668.0,2025-02-28,2025-12-31,306.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+492,Transmission & Distribution,Ministry of Power,611966,Transmission System for Evacuation of power from Potential RE Zone in Khavda Area of Gujarat under phase IV 7GW-Part E4,224,,89.66,2025-07-09,2026-03-31,265.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+493,Transmission & Distribution,Ministry of Power,611967,Transmission Scheme for Solar Energy Zone in Ananthpuram 2500MW and Kurnool 1000MW,1249,,1023.92,2025-09-30,2026-03-31,182.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+494,Transmission & Distribution,Ministry of Power,612132,Transmission Scheme for Evacuation of power from REZ in Rajasthan [20 GW] under Phase-III Part D [Sikar Khetri Transmission Ltd],2000,,1528.4,2025-08-08,2026-06-30,326.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+495,Transmission & Distribution,Ministry of Power,612133,Transmission System for Evacuation of power from Rajasthan REZ Ph-IV [Part-1] [Bikaner Complex] Part D [Neemrana Bareilly Transmission Ltd],2056,,1603.68,2025-12-26,2026-06-30,186.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+496,Transmission & Distribution,Ministry of Power,612134,Transmission System for Evacuation of power from Rajasthan REZ Ph-IV [Part-1] [Bikaner Complex] Part A [Bikaner Neemrana  Transmission Ltd],2998,,2098.83,2025-12-26,2026-06-30,186.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+497,Transmission & Distribution,Ministry of Power,612138,"Transmission Scheme for Solar Energy Zone in Bidar [2500 MW], Karnataka [Bidar Transmission Ltd]",2148,,1505.69,2026-02-08,2026-06-30,142.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+498,Transmission & Distribution,Ministry of Power,612139,Transmission system for Evacuation of Additional 7 GW RE power from Khavda RE park under Phase-III Part B [Vataman Transmission Limited],3752,,2025.98,2025-12-25,2026-12-31,371.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+499,Transmission & Distribution,Ministry of Power,612140,Transmission Scheme for Integration of Renewable Energy Zone [Phase II] in Koppal II [Phase A&B] and gadag II[Phase A] in Karnataka [POWERGRID KOPPAL GADAG TRANSMISSION LIMITED],2889,,1733.63,2025-12-25,2026-06-30,187.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+500,Transmission & Distribution,Ministry of Power,612151,Transmission System for Evacuation of Power from potential Renewable Energy zone in Khavda Area of Gujarat under Phase IV [7 GW] Part E3,334,,207.08,2025-07-31,2026-03-31,243.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+501,Transmission & Distribution,Ministry of Power,612855,Transmission System for Evacuation of Power from Potential Energy Renewable Zone in Khavda Area of Gujarat under Ph-IV [7GW] Part E2,679,,142.59,2026-05-30,2026-06-30,31.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+502,Transmission & Distribution,Ministry of Power,612856,Augmentation of 1x1500 MVA 3rd  765/400 kV transformation capacity at Kurnool New Substation,164,,88.34,2025-09-26,2026-01-31,127.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+503,Transmission & Distribution,Ministry of Power,615332,Transmission System for Evacuation of Power from Rajasthan REZ Ph-IV [Part-2 5.5 GW][Jaisalmer/Barmer Complex] Part B [SPV Name  POWERGRID Sirohi Transmission Limited],3279,,1040.75,2026-08-22,2026-12-31,131.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+504,Transmission & Distribution,Ministry of Power,615333,Transmission System for Evacuation of Power from Rajasthan REZ Ph-IV [Part-2 5.5 GW] [Jaisalmer/Barmer Complex] Part D [SPV Name POWERGRID Beawar Mandsaur Transmission Limited],2227,,801.72,2026-08-21,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+505,Transmission & Distribution,Ministry of Power,615334,Transmission System for Evacuation of Power from Rajasthan REZ Ph-IV [Part-2 5.5 GW] [Jaisalmer/Barmer Complex] Part E [SPV Name POWERGRID Mewar Transmission Limited],3251,,1137.85,2026-08-18,2027-03-31,225.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+506,Transmission & Distribution,Ministry of Power,615335,Transmission System Strengthening for Interconnections of  Bhadla-III & Bikaner III Complex [SPV Name POWERGRID BHADLA BIKANER TRANSMISSION LIMITED],1382,,201.08,2026-08-29,2026-12-31,124.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+507,Transmission & Distribution,Ministry of Power,615337,Additional Transmission System for evacuation of Power from Bhadla-III PS as part of Rajasthan REZ Phase III Scheme [20 GW] [SPV Name POWERGRID Bhadla-III Power Transmission Limited],369,,113.89,2026-02-27,2026-03-31,32.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+508,Transmission & Distribution,Ministry of Power,615338,TRANSMISSION SYSTEM FOR EVACUATION OF POWER FROM RAJASTHAN REZ PH -IV [PART-2 5.5 GW] [JAISALMER/BARMER COMPLEX] PART F [SPV Name POWERGRID BARMER I TRANSMISSION LIMITED],2735,,533.05,2026-11-06,2027-06-30,236.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+509,Transmission & Distribution,Ministry of Power,615339,Transmission system for evacuation of power from Rajasthan REZ Ph-IV [Part-3/6GW] [Bikaner complex] Part A [SPV Name POWERGRID Bikaner IV Transmission Limited],5969,,698.04,2026-11-11,2027-03-31,140.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+510,Transmission & Distribution,Ministry of Power,615340,TRANSMISSION SYSTEM FOR EVACUATION OF POWER FROM RAJASTHAN REZ PH-IV [PART-3/ 6 GW] [BIKANER COMPLEX] PART B [SPV Name POWERGRID Siwani Transmission Limited],5357,,666.56,2026-11-11,2027-03-31,140.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+511,Transmission & Distribution,Ministry of Power,615342,Augmentation of Transformation Capacity at jam Khambhaliya PS [GIS] [SPV Name POWERGRID Jam Khambhaliya Transmission Limited],329,,13.17,2026-07-14,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+512,Transmission & Distribution,Ministry of Power,615343,Provision of Dynamic Reactive Compensation at Khavda pooling Station 1 [KPS1] and Khavda Pooling station 3 [KPS3],501,,8.11,2026-11-06,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+513,Transmission & Distribution,Ministry of Power,615344,Transmission System for Evacuation of Power from Rajasthan REZ Ph-IV [Part-2  5.5GW] [Jaisalmer/Barmer Complex] Part H1 [POWERGRID KURAWAR TRANSMISSION LIMITED],3674,,808.28,2026-10-14,2027-03-31,168.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+514,Transmission & Distribution,Ministry of Power,615345,Transmission System for Evacuation of Power from Potential Renewable Energy Zone in Khavda area of Gujarat under Phase-IV [7GW] Part B [SPV Name POWERGRID South Olpad Transmission Limited],4766,,762.56,2026-10-14,2027-03-31,168.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+515,Transmission & Distribution,Ministry of Power,615346,Transmission System for Evacuation of Power from Rajasthan REZ Ph-IV [Part-2 5.5 GW] [Jaisalmer/Barmer Complex] Part C [SPV Name POWERGRID Mandsaur Transmission Limited],2708,,1056.12,2026-08-18,2026-12-31,135.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+516,Transmission & Distribution,Ministry of Power,615347,TRANSMISSION SYSTEM FOR EVACUATION OF POWER FROM POTENTIAL RENEWABLE ENERGY ZONE IN KHAVDA AREA OF GUJARAT UNDER PHASE-V [8 GW] PART A   [SPV Name POWERGRID West Central Transmission Limited],24819,,1985.98,2029-05-18,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+517,Transmission & Distribution,Ministry of Power,616670,Transmission System for evacuation of Power from Rajasthan REZ Ph-IV [Part-4 3.5 GW] Part A  [SPV name POWERGRID Ghiror Transmission Limited],5846,,566.68,2026-12-30,2027-03-31,91.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+518,Transmission & Distribution,Ministry of Power,616671,Transmission System under ISTS for evacuation of Power from Kudankulam Unit-3&4 [2x1000 MW]  [SPV Name POWERGRID Kudankulam Tarnsmission Limited],548,,65.46,2026-12-31,2026-12-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+519,Transmission & Distribution,Ministry of Power,616672,System Strengthening at Koppal-II and GadagII for integration of RE generation projects [SPV Name POWERGRID Koppal Gadag Augmentation Transmission Limited],1354,,44.0,2027-06-01,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+520,Transmission & Distribution,Ministry of Power,617068,"Augmentation of Transformation Capacity by 3x500 MVA, 400/220 KV ICTS [6th-8th] and 1x1500 MVA, 765/400 KV ICT [4th] at Bidar PS  [SPV Name- POWERGRID Bidar Augmentation Transmission Limited]",288,,7.41,2027-06-30,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+521,Transmission & Distribution,Ministry of Power,617069,Augmentation of Transformation Capacity at KPS1 [GIS] and KPS2 [GIS] [Phase-V Part B1 and Part B2 Scheme]  [SPV Name- POWERGRID KPS1 and 2 Augmentation Transmission Limited],466,,23.99,2027-02-17,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+522,Transmission & Distribution,Ministry of Power,617179,Transmission Scheme for evacuation of Power from Ratle HEP [850 MW] & kiru [624 MW] Part B,219,,2.61,2026-07-14,2027-03-31,260.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+523,Transmission & Distribution,Ministry of Power,617181,"Augmentation at Fatehgarh-II PS, Fatehgarh-IV PS [Section-II] and Barmer-I PS [POWERGRID Fatehgarh Barmer Augmentation Transmission Limited]",404,,16.16,2026-12-20,2027-03-31,101.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+524,Transmission & Distribution,Ministry of Power,617182,Augmentation of Banaskantha [Raghanesda] PS [GIS] [POWERGRID Banaskantha Transco Limited],172,,17.27,2027-03-23,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+525,Transmission & Distribution,Ministry of Power,617183,Transmission system strengthening at Kurnool- III PS for integration of additional RE generation projects [POWERGRID Kurnool III PS RE Transmission Limited],2886,,141.7,2027-12-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+526,Transmission & Distribution,Ministry of Power,617184,Transmission Scheme for integration of Davanagere/ Chitradurga and Bellary REZ in Karnataka  [POWERGRID Chitradurga Bellary REZ Transmission Limited],3453,,62.15,2027-09-20,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+527,Transmission & Distribution,Ministry of Power,617185,Transmission System for Integration of Kurnool-IV REZ  Phase-I [for 4.5 GW] [POWERGRID Kurnool-IV Transmission Limited],5550,,333.0,2027-03-23,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+528,Transmission & Distribution,Ministry of Power,617186,Rajasthan REZ Ph-V [Part-1- 4 GW] [Sirohi/Nagaur] Complex [Rajasthan V Power Transmission Limited],5028,,319.73,2027-03-23,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+529,Transmission & Distribution,Ministry of Power,617269,Transmission System for Strengthening to facilitate evacuation of power from Bhadla/Bikaner Complex,213,,2.1,2026-06-09,2026-08-31,83.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+530,Transmission & Distribution,Ministry of Power,617270,Eastern Region  Expansion Scheme-44 [ERES-44],409,,0.32,2026-05-24,2026-06-30,37.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+531,Transmission & Distribution,Ministry of Power,617271,Eastern Region  Expansion Scheme-43 [ERES-43],343,,0.71,2026-03-01,2026-06-30,121.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+532,Transmission & Distribution,Ministry of Power,617272,Implementation of LILO of both circuits of 400KV vindhyachal PS-Sasan D/C Line at Hindalco Switchyard,370,,22.2,2026-12-06,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+533,Transmission & Distribution,Ministry of Power,617279,Transmission System for evacuation of power from Mahan Energen Limited Generating Station in Madhya Pradesh [SPV Name - POWERGRID MEL Power Transmission Limited],558,,33.48,2027-12-04,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+534,Transmission & Distribution,Ministry of Power,617326,Implementation of Transmission Systems in the State of Jharkhand consisting of 400/220/132/33 kV transmission lines and substations under Jharkhand Consultancy Project,1842,,1648.05,2026-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+535,Transmission & Distribution,Ministry of Power,617375,North Eastern Region Expansion Scheme-XXIII [NERES-XXIII],209,,0.04,2028-02-03,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+536,Transmission & Distribution,Ministry of Power,617391,Augmentation of Transformation Capacity at Bhuj-II PS [GIS],488,,0.22,2026-11-23,2027-03-31,128.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+537,Transmission & Distribution,Ministry of Power,617405,Jamnagar Transmission Limited,4000,,,2026-10-14,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+538,Transmission & Distribution,Ministry of Power,617801,Provision of ICT Augmentation & Bus Reactor at Bhuj-II PS,582,,0.2,2026-12-18,2027-03-31,103.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+539,Transmission & Distribution,Ministry of Power,617802,Augmentation of Transformation Capacity and Implementation of Line Bays at  Mandsaur S/S for RE Interconnection [SPV Name- POWERGRID Mandsaur I RE Transmission Limited],319,,0.1,2028-03-30,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+540,Transmission & Distribution,Ministry of Power,617803,Transmission System Strengthening at Davanagere for Integration of RE Generation [SPV Name - POWERGRID Davanagere Power Transmission Limited],379,,6.97,2027-09-24,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+541,Transmission & Distribution,Ministry of Power,617806,Transmission System for Integration of Ananthapur 2 REZ Phase 1 for 4.5 GW. SPV Name Anantapuram 2 REZ Transmission Ltd,4536,,208.88,2027-03-30,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+542,Transmission & Distribution,Ministry of Power,617807,Inter-regional [NR-WR] Transmission System strengthening to relieve the loading of 765 kV Vindhyachal-Varanasi D/c line,2368,,0.1,2027-10-16,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+543,Transmission & Distribution,Ministry of Power,617808,Inter-Regional Strengthening between SR Grid and WR Grid,1007,,0.1,2027-10-17,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+544,Transmission & Distribution,Ministry of Power,900808,Transmission System for Kurnool Wind Energy Zone/ Solar Energy Zone  Part-A and Part-B,3547,,3404.59,2024-11-30,2026-01-31,427.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+545,Railways,Ministry of Railways,400019,DHULE [BORVIHIR] - NARDANA NEW LINE [50.60 KMS],493,1170.83,288.08,2026-12-31,2027-09-30,273.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+546,Railways,Ministry of Railways,400022,Taranga Hill-Abu Road via Ambaji,2798,2798.0,2037.04,2030-07-31,2030-07-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+547,Railways,Ministry of Railways,400023,Construction of New BG line between Hassan to Belur [27 Km],749,,,2028-04-30,2027-04-30,-366.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+548,Railways,Ministry of Railways,400045,Proposed 6 nos Road Over Bridge [ROB] at different locations under MCL Talcher Under Deposit Scheme.,168,,69.85,2025-03-31,2025-01-31,-59.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+549,Railways,Ministry of Railways,400204,Bahraich-Shravasti-Balrampur-Siddharthnagar -Santkabir nagar,4940,4939.78,1253.71,2030-10-30,2030-10-31,1.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+550,Railways,Ministry of Railways,400205,Sahjanwa-Dohrighat,1320,1319.75,485.96,2029-03-31,2029-03-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+551,Railways,Ministry of Railways,400220,Kharsia-Dharamjaygarh with Spur line [East Corridor-Phase 1],3055,3438.0,2624.33,2018-09-30,2026-03-31,2739.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+552,Railways,Ministry of Railways,400223,Nagapattinam-Tiruturaipundi and Karaikal-Peralam New Line,713,981.0,598.38,2027-03-26,2028-03-31,371.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+553,Railways,Ministry of Railways,400232,Brundamal-Jharsuguda- flyover connection for joining downline,297,297.0,209.57,2026-12-26,2026-12-26,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+554,Railways,Ministry of Railways,400234,Third Railway Line between Patratu-Sonnagar [281 kms],8975,8975.0,4950.0,2026-03-31,2026-07-31,122.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+555,Railways,Ministry of Railways,400247,Kalinarayanpur-Krishnanagar Doubling Alongwith Krishnanagar - Chapra New Line And Naihati-Ranaghat 3rd Line.,1000,1000.0,1053.99,2027-02-28,2027-02-28,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+556,Railways,Ministry of Railways,400253,Vizianagaram - Titlagarh 3rd line  [272 Km including By - pass line of 7.68 KM],4803,6669.91,5722.01,2025-12-26,2025-12-26,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+557,Railways,Ministry of Railways,400254,Sakri -Hasanpur [via Harnagar - Kusheshwar Asthan] New Railway line,735,,588.66,2024-12-31,2027-03-31,820.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+558,Railways,Ministry of Railways,400271,Wardha-Nanded Via Yavatmal New BG Line,3445,3445.0,3002.93,2025-03-28,2026-12-31,643.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+559,Railways,Ministry of Railways,400273,Tarakeshwar-Bishnupur New Line [82.47 km],1189,1542.0,1330.49,2019-03-31,2026-02-28,2526.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+560,Railways,Ministry of Railways,400275,Tindivanam-Nagari New Line Project [184.5 km],3631,3631.0,1113.53,2025-09-16,2028-03-31,927.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+561,Railways,Ministry of Railways,400277,Dum Dum Airport-New Garia via Rajarhat-Construction of Metro Railway,8964,8964.0,8316.32,2025-12-31,2026-03-31,90.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+562,Railways,Ministry of Railways,400280,Ph II extension of MRTS from Velachery to St Thomas Mount,734,734.01,475.73,2025-07-24,2025-09-30,68.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+563,Railways,Ministry of Railways,400291,Doubling of Kirandul-Jagdalpur Line [150 km],1589,1798.0,1576.81,2020-03-31,2025-12-31,2101.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+564,Railways,Ministry of Railways,400298,Nadikudi - Srikalahasti New Line,2312,5932.0,2421.35,2027-05-31,2028-03-31,305.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+565,Railways,Ministry of Railways,602792,Gauge Conversion of Kendri-Dhamtari  including Abhanpur - Rajim Branch line 67.20 Kms - 2nd Material Modification to Raipur Titlagarh doubling.,1171,1171.0,377.41,2025-02-28,2026-03-31,396.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+566,Railways,Ministry of Railways,602797,"Sainthia, Sitarampur, Mughalsarai, Allahabad & Etawah - Bypass Line Project",462,461.64,193.39,2027-03-31,2027-03-27,-4.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+567,Railways,Ministry of Railways,611452,MUMBAI CENTRAL VIRAR VADODARA AHMEDABAAD TRAIN PROTECTION SYSTEM 500 RKM,311,311.0,263.42,2025-12-31,2026-12-31,365.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+568,Railways,Ministry of Railways,611614,Dedicated Test Track for RDSO Phase II,819,967.06,471.0,2026-11-30,2026-11-26,-4.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+569,Railways,Ministry of Railways,611615,Malugur- Palasamudram New Line Project [17.975 Km],342,,,2027-11-30,2027-12-31,31.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+570,Railways,Ministry of Railways,611669,NER Provision of Automatic Block Signalling on Gorakhpur Cantt[Excl]  Chhapra Gramin & Burhwal Jn [Excl]  Sitapur Jn section of high density routes,380,,24.53,2027-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+571,Railways,Ministry of Railways,611751,AURANGABAD-ANKAI - DOUBLING PROJECT 98.25 Km,961,,555.02,2027-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+572,Railways,Ministry of Railways,611752,GOOTY-PENDEKALLU DOUBLING  29.225 Km,352,351.83,18.0,2027-03-31,2027-03-27,-4.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+573,Railways,Ministry of Railways,611754,GUNTAKAL WEST-MALLAPPA GATE RAIL OVER RAIL - ROR TRACK,293,,0.0,2026-07-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+574,Railways,Ministry of Railways,611849,Devgarh Madariya - Nathdwara Gauge Conversion [82.54 Km] part of Marwar - Mavli Gauge Conversion [152 Km],969,,151.53,2028-06-01,2028-06-28,27.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+575,Railways,Ministry of Railways,611861,Rewari - Kathuwas Doubling Project [27.72 Km],352,352.0,275.26,2027-06-30,2027-06-27,-3.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+576,Railways,Ministry of Railways,611884,Bhiwani - Dobh Bahali Doubling Project [42.30 Km],471,471.0,219.67,2028-02-29,2028-02-28,-1.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+577,Railways,Ministry of Railways,611918,Kosamba Umarpada 70 Km,468,,20.28,2027-03-30,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+578,Railways,Ministry of Railways,611927,Kurnool - Setting up facilities for coach midlife rehabilitation workshop,561,,276.66,2023-12-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+579,Railways,Ministry of Railways,611929,Maintenance cum workshop depot for Vande Bharat Sleeper Trains as per conditions under WTA 527,167,,0.0,2024-12-29,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+580,Railways,Ministry of Railways,611937,Adraj Moti Vijapur 40 Kms,418,417.53,502.23,2026-05-31,2025-12-31,-151.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+581,Railways,Ministry of Railways,611943,New Broad Gauge line between Naliya to Jakhau Port,410,410.26,7.0,2028-01-31,2028-01-28,-3.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+582,Railways,Ministry of Railways,611944,Quadrupling between Gandhidham Adipur with Y connection at Adipur for providing direct entry towards Mundra Port and Bhuj and high level platform at Gopalpur 11Kms,152,152.44,102.65,2026-03-31,2026-01-31,-59.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+583,Railways,Ministry of Railways,611945,Petlad Bhadran 23 Kms,307,307.11,13.59,2030-05-31,2030-05-30,-1.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+584,Railways,Ministry of Railways,611970,Samlaya Timba Road 54 km,670,670.17,45.02,2030-03-31,2030-03-30,-1.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+585,Railways,Ministry of Railways,611971,Samni Jambusar 24 km,350,349.93,67.73,2030-03-31,2030-03-30,-1.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+586,Railways,Ministry of Railways,611974,Western Railway Samakhiali Gandhidham Quadrupiling 53 Kms,1430,,230.24,2026-12-30,2027-06-30,182.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+587,Railways,Ministry of Railways,611977,Dahod Creation of Infrastructure facilities for 9000 HP Electric locomotives Manufacturing  at,487,,108.69,2025-02-28,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+588,Railways,Ministry of Railways,611978,Dahod Rolling Stock Workshop Provision of Infrastructure for CBS at,158,,47.31,2025-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+589,Railways,Ministry of Railways,611979,Sabarmati  Setting up of Maintenance Facilities for Train Sets Phase ii,250,,103.21,2025-06-30,2026-03-31,274.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+590,Railways,Ministry of Railways,612072,4th LINE BETWEEN BAREJADI NANDEJ-SANAND-AHMEDABAD BYPASS,962,961.67,359.61,2027-03-31,2028-07-31,488.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+591,Railways,Ministry of Railways,612096,Construction of Balurghat-Hilli new BG Line,1209,1181.57,405.31,2027-03-31,2027-03-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+592,Railways,Ministry of Railways,612815,4th line between Nipania Bhatapara 14.4 Km,170,,1.34,2027-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+593,Railways,Ministry of Railways,612827,Flyover between Pendurthi and Simhachalam North to avoid surface crossing at Simhachalam  7.135 km    PB 73 of 2023  24 NR,184,,5.15,2027-04-30,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+594,Railways,Ministry of Railways,612834,3rd & 4th line between Sarla - Sason [8 km] [PB 73/2023-24/NR],252,,91.45,2025-12-28,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+595,Railways,Ministry of Railways,613002,Redevelopment of Chennai Egmore Station,842,,340.0,2026-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+596,Railways,Ministry of Railways,613003,Dharamjaigarh-Korba 63 km,1686,,288.83,2026-08-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+597,Railways,Ministry of Railways,613015,Redevelopment of Chhatrapati Shivaji Maharaj Terminus [CSMT] and construction of associated infrastructure,1813,,614.86,2027-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+598,Railways,Ministry of Railways,613785,Redevelopment of New Delhi Railway Station and construction of associated infrastructure,4744,,129.61,2028-12-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+599,Railways,Ministry of Railways,613786,"Redevelopment of Ahmedabad railway station and associated infrastructure on engineering, procurement and construction mode",2379,,753.62,2028-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+600,Railways,Ministry of Railways,616227,Chandil - Anara - Damodar - 3rd line [121.26 km],1932,,0.3,2029-09-30,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+601,Railways,Ministry of Railways,616586,Bangriposi-Gorumahisani new line [ 85.60 km ],2269,,4.08,2029-12-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+602,Railways,Ministry of Railways,616587,Badampahar-Kendujhargarh new line [82.06 km],1876,,1.04,2029-12-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+603,Railways,Ministry of Railways,616588,Buramara-Chakulia new line [59.96 km],1459,,3.33,2029-12-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+604,Railways,Ministry of Railways,616695,Paradeep - Badabandha 3rd & 4th Line / 18.51kms,300,,,2028-11-30,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+605,Railways,Ministry of Railways,616697,3rd & 4th line between Vadlapudi -Gate Jn. cabin and Tie line between Gate Junction to Gangavaram port,154,,20.58,2026-06-30,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+606,Railways,Ministry of Railways,616699,Multi tracking of Son Nagar-Andal 374.53 rkm & 814.38 tkm,12334,,420.86,2028-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+607,Railways,Ministry of Railways,616701,Lumding Furkating Doubling Project 140 km,2124,,13.74,2028-02-29,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+608,Railways,Ministry of Railways,616841,PUSHKAR- MERTA CITY NEW LINE,800,,14.64,2026-12-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+609,Railways,Ministry of Railways,616842,LUNI- SAMDARI- BHILDI DOUBLING,3086,,363.31,2027-07-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+610,Railways,Ministry of Railways,616843,AJMER- CHANDERIYA DOUBLING,1635,,140.65,2027-06-30,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+611,Railways,Ministry of Railways,616856,Doubling between Bhadrachalam Road and Dornakal,770,,16.34,2029-04-13,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+612,Railways,Ministry of Railways,616857,Doubling between Motumari  Vishnupuram - 88.81 Km and Rail over Rail - RoR at Motumari - 10.877 Km,1596,,14.45,2029-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+613,Railways,Ministry of Railways,617200,KHARSIA- NAYA RAIPUR-PARMALKASA 5th and 6th Line [278KM],7854,,,2031-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+614,Railways,Ministry of Railways,617201,Gondia-Balharshah [Chanda Fort] Doubling [240 Km],4373,,0.29,2031-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+615,Railways,Ministry of Railways,617210,Tiupati Katpadi 104.39 kms,1216,,0.1,2029-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+616,Railways,Ministry of Railways,617211,Doubling of Guntur Bibinagar 239 Km,2853,,75.78,2029-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+617,Railways,Ministry of Railways,617212,Doubling between Mudkhed  Medchal & Mahbubnagar  Dhone section 417.88 Km,4686,,778.34,2029-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+618,Railways,Ministry of Railways,617214,Rail Connectivity to Errupalem Amravati Namburu 57 Km,2047,,14.49,2027-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+619,Railways,Ministry of Railways,617215,Doubling between Parbhani  Parli Vaijanath stations  64.71 Km,770,,25.4,2028-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+620,Railways,Ministry of Railways,617216,3rd Line between Gudur Renigunta 83.17 Km,877,,29.04,2027-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+621,Railways,Ministry of Railways,617224,Gorakhpur-Valmikinagar Doubling project,1120,,269.67,2027-12-30,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+622,Railways,Ministry of Railways,617231,Construction of Bulb line at Nabinagar  Ankorah of East Central Railway,612,,,2028-06-30,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+623,Railways,Ministry of Railways,617252,Anandnagar - Ghugli via Maharajganj New line 52.7 km,958,,454.36,2028-03-21,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+624,Railways,Ministry of Railways,617284,Chunar-Chopan doubling project,1424,,58.77,2028-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+625,Railways,Ministry of Railways,617333,Surface triangle line bet. Bhadura stn and new crossing stn Karma,200,,,2027-02-28,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+626,Railways,Ministry of Railways,617345,SER Upgradation of maintenance infrastructure at Shalimar into Vande Bharat Chair Car maintenance cum workshop depot.,227,,21.22,2026-10-22,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+627,Railways,Ministry of Railways,617361,Babupeth - Sasti New Rail Line [13.114 KMs],363,362.81,0.47,2028-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+628,Railways,Ministry of Railways,617364,Double Chord line Between Nilaje-Kopar,338,205.0,6.39,2028-07-26,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+629,Railways,Ministry of Railways,617370,Doubling between Jaunpur Jn - Zaffarabad 6.28 km,181,,4.0,2027-01-30,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+630,Railways,Ministry of Railways,617372,Doubling between Pradhankunta-Patherih-Bhojudih of East Central Railway,349,,108.89,2025-12-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+631,Railways,Ministry of Railways,617373,Jhajha-Batai New Line Project,588,,3.05,2027-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+632,Railways,Ministry of Railways,617374,"Dallirajhara - Rowghat New Rail Line Project, Phase-I",1516,1881.26,2053.12,2025-03-31,2026-02-28,334.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+633,Railways,Ministry of Railways,617379,Development of New Bijwasan Railway Terminal,446,,521.74,2020-03-31,2025-12-31,2101.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+634,Railways,Ministry of Railways,617390,Sardega -Bhalumuda New Double line [37.24 Km],1282,,128.0,2028-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+635,Railways,Ministry of Railways,617403,SADULPUR - CHURU  DOUBLING PROJECT,469,,128.6,2026-06-30,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+636,Railways,Ministry of Railways,617404,POKHRAN - RAMDEVRA New Line,189,,,2028-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+637,Railways,Ministry of Railways,617406,RATLAM- DUNGARPUR VIA BANSWARA NEW LINE PROJECT,2417,,6.79,2028-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+638,Railways,Ministry of Railways,617408,NATHDWARA- NATHDWARA TOWN NL,166,,83.34,2027-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+639,Railways,Ministry of Railways,617409,Railway Manufacturing Unit,521,,420.0,2026-12-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+640,Railways,Ministry of Railways,617824,Bakhtiyarpur-Rajgir-Tilaiya [Single line section]104km,2017,,,2029-10-01,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+641,Railways,Ministry of Railways,617832,Koderma-Arigada Doubling 133.38 Km of East Central Railway,2887,,,2029-12-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+642,Railways,Ministry of Railways,703585,Yeshvanthpur - Channasandra Doubling Project [21.70 Km],314,683.57,152.31,2024-03-31,2026-03-31,730.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+643,Railways,Ministry of Railways,703586,Baiyyappanahalli - Hosur Doubling Project [48 km],499,748.7,630.41,2024-03-31,2026-01-31,671.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+644,Railways,Ministry of Railways,705237,Western Dedicated Freight Corridor,51101,124005.0,124623.0,2022-03-31,2025-12-31,1371.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+645,Railways,Ministry of Railways,705244,Coach Production Factory Upgradation Project,520,,192.25,2021-12-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+646,Railways,Ministry of Railways,705252,Kazipet Wagon Overhauling Project,385,,0.0,2023-12-01,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+647,Railways,Ministry of Railways,705253,Kurnool Coach Midlife Rehabilitation Project,563,,120.0,2020-12-01,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+648,Railways,Ministry of Railways,705298,North Region Video Surveillance Project,274,,0.0,2024-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+649,Railways,Ministry of Railways,705300,Western Region Video Surveillance Project,228,,0.0,2023-12-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+650,Railways,Ministry of Railways,705356,Ahmednagar - Beed - Parli - Vaijnath  New Broad Gauge Line Railway Project [261.3 km],2539,4957.27,5140.63,2026-03-31,2026-03-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+651,Railways,Ministry of Railways,705357,Baramati Lonand New Line Project,138,1843.9,850.75,2027-03-31,2027-03-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+652,Railways,Ministry of Railways,705358,Khurda-Bolangir New Broad Gauge Rail Link [301km],3792,5089.0,5194.05,2026-12-31,2026-12-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+653,Railways,Ministry of Railways,705359,Talcher-Bimlagarh New Railway Line,1928,1928.0,1972.31,2025-03-31,2027-03-31,730.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+654,Railways,Ministry of Railways,705362,"Jaynagar-Bijalpura, incl. extn. Bet, Bijalpura-Bardibas [Nepal]",819,819.0,580.51,2022-03-31,2026-03-31,1461.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+655,Railways,Ministry of Railways,705364,Khagaria-Kusheshwar Asthan [42Km] new line project,614,1384.16,487.99,2024-12-31,2027-03-31,820.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+656,Railways,Ministry of Railways,705366,Hajipur-Sagauli New line,2067,2087.0,2015.02,2020-03-31,2026-12-31,2466.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+657,Railways,Ministry of Railways,705368,Araria Supaul New BG Line,1605,2514.0,1604.02,2024-03-31,2027-01-31,1036.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+658,Railways,Ministry of Railways,705373,"Fatuha-Islampur incl. MM for extn.of NL from Neora to Daniawan , Daniawan to  Biharsharif, Biharsharif to Barbigha , Barbigha to Shekhpura",1473,2882.0,2538.21,2023-03-31,2025-08-31,884.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+659,Railways,Ministry of Railways,705375,Koderma-Tilaiya New Line,1626,2486.62,2122.42,2025-02-28,2026-02-28,365.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+660,Railways,Ministry of Railways,705385,Pirpainti - Jasidih [100.52 Km] New BG line,2555,2555.0,784.18,2028-03-31,2028-03-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+661,Railways,Ministry of Railways,705391,Jiribam-Imphal new line project,14323,21885.9,15782.5,2026-12-31,2029-06-30,912.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+662,Railways,Ministry of Railways,705392,Dimapur [Dhansiri]-Sukhobi Kohima [Zubza] NL [82.5 Km],6663,6663.0,5634.59,2025-03-26,2025-12-29,278.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+663,Railways,Ministry of Railways,705401,Murkongselek-Pasighat,435,1250.0,771.1,2025-03-31,2026-05-31,426.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+664,Railways,Ministry of Railways,705410,Nangal Dam-Talwara New Broad Gauge Line [84 KM] and Taking Over Siding Mukerian-Talwara [29 KM],2018,2018.0,2259.62,2025-12-31,2027-12-31,730.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+665,Railways,Ministry of Railways,705419,Gwalior - Seopurkala with extension to Kota [Gauge Conversion],2913,2913.0,2120.66,2025-03-31,2026-02-28,334.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+666,Railways,Ministry of Railways,705424,Chandigarh-Baddi New Rail Line- 36 km,1540,1540.13,539.29,2026-12-31,2026-12-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+667,Railways,Ministry of Railways,705428,Bhanupalli-Bilaspur-Beri New Railway Line Project,13447,13447.0,7008.64,2026-12-31,2027-12-30,364.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+668,Railways,Ministry of Railways,705429,Rishikesh-Karnaprayag New Rail Line- 125 km,38953,38953.0,24645.2,2025-12-31,2027-03-31,455.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+669,Railways,Ministry of Railways,705432,Sivok-Rangpo New Rail Line,7877,11775.0,9647.55,2015-05-31,2027-12-31,4597.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+670,Railways,Ministry of Railways,705433,Dallirajhra- Rowghat New Railway Line - Phase I [95 km],1628,1628.0,1440.85,2025-09-30,2025-12-31,92.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+671,Railways,Ministry of Railways,705434,New Railway Line between Ginigera and Raichur [165.57 km],2565,3034.98,2108.54,2019-03-31,2027-03-31,2922.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+672,Railways,Ministry of Railways,705436,Kotapalli - Narasapur New Line,2501,2501.0,1320.81,2028-03-31,2028-03-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+673,Railways,Ministry of Railways,705437,Manoharabad-Kothapalli New Rail Line [151 km],1160,2781.0,2116.77,2027-03-31,2027-12-31,275.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+674,Railways,Ministry of Railways,705444,Gevra Road-Pendra Road New Railway Line [135 km],4970,7448.52,4696.68,2022-03-31,2025-12-31,1371.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+675,Railways,Ministry of Railways,705450,Jogbani-Biratnagar New Rail Line project,402,486.0,367.54,2022-03-31,2026-12-31,1736.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+676,Railways,Ministry of Railways,705453,"New line Dahod-Indore via Sardarpur, Jabuwa and Dhar",456,3516.77,3725.91,2027-02-28,2027-02-28,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+677,Railways,Ministry of Railways,705454,Chhota Udaipur - Dhar New Line Project [157 km],1794,1794.0,1815.94,2025-12-27,2025-12-27,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+678,Railways,Ministry of Railways,705457,Ratlam-Mhow-Khandwa-Akola Gauge Conversion,1656,6499.86,4445.82,2027-03-31,2028-09-30,549.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+679,Railways,Ministry of Railways,705458,Miyagam-Karjan-Dabhoi-Samlaya [GC],484,1039.13,621.61,2021-03-31,2026-12-31,2101.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+680,Railways,Ministry of Railways,705479,Wadsa-Gadchiroli,1886,1886.0,728.36,2027-03-31,2027-03-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+681,Railways,Ministry of Railways,705480,"Lalitpur-Satna, Rewa-Singrauli & Mahoba-Khajuraho",8914,8914.0,6447.32,2027-03-31,2027-12-31,275.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+682,Railways,Ministry of Railways,705481,Ramganjmandi-Bhopal New Line Project [262 km],3032,5073.0,3764.11,2025-12-25,2027-12-31,736.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+683,Railways,Ministry of Railways,705482,Dholpur - Sirmuttra Gauge Conversion,747,747.0,431.82,2019-02-28,2027-02-28,2922.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+684,Railways,Ministry of Railways,705490,Gadag-Wadi New Railway Line [257 km],2842,6700.0,1419.19,2027-03-31,2027-12-31,275.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+685,Railways,Ministry of Railways,705491,Marikuppam - Kuppam New Line Project [23.70 Km],297,297.0,135.5,2026-06-30,2026-06-30,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+686,Railways,Ministry of Railways,705492,Kadur - Chickamagalur - Sakleshpur [93km],825,825.0,705.64,2025-06-30,2025-12-31,184.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+687,Railways,Ministry of Railways,705494,Rayadurg-Tumkur via Kalyandurg New Line [207 km],2496,2496.0,1787.43,2015-09-30,2028-02-29,4535.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+688,Railways,Ministry of Railways,705495,Bagalkot-Kudachi New Railway Line [142 km],1378,1649.0,729.34,2027-03-31,2027-01-31,-59.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+689,Railways,Ministry of Railways,705496,Tumkur-Chitradurga-Davangere New Rail Line Project [191 km],1876,1876.0,461.98,2019-03-31,2027-12-31,3197.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+690,Railways,Ministry of Railways,705498,3rd Line Kalyan - Kasara [67.35 Kilometres],793,1395.79,981.36,2026-12-31,2026-12-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+691,Railways,Ministry of Railways,705500,3rd Line Wardha - Sewagram - Nagpur,540,944.24,783.01,2025-12-31,2025-12-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+692,Railways,Ministry of Railways,705502,3rd Line Wardha - Ballarshah [132 Kilometres],1385,2033.59,1713.23,2025-12-31,2026-02-28,59.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+693,Railways,Ministry of Railways,705503,Pune - Miraj-Londa  [467 Kilometres],4028,4872.52,4969.74,2025-02-28,2025-08-31,184.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+694,Railways,Ministry of Railways,705504,Doubling of Daund Manmad Line [247.6 km],2081,3267.06,2874.47,2025-12-01,2026-03-31,120.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+695,Railways,Ministry of Railways,705505,4th Line Wardha - Nagpur [78.7 Kilometres],638,1341.28,1012.82,2025-12-31,2026-02-28,59.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+696,Railways,Ministry of Railways,705506,3rd Line Manmad - Jalgaon [160 Kilometres],1035,1558.75,1726.94,2024-12-31,2025-08-31,243.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+697,Railways,Ministry of Railways,705507,Itarsi - Nagpur Third Railway Line [280 km],2450,2506.68,1937.22,2027-03-31,2027-12-31,275.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+698,Railways,Ministry of Railways,705510,Bhadrak-Nergundi Third Line,1284,1284.0,1298.0,2024-11-30,2026-01-31,427.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+699,Railways,Ministry of Railways,705511,Jagdalpur-Koraput,1547,1547.0,1336.83,2024-03-31,2026-12-31,1005.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+700,Railways,Ministry of Railways,705512,Doubling of Kottavalasa-Koraput Rail Line [189 KM],2500,2500.0,2037.7,2022-03-31,2028-03-31,2192.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+701,Railways,Ministry of Railways,705513,Koraput - Singapur Railway Doubling,2362,2362.0,1834.53,2027-12-01,2028-03-30,120.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+702,Railways,Ministry of Railways,705514,Jarapada- Budhapank with flyover at Talcher road 3rd and 4th Line,1000,810.02,421.59,2018-11-13,2026-03-31,2695.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+703,Railways,Ministry of Railways,705515,3rd & 4th Railway Line Project from Salegaon to Budhapank via Rajathgarh.,1173,2092.0,1971.0,2026-03-31,2026-03-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+704,Railways,Ministry of Railways,705520,Vizianagaram-Sambhalpur 3rd Line Project,4803,,2979.23,2025-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+705,Railways,Ministry of Railways,705526,Samastipur-Darbhanga Doubling Railway Project,519,519.0,380.73,2025-03-31,2025-10-31,214.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+706,Railways,Ministry of Railways,705527,Sagauli-Valmiknagar,1216,2222.0,2074.54,2025-12-24,2025-12-25,1.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+707,Railways,Ministry of Railways,705528,Muzaffarpur-Sugauli,1586,1586.0,1471.11,2024-06-30,2026-02-28,608.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+708,Railways,Ministry of Railways,705562,Chhapra-Ballia Patch Doubling,963,1046.0,912.16,2025-02-25,2026-03-26,394.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+709,Railways,Ministry of Railways,705567,Burhwal Gonda 3rd line,1016,1118.0,1435.86,2025-03-25,2026-01-31,312.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+710,Railways,Ministry of Railways,705572,Doubling of New Bonggigaon to Kamakhya via Goalpara - 176 km,4060,4961.0,3729.89,2026-03-31,2026-03-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+711,Railways,Ministry of Railways,705583,Anand Vihar-Tilak Bridge 3rd & 4th line,667,667.0,289.26,2023-03-31,2027-12-31,1736.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+712,Railways,Ministry of Railways,705588,Janghai-Pratapgarh- Amethi,722,1194.0,1567.0,2025-03-31,2026-03-31,365.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+713,Railways,Ministry of Railways,705598,Jhansi - Bina Third Railway Line [153 Km],2002,2002.0,1831.86,2022-03-31,2026-03-31,1461.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+714,Railways,Ministry of Railways,705608,Jhansi-Khairar-Manikpur & Khirar-Bhimsen,4330,4330.0,2456.1,2026-03-31,2026-03-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+715,Railways,Ministry of Railways,705610,"Renigunta, Wadi & Gooty Bypass Railway Project",302,543.0,381.0,2025-12-31,2025-12-25,-6.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+716,Railways,Ministry of Railways,705612,Kazipet-Vijayawada 3rd line with electrification [220 km],1953,3363.0,3625.29,2025-02-28,2025-12-31,306.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+717,Railways,Ministry of Railways,705613,Third Line [new] between Kazipet - Balharshah  with electrification [201.04 Km],2595,3071.0,3409.31,2025-01-31,2025-11-30,303.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+718,Railways,Ministry of Railways,705616,Jharsuguda-Bilaspur Fourth Railway Line [206 km],2140,2979.0,2189.75,2024-10-31,2026-03-31,516.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+719,Railways,Ministry of Railways,705617,Rajnandgaon - Nagpur [Kalumna] Third Railway Line [228.30 km],3545,3545.0,3518.69,2024-12-31,2026-06-30,546.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+720,Railways,Ministry of Railways,705628,Doubling of Hatia [Ranchi]-Bondamunda Rail Line - 159 km,3029,3029.04,2525.28,2025-06-30,2026-06-30,365.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+721,Railways,Ministry of Railways,705629,Narayangarh-Bhadrak 3rd line,2400,3425.32,2344.37,2025-12-31,2026-06-30,181.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+722,Railways,Ministry of Railways,705632,Vijayawada - Kazipet Byepass line,647,904.0,973.78,2025-01-12,2025-12-31,353.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+723,Railways,Ministry of Railways,705633,Guntur-Guntakal Doubling Project,3733,4295.0,4475.93,2025-12-31,2026-12-31,365.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+724,Railways,Ministry of Railways,705635,Trivandrum- Kanyakumari,1432,3785.45,2505.8,2025-03-24,2026-12-31,647.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+725,Railways,Ministry of Railways,705638,Kumbalam-Turavur doubling project [15.59 Km],813,802.8,72.62,2027-03-31,2027-03-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+726,Railways,Ministry of Railways,705639,Ernakulam-Kumbalam doubling project [7.71 Km],601,595.39,292.67,2028-03-31,2027-02-28,-397.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+727,Railways,Ministry of Railways,705648,Vijaywada-Gudur 3rd Line,6654,6654.0,5922.0,2024-11-30,2025-12-31,396.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+728,Railways,Ministry of Railways,705650,Hospet - Tinaighat - Vasco Rail Doubling Project,5060,5060.0,5246.91,2027-03-31,2027-12-30,274.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+729,Railways,Ministry of Railways,705651,Katni - Bina Third Railway Line [279 km],2478,4127.23,3332.06,2022-03-31,2025-12-31,1371.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+730,Railways,Ministry of Railways,705659,Satna-Rewa Railway Line Doubling Project,500,584.0,565.66,2026-03-31,2026-03-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+731,Railways,Ministry of Railways,705660,Doubling of Katni - Singrauli Railway Line [261 km],2445,4377.0,3242.32,2025-12-26,2025-12-27,1.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+732,Railways,Ministry of Railways,705661,Katni Grade Separator/Bye Pass,1248,1248.0,1662.02,2024-09-30,2026-03-31,547.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+733,Railways,Ministry of Railways,705662,Hotgi-Kudgi-Gadag Doubling Project,1878,2459.0,2684.67,2024-12-31,2026-03-31,455.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+734,Railways,Ministry of Railways,705663,Bangalore-Whitefield-Bangalore City-Krishnarajapuram [23.08 km] - Quadrupling,493,493.0,252.45,2026-02-28,2026-02-28,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+735,Railways,Ministry of Railways,705667,Mathura-Jhansi Third Railway Line [274 Km],5961,5961.0,4990.85,2024-12-31,2026-12-31,730.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+736,Railways,Ministry of Railways,705668,KHARAGPUR-ADITYAPUR THIRD RAIL LINE- 132 KM,3250,3250.0,3176.46,2025-03-31,2025-12-31,275.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+737,Railways,Ministry of Railways,705694,Provision of Work-site Tampers [WST] Railway Project,188,,141.91,2023-12-31,2026-01-31,762.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+738,Railways,Ministry of Railways,705708,WST Machine Procurement Project,176,,,2024-03-31,2027-12-31,1370.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+739,Railways,Ministry of Railways,705710,PCT Machine Procurement Project,336,,74.32,2024-04-01,2027-06-30,1185.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+740,Railways,Ministry of Railways,705712,RBMV Machine Procurement Project,480,,20.65,2024-06-30,2027-12-31,1279.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+741,Railways,Ministry of Railways,705717,SRGM Machine Procurement Project,440,,390.03,2023-12-31,2026-03-31,821.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+742,Railways,Ministry of Railways,705720,WST Machine Procurement Project,384,,,2024-04-01,2026-12-31,1004.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+743,Railways,Ministry of Railways,705721,DTS Machine Procurement Project,448,,,2024-12-31,2030-12-31,2191.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+744,Railways,Ministry of Railways,705722,BRM Machine Procurement Project,210,,0.02,2024-06-30,2027-12-31,1279.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+745,Railways,Ministry of Railways,705726,Track Machine Procurement Project,6339,,4201.26,2025-03-01,2028-01-31,1066.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+746,Railways,Ministry of Railways,705728,Mumbai-Ahmedabad High Speed Rail Project- 508 km,108000,108000.0,84199.9,2027-08-31,2029-12-31,853.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+747,Railways,Ministry of Railways,705730,Joka-BBD Bag new metro project,4835,10362.0,4672.28,2026-12-31,2029-12-31,1096.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+748,Railways,Ministry of Railways,705735,Solapur-tuljapur-Osmanabad,905,3295.74,1154.89,2027-03-31,2028-03-28,363.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+749,Railways,Ministry of Railways,705741,Jeypore-Navarangpur New  Rail Line Project,748,748.0,12.76,2028-07-31,2029-12-31,518.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+750,Railways,Ministry of Railways,705742,Jeypore-Malkanagiri New Railway Line Project,2344,,490.13,2033-07-31,2033-07-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+751,Railways,Ministry of Railways,705752,Gudha-Thatha Mithri Construction of Railway Track Project,819,967.06,393.06,2026-11-30,2026-11-30,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+752,Railways,Ministry of Railways,705761,SHIMOGA - SHIKARIPURA - RANEBENNUR [96 Km],1454,1454.0,72.26,2027-12-01,2028-06-30,212.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+753,Railways,Ministry of Railways,705763,Indore - Budni New Railway Line [198 kms],7474,7474.0,1841.69,2030-09-30,2030-09-30,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+754,Railways,Ministry of Railways,705764,Nimach-Badi Sadri  New Rail Line Project,495,825.0,130.09,2026-03-31,2026-06-30,91.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+755,Railways,Ministry of Railways,705765,Gomoh - Flyover for DN trains,686,686.0,578.93,2026-03-26,2026-03-26,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+756,Railways,Ministry of Railways,705766,Lalitpur-Birari with flyover at Lalitpur- 16 Km,304,356.0,234.88,2024-12-31,2026-01-31,396.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+757,Railways,Ministry of Railways,705771,Allahabad-Bamhrauli Flyover Construction & 4th Railway Line Project,494,494.0,333.0,2026-03-31,2026-03-26,-5.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+758,Railways,Ministry of Railways,705772,"Mughalsarai-Allahabad, 3rd line",2649,2649.44,1688.13,2026-12-31,2027-03-31,90.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+759,Railways,Ministry of Railways,705774,Aligarh -Daud Khan Flyover Construction & 3rd Railway Line Project,758,779.49,412.67,2025-01-31,2027-03-31,789.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+760,Railways,Ministry of Railways,705777,Bhandai - Flyover for Etawah bound down train- 10 Km,250,250.18,115.68,2026-02-28,2027-02-28,365.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+761,Railways,Ministry of Railways,705779,"Phephna-Indara, Mau-Shahganj doubling excluding Indara-Mau",1178,1777.0,1489.5,2024-12-31,2026-03-31,455.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+762,Railways,Ministry of Railways,705780,Bhatni-Aurnihar with electrification excluding Indara-Mau,2529,2529.46,2051.69,2024-12-31,2025-12-31,365.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+763,Railways,Ministry of Railways,705782,Barabanki-Malhaur 3rd & 4th Railway Line Project,407,407.0,317.0,2025-03-31,2026-03-31,365.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+764,Railways,Ministry of Railways,705783,Ludhiana- Killa Raipur Railway  Doubling Project,238,238.0,134.48,2025-03-31,2026-03-31,365.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+765,Railways,Ministry of Railways,705784,Janghai-Phaphamau Doubling Rail Line Project,357,978.77,579.0,2025-03-31,2025-03-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+766,Railways,Ministry of Railways,705785,Lodhma - Piska - Link Line bypassing Hatia/Ranchi with Y connection,473,473.0,288.72,2026-06-30,2027-05-31,335.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+767,Railways,Ministry of Railways,705789,Penukonda - Dharmavaram Doubling Project [41.5 Km],308,307.66,276.34,2026-03-31,2026-03-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+768,Railways,Ministry of Railways,705793,New Delhi- Mumbai Speed Booster[160Kmph] Project,6806,,135.65,2024-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+769,Railways,Ministry of Railways,705794,New Delhi- Howrah Speed Booster[160Kmph] Project,6685,,127.03,2024-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+770,Railways,Ministry of Railways,705799,Nagpur- Nagbhir Railway Line Gauge Conversion Project,1400,1400.0,1472.0,2025-12-31,2025-12-25,-6.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+771,Railways,Ministry of Railways,705912,Sawai Madhopur-Jaipur Railway Line Project,1204,,109.85,2027-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+772,Railways,Ministry of Railways,705919,Agra Fort-Bandikui Doubling Line Project,1390,1390.0,123.0,2027-06-30,2027-06-27,-3.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+773,Railways,Ministry of Railways,705933,Nimach-Ratlam Doubling [133 Km],1096,1095.88,1067.49,2027-10-31,2027-10-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+774,Railways,Ministry of Railways,706757,Modasa-Shamlaji Road Railway Line Project,262,262.0,337.67,2025-03-31,2027-03-31,730.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+775,Railways,Ministry of Railways,706759,Rampur Dumra-Tal-Rajendrapul Additional Bridge and Railway Line Doubling,2374,1700.24,1427.78,2024-12-01,2025-12-31,395.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+776,Railways,Ministry of Railways,706763,Rajkot - Kanalus Doubling Project [111.2 Kms],1081,1080.58,829.85,2026-10-31,2026-10-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+777,Railways,Ministry of Railways,706776,Noapara-Barasat via Bimanbandar - Construction of Metro railway [18 km],4830,4830.0,2764.13,2026-08-31,2029-03-31,943.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+778,Railways,Ministry of Railways,706777,Baranagar-Barrackpore and Dakshineshwar- Construction of Metro Railway,2298,2734.0,393.01,2026-12-31,2025-12-26,-370.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+779,Railways,Ministry of Railways,706779,Mumbai Urban Transport Project [MUTP] - PHASE II,8087,8087.0,7364.0,2014-03-31,2027-12-31,5023.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+780,Railways,Ministry of Railways,706780,Mumbai Urban Transport Project [MUTP]  Phase-IIIA,33690,33690.0,2805.0,2027-12-31,2027-12-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+781,Railways,Ministry of Railways,706781,Mumbai Urban Transport Project Phase-III,10947,10947.0,5588.85,2022-03-31,2026-12-31,1736.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+782,Railways,Ministry of Railways,706835,Belgaum-Dharwad via Kittur [73.10Km],1591,,0.38,2027-12-31,2029-03-31,456.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+783,Railways,Ministry of Railways,706837,Pradhan Kuntha Jn Line Doubling Project,349,349.22,108.89,2027-11-30,2027-11-27,-3.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+784,Railways,Ministry of Railways,706844,Katihar - Kumedpur Doubling Line Project,942,942.0,356.0,2027-08-31,2027-08-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+785,Railways,Ministry of Railways,706854,Boridand - Ambikapur Doubling Line Project,1376,1576.72,139.49,2030-06-30,2030-06-30,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+786,Railways,Ministry of Railways,706860,Barauni-Bachwara [16 km] - 3rd & 4th line incl. Barauni yard remodelling [32 km],645,,27.98,2025-08-01,2026-10-31,456.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+787,Railways,Ministry of Railways,706866,Sawaimadhopur Bye Pass Line Project,304,304.0,53.0,2026-03-31,2027-05-27,422.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+788,Railways,Ministry of Railways,706898,Khurda Road - Balangir Electrification of Railway Track Project,268,,0.0,2021-03-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+789,Railways,Ministry of Railways,706922,Guwahati-Dibrugarh via Tinsukia & Simaluguri-Dibrugarh,890,889.36,391.73,2020-09-03,2024-06-30,1396.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+790,Railways,Ministry of Railways,706940,"Mariani-Jorhat, Tinsukia-Dangri and Makum -TirapTrack Electrification Project",184,,0.0,2024-05-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+791,Railways,Ministry of Railways,706942,Harmuty-Murkongselek Branch Line Electrification Project,238,,0.0,2024-05-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+792,Railways,Ministry of Railways,706950,Hospet-Hubli-Vasco da Gama Line Electrification Project,744,1122.62,969.05,2023-03-31,2024-03-31,366.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+793,Railways,Ministry of Railways,709808,PACHORA-JAMNER WITH EXTENSION UPTO MALKAPUR NG TO BG,955,2093.82,130.42,2027-08-31,2028-03-28,210.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+794,Railways,Ministry of Railways,709811,GANDHAMARDAN IRON ORE MINES TO GOALDIH STATION/12.76kms,190,189.93,,2027-09-30,2027-09-27,-3.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+795,Railways,Ministry of Railways,709812,NADIAD-PETLAD [37.26 KM],462,,93.31,2030-06-30,2030-06-30,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+796,Railways,Ministry of Railways,709813,NEW BG LINE INTERSECTION [5 NOS] BETWEEN GERATPUR-SANAND & BOTAD-AHMEDABAD [16.51 KM],437,,19.37,2028-06-30,2027-10-27,-247.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+797,Railways,Ministry of Railways,709815,4TH LINE - BHATAPARA-HATHBAND [8.8 KM] [PB-72/NR/2022-23],177,177.03,,2027-01-31,2027-12-31,334.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+798,Railways,Ministry of Railways,709816,4TH LINE - BHILAI-BHILAI NAGAR [8.8 KM] [PB-72/NR/2022-23],177,177.34,1.64,2027-02-28,2027-02-28,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+799,Railways,Ministry of Railways,709817,4TH LINE - DADHAPARA-BELHA [9.2 KM] [PB-72/NR/2022-23],169,169.06,18.37,2026-11-30,2026-11-26,-4.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+800,Railways,Ministry of Railways,709818,4TH LINE RAJNANDGAON-DONGARHGARH [31.2 KM] [PB-72/NR/2022-23],328,328.34,57.3,2027-01-31,2027-01-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+801,Railways,Ministry of Railways,709819,3RD AND 4TH LINE - SARAGBUNDIA AND MADWARANI,168,,0.11,2026-12-31,2026-12-31,0.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+802,Railways,Ministry of Railways,900874,JHAJHA - BATIA,588,,0.82,2028-03-31,2030-01-30,670.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+803,Metals & Mining,Ministry of Steel,615202,Capacity expansion of Deposit-14 and 14 NMZ at Kirandul,1700,1756.2,142.16,2028-12-31,2028-03-27,-279.0,0,,https://ipm.mospi.gov.in/Home/PublicDashboard
+804,Steel,Ministry of Steel,400065,Installation of 4th Slab Caster along with its Auxiliaries and a New Ladle Furnace in SMS-II at Rourkela Steel Plant,1105,,790.11,2025-05-15,2025-09-30,138.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+805,Steel,Ministry of Steel,400121,"Construction of Screening Plant-II for Donimalai and Kumaraswamy Iron Ore Mining Complex of NMDC Limited at Ballari Dt, Karnataka.",1044,,320.8,2026-08-25,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+806,Steel,Ministry of Steel,400174,"New Sinter Plant at BSL, SAIL",1034,1752.3,885.61,2017-10-31,2027-06-30,3529.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+807,Steel,Ministry of Steel,612781,Rebuilding of COB 4 at Durgapur Steel Plant,917,,154.56,2026-12-08,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+808,Steel,Ministry of Steel,617242,Installation of New Bar Mill at Durgapur Steel Plant,2115,,257.17,2027-06-30,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+809,Steel,Ministry of Steel,617243,Replacement of Hot Leveller No.1 of Plate Mill at Bhilai Steel Plant,199,,20.98,2026-07-29,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+810,Steel,Ministry of Steel,617246,Up-gradation of Blast Furnace No. 3 at Durgapur Steel Plant,758,,95.38,2026-06-07,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+811,Steel,Ministry of Steel,617248,Third Ladle Furnace in Secondary Refinery Unit at IISCO Steel Plant,228,,27.2,2026-07-17,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+812,Steel,Ministry of Steel,617249,Replacement of existing Grinders in CRM-I & II at Bokaro Steel Plant,212,,20.54,2027-01-27,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+813,Steel,Ministry of Steel,617250,Secondary Emission Control in Converters of SMS-II at Bokaro Steel Plant,207,,15.76,2026-10-25,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+814,Steel,Ministry of Steel,617251,Revamping of Air Pollution Control Systems of SP-1 at Durgapur Steel Plant,196,,11.72,2026-05-27,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+815,Steel,Ministry of Steel,617253,Revamping of old sub-systems of Blast Furnace 3 at Bokaro Steel Plant,514,,310.02,2025-07-03,2025-11-30,150.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+816,Steel,Ministry of Steel,617254,Replacement of remaining 04 sets  of Battery Cyclones with 04 Nos. of ESPs in Sinter Plant-1 at Bokaro Steel Plant,260,,58.19,2026-06-29,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+817,Steel,Ministry of Steel,617255,"Replacement of Converter Vessels, Trunnion Rings, Support System & Installation of Secondary Emission at Bhilai Steel Plant",472,,161.45,2026-06-14,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+818,Steel,Ministry of Steel,617256,Rebuilding of Coke Oven Battery No.7 & 8 at Bhilai Steel Plant,884,,530.05,2025-10-31,2026-03-31,151.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+819,Steel,Ministry of Steel,617257,Rebuilding of Coke Oven Battery No.6 at Bokaro Steel Plant,627,,169.38,2026-11-15,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+820,Steel,Ministry of Steel,617338,Stamp Charge Battery No.12 Battery Proper at IISCO Steel Plant,2518,,210.51,2028-07-20,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+821,Steel,Ministry of Steel,706811,NMDC Slurry Pipeline Project Phase-1,2907,5427.0,3243.55,2023-06-30,2025-12-31,915.0,1,,https://ipm.mospi.gov.in/Home/PublicDashboard
+822,Steel,Ministry of Steel,709826,SCREENING PLANT-III AT KIRANDUL,2719,,1396.9,2026-01-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard
+823,Steel,Ministry of Steel,709827,CONSTRUCTION OF RESIDENTIAL TOWERS AT BIOM KIRANDUL COMPLEX,350,,299.39,2025-12-31,,,,,https://ipm.mospi.gov.in/Home/PublicDashboard

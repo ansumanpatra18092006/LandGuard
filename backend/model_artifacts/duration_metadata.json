@@ -1,0 +1,68 @@
+{
+  "model_name": "Random Forest Regressor",
+  "target_definition": "Conditional schedule-extension magnitude in days when a later schedule date appears within the next 3 months",
+  "features": [
+    "sector_name",
+    "original_cost_crore",
+    "expenditure_crore",
+    "days_to_original_deadline",
+    "original_deadline_passed",
+    "expenditure_to_original_cost_pct"
+  ],
+  "selection_metric": "validation_mae_days",
+  "train_positive_events": 1346,
+  "validation_positive_events": 773,
+  "test_positive_events": 986,
+  "likely_range_error_days": 287,
+  "metrics": {
+    "mae_days": 240.88848065714168,
+    "median_ae_days": 137.47561635872447,
+    "rmse_days": 450.0222848403968,
+    "r2": 0.5492484486612914
+  },
+  "all_model_metrics": {
+    "Random Forest Regressor": {
+      "validation": {
+        "mae_days": 218.6216148560359,
+        "median_ae_days": 106.3409623870009,
+        "rmse_days": 440.27936356689486,
+        "r2": 0.582236620556152
+      },
+      "test": {
+        "mae_days": 240.88848065714166,
+        "median_ae_days": 137.47561635872447,
+        "rmse_days": 450.02228484039676,
+        "r2": 0.5492484486612915
+      }
+    },
+    "Gradient Boosting Regressor": {
+      "validation": {
+        "mae_days": 236.27718252199412,
+        "median_ae_days": 126.407526635294,
+        "rmse_days": 416.4457204796342,
+        "r2": 0.6262419849747923
+      },
+      "test": {
+        "mae_days": 244.27487534170245,
+        "median_ae_days": 137.2342310943019,
+        "rmse_days": 419.2804335551241,
+        "r2": 0.6087283506875354
+      }
+    },
+    "Extra Trees Regressor": {
+      "validation": {
+        "mae_days": 227.42787459630816,
+        "median_ae_days": 120.79670981595291,
+        "rmse_days": 446.38202305491546,
+        "r2": 0.570575221923769
+      },
+      "test": {
+        "mae_days": 244.89194795011144,
+        "median_ae_days": 137.20097085260576,
+        "rmse_days": 452.6203957236498,
+        "r2": 0.5440287823905534
+      }
+    }
+  },
+  "disclaimer": "Conditional impact model trained only on observed positive schedule-extension events. It estimates extension magnitude if slippage occurs; it does not guarantee an exact delay duration."
+}

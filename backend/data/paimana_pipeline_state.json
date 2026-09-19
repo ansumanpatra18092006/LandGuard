@@ -1,0 +1,9 @@
+{
+  "last_check_at": "2026-09-19T14:36:41.730903+00:00",
+  "new_snapshots_last_run": [],
+  "retraining_status": "waiting_for_mature_labels",
+  "model_promotion_status": "not_needed",
+  "last_success_at": "2026-09-19T14:36:54.638219+00:00",
+  "latest_published_month": "2026-05",
+  "message": "Source is current; waiting for a newer fully-labelled 3-month horizon."
+}

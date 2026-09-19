@@ -1,0 +1,36 @@
+services:
+  - type: web
+    name: landguard-ai-sih2026
+    runtime: docker
+    plan: free
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /api/v1/health
+    autoDeployTrigger: commit
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_SERVICE_ROLE_KEY
+        sync: false
+      - key: BREVO_API_KEY
+        sync: false
+      - key: BREVO_SENDER_EMAIL
+        sync: false
+      - key: BREVO_SENDER_NAME
+        value: LandGuard AI
+      - key: PUBLIC_APP_URL
+        value: https://landguard-ai-sih2026.onrender.com
+      - key: FRONTEND_ORIGIN
+        value: https://landguard-ai-sih2026.onrender.com
+      - key: SESSION_MINUTES
+        value: "120"
+      - key: SEED_DEMO_DATA
+        value: "true"
+      - key: PAIMANA_AUTO_MONITOR_ENABLED
+        value: "false"
+      - key: PAIMANA_VERIFY_SSL
+        value: "false"
+      - key: PYTHONUNBUFFERED
+        value: "1"

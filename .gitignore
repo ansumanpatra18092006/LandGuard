@@ -1,0 +1,142 @@
+# =========================
+# Python
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+*.so
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.cache/
+.coverage
+.coverage.*
+htmlcov/
+
+# Build / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# =========================
+# Node / React / Vite
+# =========================
+node_modules/
+frontend/node_modules/
+
+dist/
+frontend/dist/
+
+.vite/
+.cache/
+.parcel-cache/
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# Environment / secrets
+# =========================
+.env
+.env.*
+!.env.example
+!.env.sample
+!.env.template
+
+backend/.env
+frontend/.env
+frontend/.env.local
+frontend/.env.development.local
+frontend/.env.test.local
+frontend/.env.production.local
+
+# =========================
+# Database / local data
+# =========================
+*.db
+*.sqlite
+*.sqlite3
+
+# Local Postgres dumps
+*.sql.gz
+*.dump
+
+# =========================
+# ML / generated training outputs
+# =========================
+# Keep deployed model artifacts if your app needs them.
+# Uncomment these only if you do NOT want to commit model files:
+# backend/model_artifacts/*.joblib
+# backend/model_artifacts/*.pkl
+# backend/model_artifacts/*.json
+
+# Temporary ML/data files
+*.tmp
+*.temp
+
+# =========================
+# IDE / editor
+# =========================
+.vscode/
+.idea/
+
+*.swp
+*.swo
+
+# =========================
+# OS files
+# =========================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+
+# =========================
+# Test / coverage output
+# =========================
+coverage/
+test-results/
+playwright-report/
+
+# =========================
+# Archives / backups
+# =========================
+*.zip
+*.tar
+*.tar.gz
+*.7z
+*.rar
+*.bak
+
+# =========================
+# Temporary folders
+# =========================
+tmp/
+temp/
+
+# =========================
+# Deployment / local runtime
+# =========================
+*.pid
+
+# =========================
+# Optional local-only files
+# =========================
+*.local

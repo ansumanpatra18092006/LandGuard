@@ -1,0 +1,123 @@
+/* Interactive states extend the existing LandGuard visual system. */
+.header-actions,.quick-actions,.notice-controls { display:flex; flex-wrap:wrap; gap:8px; }
+.row-action-group { display:flex; align-items:center; gap:4px; }
+.toast { position:fixed; z-index:100; bottom:24px; right:24px; max-width:calc(100vw - 48px); pointer-events:none; }
+.toast.is-present { display:flex; align-items:center; gap:18px; padding:12px 18px; border:1px solid var(--teal); background:var(--teal-soft); color:var(--teal-hover); border-radius:9px; box-shadow:0 8px 30px #153d2720; font-size:13px; }
+.toast.visible { pointer-events:auto; }
+.refresh-status { font-size:11px; color:var(--text-muted); margin:-10px 0 18px; min-height:16px; }
+button.clickable-stat { display:block; width:100%; text-align:left; color:var(--text); font:inherit; transition:border-color var(--duration) var(--ease),box-shadow var(--duration) var(--ease),transform var(--duration) var(--ease); }
+.clickable-stat:hover { transform:translateY(-1px); box-shadow:var(--shadow-md); border-color:var(--border-strong); }
+.active-indicator { border-color:var(--teal) !important; box-shadow:inset 0 0 0 1px var(--teal); background:var(--teal-soft) !important; }
+.metric-action { display:block; color:var(--teal-hover); margin-top:6px; font-size:10px; font-weight:620; }
+button.bottleneck-row { width:100%; text-align:left; background:transparent; color:inherit; font:inherit; }
+button.bottleneck-row:hover { background:var(--surface-muted); }
+.drill-bar { cursor:pointer; }
+.drill-bar rect { transition:filter .15s ease, stroke .15s ease; }
+.drill-bar:hover rect { filter:brightness(1.12); }
+.drill-bar:focus-visible rect { outline:2px solid var(--teal); outline-offset:2px; }
+.analytics-tooltip { padding:13px 16px; background:var(--surface); border:1px solid var(--border); border-radius:var(--radius-md); box-shadow:var(--shadow-lg); font-size:12px; line-height:1.6; max-width:260px; }
+.analytics-tooltip > strong { display:block; font-size:12.5px; margin-bottom:8px; color:var(--text); }
+.analytics-tooltip p { margin:3px 0; }
+.analytics-tooltip small { display:block; color:var(--text-muted); margin-top:9px; padding-top:8px; border-top:1px dashed var(--surface-sunken); font-size:10.5px; }
+.analytics-tooltip dl { display:grid; gap:6px; margin:0; }
+.analytics-tooltip dl > div { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+.analytics-tooltip dt { display:flex; align-items:center; gap:7px; color:var(--text-muted); font-weight:500; }
+.analytics-tooltip dd { margin:0; font-weight:650; font-variant-numeric:tabular-nums; color:var(--text); }
+.tooltip-dot { width:7px; height:7px; border-radius:2px; display:inline-block; flex-shrink:0; }
+.tooltip-count { font-size:20px; font-weight:660; margin:0; font-variant-numeric:tabular-nums; }
+.tooltip-count span { font-size:11px; font-weight:500; color:var(--text-muted); margin-left:4px; }
+.chart-values button { display:flex; justify-content:space-between; width:100%; text-align:left; }
+.project-table tbody tr[tabindex] { cursor:pointer; transition:background .15s; }
+.project-mobile-card[tabindex] { cursor:pointer; transition:background .15s; }
+.project-mobile-card[tabindex]:hover { background:var(--teal-soft); }
+.project-table tbody tr:hover,.selected-row td,.project-mobile-card.selected-row { background:var(--teal-soft); }
+.project-table tbody tr:focus-visible { outline:2px solid var(--teal); outline-offset:-2px; }
+.row-actions { display:flex; align-items:center; gap:6px; }
+.row-menu { display:inline-flex; }
+.row-menu-panel { position:fixed; margin:0; width:218px; padding:7px; border:1px solid var(--border); border-radius:9px; background:white; color:var(--text); box-shadow:0 10px 35px #16372725; }
+.row-menu-panel:popover-open { display:grid; }
+.row-menu-panel button,.row-menu-panel a { display:flex; align-items:center; gap:9px; padding:9px 10px; background:transparent; border:0; border-radius:5px; color:inherit; text-decoration:none; font-size:12px; text-align:left; }
+.row-menu-panel button:hover,.row-menu-panel a:hover { background:var(--teal-soft); }
+.row-menu-panel [role=status] { font-size:11px; white-space:normal; padding:0 9px; }
+.app-modal { border:1px solid var(--border); border-radius:14px; padding:0; color:var(--text); background:#fff; width:min(600px,calc(100vw - 32px)); max-height:calc(100dvh - 40px); box-shadow:0 22px 90px #16372735; }
+.app-modal::backdrop { background:#142c2666; backdrop-filter:blur(2px); }
+.modal-heading { position:sticky; top:0; z-index:2; display:flex; align-items:center; justify-content:space-between; gap:12px; padding:18px 22px; border-bottom:1px solid var(--border); background:white; }
+.modal-heading h2 { font-size:17px; margin:0; }
+.quick-view,.notice-center { margin:0 0 0 auto; height:100dvh; max-height:100dvh; border-radius:14px 0 0 14px; width:min(490px,100vw); }
+.quick-content,.notice-content { padding:24px; }
+.quick-content h3 { font-size:23px; margin:12px 0; line-height:1.4; }
+.quick-content > p { display:flex; align-items:center; gap:5px; color:var(--text-muted); }
+.quick-content .progress { margin:22px 0; }
+.quick-content > .muted { font-size:12px; line-height:1.7; }
+.quick-facts { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin:24px 0; }
+.quick-facts dt { font-size:11px; color:var(--text-muted); }
+.quick-facts dd { margin:6px 0 0; font-weight:600; font-size:14px; overflow-wrap:anywhere; }
+.context-breadcrumb { display:flex; align-items:center; flex-wrap:wrap; gap:16px; margin-bottom:15px; font-size:12px; color:var(--text-muted); }
+.context-breadcrumb .back { margin:0; }
+.detail-tabs { display:flex; gap:4px; overflow-x:auto; border-bottom:1px solid var(--border); margin:0 0 24px;
+  /* Signals a hard-clipped tab (e.g. "AI" for "AI Intelligence") is a scroll cue, not truncated
+     text. Only the trailing edge fades: the strip always opens at scroll position 0, so a
+     leading fade would falsely suggest there was more to scroll to on the left. Harmless when
+     every tab already fits — the gradient then lands on empty space past the last tab. */
+  mask-image: linear-gradient(to right, black calc(100% - 20px), transparent 100%); }
+.detail-tabs button { white-space:nowrap; border:0; border-bottom:3px solid transparent; border-radius:0; background:transparent; padding:13px 16px; }
+/* `.detail-tabs button` resets the background, which also cancelled the base button hover —
+   unselected tabs had no hover affordance at all. */
+.detail-tabs button:hover { background:var(--surface-muted); color:var(--text); }
+.detail-tabs button[aria-selected=true] { color:var(--teal-hover); background:var(--teal-soft); }
+.detail-tabs button[aria-selected=true]:hover { background:var(--teal-soft); color:var(--teal-hover); }
+[role=tabpanel] .detail-grid { grid-template-columns:1fr; }
+[role=tabpanel] .detail-grid:empty { display:none; }
+.metadata-details { padding:20px 24px; }
+.metadata-details summary { cursor:pointer; font-weight:600; }
+.content-enter { animation:content-enter var(--motion-micro) var(--ease-out); }
+.command-launch { gap:6px; white-space:nowrap; }
+.command-launch { width:auto; min-width:40px; }
+.progress-track { display:block; height:7px; width:100%; background:var(--surface-sunken); border-radius:10px; overflow:hidden; margin-top:10px; }
+.progress-track i { display:block; height:100%; background:var(--primary); border-radius:10px; transform-origin:left; }
+.progress.compact .progress-track { height:5px; margin-top:7px; }
+.progress[data-tone=high] .progress-track i { background:var(--risk-low); }
+.progress[data-tone=medium] .progress-track i { background:var(--risk-medium); }
+.progress[data-tone=low] .progress-track i { background:var(--risk-high); }
+.progress[data-tone=medium] strong { color:var(--risk-medium); }
+.progress[data-tone=low] strong { color:var(--risk-high); }
+.chart-value-button { width:100%; display:flex; justify-content:space-between; text-align:left; border:0; background:transparent; font-size:11px; }
+.page-title { animation:content-enter var(--motion-section) var(--ease-out); }
+.filter-sheet > .muted { padding:0 20px; font-size:12px; }
+.command-launch kbd { font-size:10px; color:var(--text-muted); }
+.command-input { display:block; width:calc(100% - 40px); margin:20px; padding:13px; }
+.command-status,.command-help { margin:12px 22px; font-size:11px; color:var(--text-muted); }
+.command-results { overflow-y:auto; max-height:50dvh; padding:0 10px; }
+.command-results [role=option] { display:flex; align-items:center; gap:12px; padding:12px; border-radius:6px; cursor:pointer; font-size:13px; }
+.command-results [role=option][aria-selected=true] { background:var(--teal-soft); color:var(--teal-hover); }
+.command-results [role=option] small { width:48px; flex-shrink:0; color:var(--text-muted); }
+.command-results [role=option] > span:last-child { margin-left:auto; }
+.notice-explainer { font-size:12px; color:var(--text-muted); line-height:1.7; margin-top:0; }
+.notice-explainer strong { display:block; color:var(--text); }
+.notice-content > .muted { font-size:11px; margin:20px 0; }
+.review-list { display:grid; gap:12px; }
+.review-list article { border:1px solid var(--border); border-radius:8px; padding:16px; }
+.review-list article.is-unread { border-left:3px solid var(--teal); background:var(--teal-soft); }
+.review-list a { display:block; font-size:14px; line-height:1.6; font-weight:600; }
+.review-list p { font-size:12px; margin:9px 0; }
+.review-list small,.notice-read { display:block; font-size:10px; color:var(--text-muted); }
+.notice-read { margin-bottom:6px; }
+.review-list button { margin-top:10px; padding:6px 0; font-size:11px; color:var(--teal); font-weight:620; }
+.review-list button:hover { color:var(--teal-hover); background:transparent; text-decoration:underline; text-underline-offset:3px; }
+@keyframes content-enter { from { opacity:.3; transform:translateY(5px); } to { opacity:1; transform:none; } }
+@media(min-width:601px) { .filter-fields { grid-template-columns:repeat(5,minmax(0,1fr)); } }
+@media(max-width:1100px) { .command-launch kbd { display:none; } }
+@media(max-width:600px) {
+  /* The UA stylesheet caps `dialog:modal` at calc(100% - 6px - 2em), so a sheet asking for
+     100% width still stopped ~34px short of the screen edge. */
+  .app-modal.quick-view,.app-modal.notice-center,.app-modal.filter-sheet { top:auto; bottom:0; margin:auto 0 0; width:100%; max-width:100%; max-height:90dvh; height:auto; border-radius:16px 16px 0 0; }
+  .filter-sheet .filter-fields { display:grid; grid-template-columns:1fr; padding:20px; }
+  .filter-sheet > .button,.filter-sheet > button { margin:0 20px 20px; width:calc(100% - 40px); }
+  .command-palette { margin:0; width:100%; max-width:100%; height:100dvh; max-height:100dvh; border-radius:0; }
+  .command-results { max-height:65dvh; }
+  .detail-tabs button { padding:12px; font-size:12px; }
+  .quick-content,.notice-content { padding:20px; }
+  .header-actions { width:100%; }
+  .topbar { gap:10px; }
+}
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation:none !important; transition:none !important; scroll-behavior:auto !important; } }

@@ -1,0 +1,236 @@
+/* ============================================================================
+   LandGuard motion layer
+
+   Loaded last, so it owns every rule that moves. Three principles:
+
+   1. Motion explains a change; it never decorates a static screen. Nothing loops,
+      nothing idles, nothing follows the cursor around the page.
+   2. Only `transform` and `opacity` animate, with two deliberate exceptions noted
+      at their definitions (the collapsing filter chip and the progress fill).
+   3. Every rule that *hides* something sits inside `prefers-reduced-motion:
+      no-preference`. If motion is off — or the JavaScript that reveals an element
+      never runs — the content is simply visible. Motion can fail; content cannot.
+   ========================================================================== */
+
+/* ---------- 1. Section reveal ---------- */
+/* Panels settle in as they reach the viewport. Applied by SectionCard via useReveal. */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal { opacity: 0; transform: translate3d(0, var(--lift-section), 0); }
+  .reveal.is-revealed {
+    opacity: 1; transform: none;
+    transition: opacity var(--motion-section) var(--ease-out), transform var(--motion-section) var(--ease-out);
+  }
+}
+
+/* ---------- 2. KPI cards ---------- */
+/* Staggered entrance, then a pointer-tracked highlight. The stagger runs once per data
+   load; `both` holds each card hidden through its own delay rather than flashing first. */
+@media (prefers-reduced-motion: no-preference) {
+  .stats .stat { animation: stat-enter var(--motion-section) var(--ease-out) both; animation-delay: calc(var(--index, 0) * 55ms); }
+}
+@keyframes stat-enter { from { opacity: 0; transform: translate3d(0, var(--lift-section), 0); } }
+
+.stat { --spot-tint: rgba(14, 74, 58, .07); }
+.stat[data-tone="teal"]  { --spot-tint: rgba(20, 107, 100, .09); }
+.stat[data-tone="amber"] { --spot-tint: rgba(163, 112, 26, .09); }
+.stat[data-tone="red"]   { --spot-tint: rgba(165, 67, 63, .09); }
+.stat[data-tone="green"] { --spot-tint: rgba(47, 122, 81, .09); }
+
+/* The highlight is a tint, not a glow — it never brightens past the card's own surface.
+   Position comes from useSpotlight; the attribute is only present on fine pointers. */
+.stat[data-spotlight]::after {
+  content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: 0;
+  background: radial-gradient(260px circle at var(--spot-x, 50%) var(--spot-y, 50%), var(--spot-tint), transparent 62%);
+  transition: opacity var(--motion-micro) var(--ease-out);
+}
+.stat[data-spotlight]:hover::after,
+.stat[data-spotlight]:focus-visible::after { opacity: 1; }
+/* Keep card content above the tint. */
+.stat > * { position: relative; z-index: 1; }
+
+.stat:hover { transform: translate3d(0, -2px, 0); }
+.stat:active { transform: none; }
+
+/* ---------- 3. Process strip ---------- */
+/* PREDICT → EXPLAIN → RECOMMEND → ALERT → INTERVENE.
+   The signal travels the chain once on entrance: each node lights, its ring expands and
+   fades, and the connector to the next stage draws. Then it stops and stays legible.
+   Hovering replays it, so it rewards attention without demanding any. */
+.process-track { display: flex; align-items: center; flex-wrap: wrap; gap: 0; list-style: none; margin: 0; padding: 0; }
+.process-track li { display: inline-flex; align-items: center; gap: 8px; }
+.process-track li + li::before {
+  content: ''; width: 22px; height: 1px; margin: 0 10px; flex-shrink: 0;
+  background: var(--border-strong); transform-origin: left center;
+}
+.process-node { position: relative; display: inline-grid; place-items: center; width: 9px; height: 9px; flex-shrink: 0; }
+.process-node i { width: 5px; height: 5px; border-radius: 50%; background: var(--text-faint); transition: background var(--motion-micro) var(--ease-out); }
+.process-node::after {
+  content: ''; position: absolute; inset: -2px; border-radius: 50%;
+  border: 1px solid var(--teal); opacity: 0; transform: scale(.4);
+}
+.process-label { font-weight: 560; letter-spacing: .2px; color: var(--text-muted); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .process-strip[data-animate="true"] .process-track li > * { animation: step-in 260ms var(--ease-out) both; animation-delay: calc(var(--step, 0) * 110ms); }
+  .process-strip[data-animate="true"] .process-track li + li::before { animation: connector-draw 220ms var(--ease-out) both; animation-delay: calc((var(--step, 0) * 110ms) - 70ms); }
+  .process-strip[data-animate="true"] .process-node::after { animation: node-ping 620ms var(--ease-out) both; animation-delay: calc(var(--step, 0) * 110ms); }
+}
+@keyframes step-in { from { opacity: 0; transform: translate3d(0, 4px, 0); } }
+@keyframes connector-draw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+/* One expanding ring per node, ending fully transparent — no residue, no loop. */
+@keyframes node-ping {
+  0%   { opacity: 0; transform: scale(.4); }
+  30%  { opacity: .85; }
+  100% { opacity: 0; transform: scale(2.4); }
+}
+
+/* ---------- 4. Detail tab indicator ---------- */
+/* One underline slides between tabs instead of two borders blinking. Width is carried as a
+   unitless scale factor from useTabIndicator so the movement stays pure transform. */
+.detail-tabs { position: relative; }
+.detail-tabs::after {
+  content: ''; position: absolute; left: 0; bottom: 0; width: 100px; height: 3px;
+  border-radius: 2px 2px 0 0; background: var(--teal); transform-origin: left center;
+  transform: translate3d(var(--tab-x, 0px), 0, 0) scaleX(var(--tab-scale, 0));
+}
+.detail-tabs[data-ready="true"]::after { transition: transform var(--motion-micro) var(--ease-out); }
+.detail-tabs button { transition: color var(--motion-micro) var(--ease-out), background var(--motion-micro) var(--ease-out); }
+/* The sliding bar replaces the per-tab bottom border. */
+.detail-tabs button[aria-selected="true"] { border-bottom-color: transparent; }
+
+/* ---------- 5. Filter chips ---------- */
+/* Removing a chip collapses the space it held, so the rest of the row glides across rather
+   than snapping. This is the first of two places where width animates: the alternative is a
+   visible jump every time a filter is cleared. The element is 30px tall and there is at most
+   one in flight, so the layout cost is negligible. */
+.filter-chips { --chip-gap: 7px; gap: var(--chip-gap); }
+
+@media (prefers-reduced-motion: no-preference) {
+  .filter-chips .chip { animation: chip-in var(--motion-micro) var(--ease-out) both; }
+  .filter-chips .chip.is-exiting {
+    animation: chip-out 160ms var(--ease-in) both;
+    overflow: hidden; white-space: nowrap; pointer-events: none;
+  }
+}
+@keyframes chip-in { from { opacity: 0; transform: scale(.94); } }
+@keyframes chip-out {
+  0%   { opacity: 1; transform: scale(1); max-width: var(--chip-w, 220px); }
+  45%  { opacity: 0; transform: scale(.94); }
+  100% { opacity: 0; transform: scale(.94); max-width: 0; padding-inline: 0; border-width: 0; margin-right: calc(var(--chip-gap) * -1); }
+}
+
+/* ---------- 6. List transitions ---------- */
+/* Rows fade up in sequence when a new page or filter scope loads. The delay is capped so a
+   24-row page does not take three times as long to read as a 6-row page. */
+@media (prefers-reduced-motion: no-preference) {
+  .project-table tbody tr,
+  .project-cards .project-mobile-card {
+    animation: row-enter 220ms var(--ease-out) both;
+    animation-delay: calc(min(var(--index, 0), 7) * 26ms);
+  }
+}
+@keyframes row-enter { from { opacity: 0; transform: translate3d(0, 6px, 0); } }
+
+.project-table tbody tr { transition: background var(--motion-micro) var(--ease-out); }
+.project-mobile-card { transition: background var(--motion-micro) var(--ease-out), box-shadow var(--motion-micro) var(--ease-out); }
+
+/* ---------- 7. Overlays ---------- */
+/* Native <dialog> elements close instantly, so useDialogTransition holds them in the DOM
+   through an exit phase. Entrances decelerate; exits are slightly quicker and accelerate,
+   which is what makes a dismissal feel like a dismissal. */
+@media (prefers-reduced-motion: no-preference) {
+  .app-modal[data-phase="open"]    { animation: overlay-in var(--motion-overlay) var(--ease-out); }
+  .app-modal[data-phase="closing"] { animation: overlay-out var(--motion-overlay-exit) var(--ease-in) both; }
+  .app-modal[data-phase="open"]::backdrop    { animation: backdrop-in var(--motion-overlay) var(--ease-out); }
+  .app-modal[data-phase="closing"]::backdrop { animation: backdrop-out var(--motion-overlay-exit) var(--ease-in) both; }
+
+  /* Side drawers travel from the edge they are anchored to. */
+  .quick-view[data-phase="open"], .notice-center[data-phase="open"] { animation: drawer-in var(--motion-overlay) var(--ease-out); }
+  .quick-view[data-phase="closing"], .notice-center[data-phase="closing"] { animation: drawer-out var(--motion-overlay-exit) var(--ease-in) both; }
+
+  .nav-drawer[data-phase="open"]    { animation: nav-drawer-in var(--motion-overlay) var(--ease-out); }
+  .nav-drawer[data-phase="closing"] { animation: nav-drawer-out var(--motion-overlay-exit) var(--ease-in) both; }
+  .nav-drawer[data-phase="open"]::backdrop    { animation: backdrop-in var(--motion-overlay) var(--ease-out); }
+  .nav-drawer[data-phase="closing"]::backdrop { animation: backdrop-out var(--motion-overlay-exit) var(--ease-in) both; }
+
+  /* The command palette drops in from above the fold, closer to the shortcut that opened it. */
+  .command-palette[data-phase="open"]    { animation: palette-in var(--motion-overlay) var(--ease-out); }
+  .command-palette[data-phase="closing"] { animation: palette-out var(--motion-overlay-exit) var(--ease-in) both; }
+}
+
+@keyframes overlay-in   { from { opacity: 0; transform: translate3d(0, 10px, 0) scale(.985); } }
+@keyframes overlay-out  { to   { opacity: 0; transform: translate3d(0, 6px, 0) scale(.99); } }
+@keyframes palette-in   { from { opacity: 0; transform: translate3d(0, -12px, 0) scale(.98); } }
+@keyframes palette-out  { to   { opacity: 0; transform: translate3d(0, -8px, 0) scale(.985); } }
+@keyframes drawer-in    { from { opacity: 0; transform: translate3d(var(--slide-overlay), 0, 0); } }
+@keyframes drawer-out   { to   { opacity: 0; transform: translate3d(var(--slide-overlay), 0, 0); } }
+@keyframes nav-drawer-in  { from { opacity: 0; transform: translate3d(calc(var(--slide-overlay) * -1), 0, 0); } }
+@keyframes nav-drawer-out { to   { opacity: 0; transform: translate3d(calc(var(--slide-overlay) * -1), 0, 0); } }
+@keyframes backdrop-in  { from { opacity: 0; } }
+@keyframes backdrop-out { to   { opacity: 0; } }
+
+/* ---------- 8. Popovers ---------- */
+.header-popover { transform-origin: top right; }
+@media (prefers-reduced-motion: no-preference) {
+  .header-popover { animation: popover-in var(--motion-micro) var(--ease-out); }
+
+  /* Row action menus use the popover API, so entry is a discrete-property transition. */
+  .row-menu-panel {
+    opacity: 0; transform: translate3d(0, -6px, 0) scale(.98); transform-origin: top center;
+    transition: opacity var(--motion-micro) var(--ease-out), transform var(--motion-micro) var(--ease-out),
+                overlay var(--motion-micro) allow-discrete, display var(--motion-micro) allow-discrete;
+  }
+  .row-menu-panel:popover-open { opacity: 1; transform: none; }
+  @starting-style { .row-menu-panel:popover-open { opacity: 0; transform: translate3d(0, -6px, 0) scale(.98); } }
+}
+@keyframes popover-in { from { opacity: 0; transform: translate3d(0, -4px, 0) scale(.97); } }
+
+/* ---------- 9. Toast ---------- */
+/* Rendered at all times so it can transition both ways; the box only draws when it holds a
+   message, and the message outlives the dismissal by exactly one exit. */
+/* The resting state is hidden, so like every other hidden state in this file it is scoped to
+   no-preference. With motion off the toast simply appears and disappears with its message. */
+@media (prefers-reduced-motion: no-preference) {
+  .toast { opacity: 0; transform: translate3d(0, 10px, 0); transition: opacity var(--motion-overlay) var(--ease-out), transform var(--motion-overlay) var(--ease-out); }
+  .toast.visible { opacity: 1; transform: none; }
+}
+
+/* ---------- 10. Progress fills ---------- */
+/* The bar wipes out to its recorded percentage on first paint, and eases to a new width if
+   the underlying record changes. Width is the second deliberate exception to the
+   transform-only rule: `scaleX` on the fill would squash nothing, but it cannot express a
+   change of target value without the inline width being animated too. */
+.progress-track i {
+  animation: progress-enter 480ms var(--ease-out) both;
+  transition: width var(--motion-section) var(--ease-out);
+}
+@keyframes progress-enter { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+
+/* ---------- 11. Micro-interactions ---------- */
+.bottleneck-row { transition: background var(--motion-micro) var(--ease-out), padding-inline var(--motion-micro) var(--ease-out); }
+.indicator-track span { transition: width var(--motion-section) var(--ease-out), background var(--motion-micro) var(--ease-out); }
+.command-results [role="option"] { transition: background var(--motion-micro) var(--ease-out), color var(--motion-micro) var(--ease-out); }
+.filter-chips .chip { transition: background var(--motion-micro) var(--ease-out), border-color var(--motion-micro) var(--ease-out); }
+.sidebar, .workspace { transition: width var(--motion-overlay) var(--ease), margin-left var(--motion-overlay) var(--ease); }
+.drill-bar rect { transition: fill var(--motion-micro) var(--ease-out), stroke var(--motion-micro) var(--ease-out), filter var(--motion-micro) var(--ease-out); }
+
+/* Mobile: side drawers and sheets rise from the bottom edge, matching where they sit. */
+@media (max-width: 600px) and (prefers-reduced-motion: no-preference) {
+  .quick-view[data-phase="open"], .notice-center[data-phase="open"], .filter-sheet[data-phase="open"] { animation: sheet-in var(--motion-overlay) var(--ease-out); }
+  .quick-view[data-phase="closing"], .notice-center[data-phase="closing"], .filter-sheet[data-phase="closing"] { animation: sheet-out var(--motion-overlay-exit) var(--ease-in) both; }
+  .command-palette[data-phase="open"]    { animation: overlay-in var(--motion-overlay) var(--ease-out); }
+  .command-palette[data-phase="closing"] { animation: overlay-out var(--motion-overlay-exit) var(--ease-in) both; }
+}
+@keyframes sheet-in  { from { opacity: 0; transform: translate3d(0, 100%, 0); } }
+@keyframes sheet-out { to   { opacity: 0; transform: translate3d(0, 100%, 0); } }
+
+/* ---------- 12. Reduced motion ---------- */
+/* The rules above already withhold every hidden state. This is the backstop: anything that
+   slipped through — third-party chart animation, a transition added later — stops here. */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,72 @@
+.workspace-page { min-width:0; }
+#project-monitor { scroll-margin-top:95px; }
+.scope-dock { position:fixed; left:calc(var(--sidebar-width) + 24px); right:24px; bottom:20px; z-index:15; display:flex; align-items:center; justify-content:space-between; gap:20px; max-width:580px; margin:0 auto; padding:13px 17px; background:#ffffffed; backdrop-filter:blur(12px); border:1px solid #a8cbbb; border-radius:12px; box-shadow:0 8px 35px #153c2424; animation:workspace-arrive .22s ease-out; }
+.workspace-page:has(.scope-dock) { padding-bottom:90px; }
+.form-grid label:focus-within { color:var(--teal); }
+.form-grid input:focus,.form-grid select:focus { background:#f9fdfb; box-shadow:0 0 0 3px #16827715; }
+.workspace-page details[open] > :not(summary) { animation:workspace-arrive .2s ease-out; }
+@media(max-width:900px) { .scope-dock { left:18px; right:18px; } }
+.scope-dock > span { display:grid; gap:4px; }
+.scope-dock strong { font-size:13px; }
+.scope-dock small { font-size:10px; color:var(--text-muted); }
+.scope-dock > div { display:flex; gap:5px; }
+.scope-dock .button,.scope-dock button { font-size:12px; padding:8px 10px; }
+.login-brand { animation:workspace-arrive .45s ease-out; }
+.login-brand h1 { color:#f0f7f3; }
+.login-brand > .eyebrow { color:#9cc4b2; }
+.login-card { animation:login-arrive .4s ease-out; transition:border-color .2s,box-shadow .2s; }
+.login-card:focus-within { box-shadow:0 18px 60px #113b2925; border-color:#8db8a3; }
+.login-card .login-field { margin:18px 0 0; }
+.login-field > label { display:flex; align-items:center; justify-content:space-between; margin:0 0 8px; transition:color .18s; }
+.login-field[data-focused=true] > label { color:var(--teal); }
+.login-field label svg { color:var(--teal); }
+.login-field input { transition:border-color .18s,box-shadow .18s,background .18s; }
+.login-field input:focus { outline:2px solid #91bfa9; outline-offset:2px; border-color:var(--teal); background:#fcfefc; }
+.password-control { position:relative; }
+.password-control input { padding-right:48px; }
+.password-control button { position:absolute; right:4px; top:3px; border:0; background:transparent; min-height:36px; padding:8px; color:var(--text-muted); }
+.login-feedback { min-height:36px; padding-top:10px; font-size:11px; color:var(--text-muted); }
+.login-submit svg:last-child { transition:transform .18s; }
+.login-submit:not(:disabled):hover svg:last-child { transform:translateX(4px); }
+.login-card.is-submitting { border-color:var(--teal); }
+.login-error { animation:workspace-arrive .2s ease-out; border-left:3px solid #b54c44; padding:10px 14px; background:#fbefed; border-radius:5px; }
+.login-journey { margin-top:36px; max-width:420px; }
+.login-journey > div { display:grid; gap:8px; }
+.login-journey button { text-align:left; justify-content:flex-start; border:1px solid #315b4f; background:transparent; color:#c2d9ce; padding:14px; font-size:12px; }
+.login-journey button span { color:#93b6a4; font:11px var(--font-mono); margin-right:8px; }
+.login-journey button svg { margin-left:auto; }
+.login-journey button[aria-pressed=true] { background:#1b4f40; border-color:#78ab95; color:white; }
+.login-journey .login-step-copy { min-height:50px; font-size:12px; color:#b8d1c3; animation:workspace-arrive .22s ease-out; }
+.login-journey > .eyebrow { color:#9cc4b2; }
+.busy-spinner { animation:busy-turn .85s linear infinite; }
+.app-nav a svg { transition:transform .18s; }
+.app-nav a:hover svg { transform:translateX(3px); }
+.header-actions button:not(:disabled):hover > svg { transform:rotate(-20deg); }
+.header-actions button > svg { transition:transform .2s; }
+.project-mobile-card:hover { box-shadow:var(--shadow-sm); }
+.project-table tbody tr:focus-visible td { background:#e9f5ee; }
+.drill-bar:hover rect { filter:brightness(1.12); }
+.drill-bar[aria-pressed=true] rect { stroke-width:2.5px; }
+.workspace-page [aria-busy=true] .project-table,.workspace-page [aria-busy=true] .project-cards { opacity:.6; transition:opacity .18s; }
+.gis-inspector { animation:workspace-arrive .25s ease-out; }
+@media(prefers-reduced-motion:no-preference) {
+ .workspace-page { animation:workspace-arrive .28s ease-out; }
+ .workspace-page > .page-title { animation:workspace-arrive .32s ease-out; }
+ .workspace-page > .scope-toolbar { animation:workspace-arrive .35s ease-out; }
+ .detail-tabs + [role=tabpanel] { animation:workspace-arrive .22s ease-out; }
+}
+@keyframes workspace-arrive { from {opacity:.25;transform:translateY(9px);} to {opacity:1;transform:none;} }
+@keyframes login-arrive { from {opacity:.3;transform:translateX(16px);} to {opacity:1;transform:none;} }
+@keyframes busy-turn { to {transform:rotate(360deg);} }
+@media(max-width:600px) { .scope-dock { bottom:12px; padding:11px; gap:8px; } .scope-dock strong { font-size:11px; } .login-journey { margin-top:22px; } }
+@media(prefers-reduced-motion:reduce) { *,*::before,*::after { animation:none!important;transition:none!important;scroll-behavior:auto!important; } }
+
+.quick-readiness { margin:16px 0; padding:14px; border:1px solid var(--border); border-radius:12px; background:var(--surface-subtle,#f7faf8); display:grid; gap:10px; }
+.quick-readiness > div:first-child { display:flex; align-items:flex-start; justify-content:space-between; gap:14px; }
+.quick-readiness .eyebrow { display:inline-flex; align-items:center; gap:6px; margin:0; }
+.quick-readiness strong { font-size:14px; text-align:right; }
+.quick-readiness dl { margin:0; display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.quick-readiness dt { font-size:10px; color:var(--text-muted); text-transform:uppercase; letter-spacing:.06em; }
+.quick-readiness dd { margin:4px 0 0; font-size:12px; line-height:1.45; }
+.quick-readiness small { color:var(--text-muted); }
+@media(max-width:600px) { .quick-readiness > div:first-child { display:grid; } .quick-readiness strong { text-align:left; } .quick-readiness dl { grid-template-columns:1fr; } }
