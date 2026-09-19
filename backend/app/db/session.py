@@ -5,23 +5,57 @@ from app.core.config import settings
 
 
 def _sqlalchemy_database_url(url: str) -> str:
-    # Hosting providers commonly expose generic PostgreSQL URLs. This project
-    # ships psycopg v3, so normalize generic schemes to the explicit driver.
+    """
+    Normalize common PostgreSQL URLs to psycopg v3.
+
+    Examples:
+    postgres://...    -> postgresql+psycopg://...
+    postgresql://...  -> postgresql+psycopg://...
+    """
     if url.startswith("postgres://"):
         return "postgresql+psycopg://" + url[len("postgres://"):]
+
     if url.startswith("postgresql://"):
         return "postgresql+psycopg://" + url[len("postgresql://"):]
+
     return url
 
 
 DATABASE_URL = _sqlalchemy_database_url(settings.database_url)
 
+is_sqlite = DATABASE_URL.startswith("sqlite")
+
+engine_kwargs = {
+    "pool_pre_ping": True,
+}
+
+if is_sqlite:
+    engine_kwargs["connect_args"] = {
+        "check_same_thread": False,
+    }
+else:
+    # Keep the application-side pool intentionally small.
+    # This is important when using Supabase pooled PostgreSQL,
+    # especially on plans with low connection limits.
+    engine_kwargs.update(
+        {
+            "pool_size": 2,
+            "max_overflow": 2,
+            "pool_timeout": 15,
+            "pool_recycle": 300,
+        }
+    )
+
 engine = create_engine(
     DATABASE_URL,
-    pool_pre_ping=True,
-    connect_args={"check_same_thread": False} if DATABASE_URL.startswith("sqlite") else {},
+    **engine_kwargs,
 )
-SessionLocal = sessionmaker(bind=engine, autoflush=False, expire_on_commit=False)
+
+SessionLocal = sessionmaker(
+    bind=engine,
+    autoflush=False,
+    expire_on_commit=False,
+)
 
 
 def get_db():
