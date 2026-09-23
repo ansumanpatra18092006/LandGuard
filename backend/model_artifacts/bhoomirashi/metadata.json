@@ -1,0 +1,83 @@
+{
+  "source": "Public Bhoomi Rashi project/notification records",
+  "dataset_rows": 1365,
+  "unique_projects": 432,
+  "target": "delay_over_365d",
+  "target_definition": "1 when chronology-matched project-context 3A\u21923D interval exceeds 365 days; 0 otherwise",
+  "pairing_method": "deduped_nearest_subsequent_3D",
+  "geography_verified": false,
+  "statutory_compliance_model": false,
+  "validation": "5-fold StratifiedGroupKFold grouped by project_id",
+  "selected_model": "Logistic Regression",
+  "selection_metric": "mean cross-validated F1",
+  "class_counts": {
+    "0": 1081,
+    "1": 284
+  },
+  "features": [
+    "land_required_ha",
+    "land_available_ha",
+    "land_to_be_acquired_ha",
+    "land_available_ratio",
+    "three_A_year",
+    "three_A_month",
+    "prior_3A_count",
+    "days_since_previous_3A",
+    "derived_project_type",
+    "ro_pd_category"
+  ],
+  "excluded_leakage_fields": [
+    "three_D_date",
+    "three_D_notification",
+    "days_3A_to_3D",
+    "delay_over_365d_as_input"
+  ],
+  "cv_metrics": [
+    {
+      "model": "Logistic Regression",
+      "mean_accuracy": 0.6190290634751514,
+      "mean_balanced_accuracy": 0.5908165102524332,
+      "mean_precision": 0.28259870800994724,
+      "mean_recall": 0.5423645320197045,
+      "mean_f1": 0.3708948124043071,
+      "mean_roc_auc": 0.6303288432753769,
+      "std_accuracy": 0.017471385132463515,
+      "std_balanced_accuracy": 0.024154631463343762,
+      "std_precision": 0.017833296243047594,
+      "std_recall": 0.06481195985952491,
+      "std_f1": 0.02886653928894208,
+      "std_roc_auc": 0.033532248817280105
+    },
+    {
+      "model": "Random Forest",
+      "mean_accuracy": 0.7105648781603092,
+      "mean_balanced_accuracy": 0.5568184070581388,
+      "mean_precision": 0.3017126393354265,
+      "mean_recall": 0.29313369630973984,
+      "mean_f1": 0.289781753988931,
+      "mean_roc_auc": 0.6123944932409822,
+      "std_accuracy": 0.025507554516967526,
+      "std_balanced_accuracy": 0.022682960806790355,
+      "std_precision": 0.025337420750113877,
+      "std_recall": 0.09341843183907661,
+      "std_f1": 0.045643303899948424,
+      "std_roc_auc": 0.059358992113053406
+    },
+    {
+      "model": "Gradient Boosting",
+      "mean_accuracy": 0.7721409794394581,
+      "mean_balanced_accuracy": 0.5213397842876519,
+      "mean_precision": 0.4018228647913805,
+      "mean_recall": 0.09167746953590873,
+      "mean_f1": 0.13815430520034097,
+      "mean_roc_auc": 0.5961139764920589,
+      "std_accuracy": 0.017465180939060795,
+      "std_balanced_accuracy": 0.005601647236621098,
+      "std_precision": 0.14638987526289363,
+      "std_recall": 0.038028285777156126,
+      "std_f1": 0.04362443125721401,
+      "std_roc_auc": 0.07312237105197826
+    }
+  ],
+  "recommended_label": "Experimental Bhoomi Rashi acquisition-stage ML"
+}

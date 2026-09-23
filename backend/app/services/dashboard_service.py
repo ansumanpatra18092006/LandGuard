@@ -1,10 +1,15 @@
+from collections import defaultdict
+from datetime import datetime, timedelta, timezone
+
 from sqlalchemy import case, func, select
 from sqlalchemy.orm import Session
 
 from app.api.filters import ProjectFilters
 from app.core.config import settings
 from app.models.project import Project as P
+from app.models.project_audit import ProjectSnapshot
 from app.services.operational_service import indicator_conditions
+from app.services.acquisition_risk_service import acquisition_delay_risk_for
 
 
 def count_where(condition):
@@ -19,6 +24,7 @@ def summary(db: Session, filters: ProjectFilters) -> dict:
         func.avg(P.compensation_completion_pct).label("avg_compensation_pct"),
         count_where(P.data_source == "ILLUSTRATIVE").label("illustrative_projects"),
         count_where(P.data_source == "USER_ENTERED").label("user_entered_projects"),
+        count_where(P.data_source == "INTEGRATED").label("integrated_projects"),
     ))).mappings().one()
     result = dict(row)
     if result["avg_compensation_pct"] is not None:
@@ -64,3 +70,38 @@ def operational_indicators(db: Session, filters: ProjectFilters) -> dict:
         "possession_below_pct": settings.possession_threshold_pct,
         "response_above_days": settings.slow_response_days,
     }}
+
+
+def delay_trends(db: Session, filters: ProjectFilters, *, group_by: str = "district", days: int = 365) -> list[dict]:
+    project_ids = list(db.scalars(filters.apply(select(P.project_id))).all())
+    if not project_ids:
+        return []
+    since = datetime.now(timezone.utc) - timedelta(days=days)
+    snapshots = list(db.scalars(
+        select(ProjectSnapshot)
+        .where(ProjectSnapshot.project_id.in_(project_ids), ProjectSnapshot.captured_at >= since)
+        .order_by(ProjectSnapshot.captured_at, ProjectSnapshot.project_id)
+    ).all())
+    buckets = defaultdict(list)
+    for row in snapshots:
+        captured = row.captured_at
+        if captured.tzinfo is None:
+            captured = captured.replace(tzinfo=timezone.utc)
+        period = captured.date().isoformat()
+        label = row.state if group_by == "state" else f"{row.district}, {row.state}"
+        buckets[(period, label)].append(row)
+    output = []
+    for (period, label), rows in sorted(buckets.items()):
+        risk_values = [
+            r.acquisition_risk_score if r.acquisition_risk_score is not None else acquisition_delay_risk_for(r).score
+            for r in rows
+        ]
+        delay_values = [r.delay_probability for r in rows if r.delay_probability is not None]
+        output.append({
+            "period": period,
+            "group_label": label,
+            "avg_acquisition_risk_score": round(sum(risk_values) / len(risk_values), 1) if risk_values else 0.0,
+            "avg_delay_probability": round(sum(delay_values) / len(delay_values), 4) if delay_values else None,
+            "project_count": len({r.project_id for r in rows}),
+        })
+    return output

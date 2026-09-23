@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import { Link, NavLink, useLocation, useNavigate } from 'react-router-dom';
-import { ShieldCheck, LayoutDashboard, FolderOpen, Map, Bell, ChartNoAxesCombined, UsersRound, PanelLeftClose, PanelLeftOpen, Menu, X, Search, ChevronDown, ArrowUpRight, Activity } from 'lucide-react';
+import { ShieldCheck, LayoutDashboard, FolderOpen, Map, Bell, ChartNoAxesCombined, UsersRound, PanelLeftClose, PanelLeftOpen, Menu, X, Search, ChevronDown, ArrowUpRight, Activity, MapPinned } from 'lucide-react';
 
 import CommandPalette from './CommandPalette';
 import NoticeCenter from './NoticeCenter';
@@ -21,6 +21,7 @@ function Navigation({ close, notices, user }) {
     <NavLink to="/map" onClick={close} title="GIS Map"><Map size={19}/><span>GIS Map</span></NavLink>
     <button onClick={() => { close?.(); notices(); }} title="Review notices"><Bell size={19}/><span>Review notices</span></button>
     <NavLink to="/analytics" onClick={close} title="Analytics"><ChartNoAxesCombined size={19}/><span>Analytics</span></NavLink>
+    <NavLink to="/route-analysis" onClick={close} title="Route feasibility"><MapPinned size={19}/><span>Route analysis</span></NavLink>
   </nav></>;
 }
 function Brand() {
@@ -46,7 +47,7 @@ export default function AppShell({ children }) {
     catch(err) {setLogoutError(err.message);}
     finally {setSigningOut(false);}
   }
-  const context = location.pathname === '/admin' ? 'Administration overview' : location.pathname === '/admin/users' ? 'Users & access' : location.pathname === '/dashboard' ? 'Dashboard' : location.pathname === '/analytics' ? 'Analytics' : location.pathname === '/map' ? 'GIS Map' : location.pathname.endsWith('/edit') ? 'Edit project' : location.pathname.endsWith('/new') ? 'New project' : location.pathname === '/projects' ? 'Project registry' : location.pathname.startsWith('/projects/') ? 'Project details' : systemAdmin ? 'Administration' : 'Workspace';
+  const context = location.pathname === '/admin' ? 'Administration overview' : location.pathname === '/admin/users' ? 'Users & access' : location.pathname === '/dashboard' ? 'Dashboard' : location.pathname === '/analytics' ? 'Analytics' : location.pathname === '/route-analysis' ? 'Route analysis' : location.pathname === '/map' ? 'GIS Map' : location.pathname.endsWith('/edit') ? 'Edit project' : location.pathname.endsWith('/new') ? 'New project' : location.pathname === '/projects' ? 'Project registry' : location.pathname.startsWith('/projects/') ? 'Project details' : systemAdmin ? 'Administration' : 'Workspace';
 
   useEffect(() => { setDrawerOpen(false); }, [location.pathname]);
   useEffect(() => {

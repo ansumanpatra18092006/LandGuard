@@ -4,7 +4,9 @@ from sqlalchemy import create_engine, pool
 from app.core.config import settings
 from app.db.base import Base
 from app.models.project import Project  # noqa: F401 - metadata registration
+from app.models.land_parcel import LandParcel  # noqa: F401 - metadata registration
 from app.models.intervention import Intervention, InterventionEvent  # noqa: F401 - metadata registration
+from app.models.project_audit import ProjectSnapshot, ProjectAuditEvent  # noqa: F401 - metadata registration
 
 target_metadata = Base.metadata
 

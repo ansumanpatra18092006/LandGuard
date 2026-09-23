@@ -7,9 +7,11 @@ from sqlalchemy.orm import Session
 from app.core.security import require_roles
 from app.core.access import OPERATIONAL_ROLES, assert_project_access, scope_projects
 from app.db.session import get_db
-from app.schemas.intelligence import ModelStatus, PredictionResult, ScenarioRequest, ScenarioResult, RiskPulseResponse
+from app.schemas.intelligence import ModelStatus, PredictionResult, ScenarioRequest, ScenarioResult, RiskPulseResponse, BhoomiRashiSignal, StageDelayOutlook
 from app.services.intelligence_service import model_status, predict, scenario, portfolio_risk_pulse
 from app.services.project_service import get_project
+from app.services.bhoomirashi_intelligence_service import predict_bhoomirashi
+from app.services.stage_outlook_service import stage_delay_outlook
 from app.models.project import Project
 
 router = APIRouter(tags=["intelligence"])
@@ -36,6 +38,20 @@ def risk_pulse(
         query = query.where(Project.district == district)
     projects = db.scalars(query.order_by(Project.project_id)).all()
     return portfolio_risk_pulse(list(projects))
+
+
+
+
+@router.get("/projects/{project_id}/stage-outlook", response_model=list[StageDelayOutlook])
+def project_stage_outlook(project_id: str, db: Annotated[Session, Depends(get_db)], _user=Depends(require_roles(*OPERATIONAL_ROLES))):
+    project = get_project(db, project_id); assert_project_access(project, _user)
+    return stage_delay_outlook(project)
+
+
+@router.get("/projects/{project_id}/bhoomirashi-predict", response_model=BhoomiRashiSignal)
+def bhoomirashi_prediction(project_id: str, db: Annotated[Session, Depends(get_db)], _user=Depends(require_roles(*OPERATIONAL_ROLES))):
+    project = get_project(db, project_id); assert_project_access(project, _user)
+    return predict_bhoomirashi(project)
 
 
 @router.post("/projects/{project_id}/predict", response_model=PredictionResult)

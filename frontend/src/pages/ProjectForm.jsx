@@ -6,6 +6,7 @@ import { safeReturnTo } from '../utils/projectScope';
 import { api } from '../services/api';
 import { getUser } from '../services/auth';
 import { ErrorState, Loading, pretty } from '../components/common';
+import LocationPicker from '../components/gis/LocationPicker';
 
 const types = ['ROAD','RAILWAY','IRRIGATION','INDUSTRIAL','URBAN'];
 const stages = ['NOTIFICATION','SURVEY','VALUATION','COMPENSATION','REHABILITATION','POSSESSION','COMPLETED'];
@@ -39,8 +40,15 @@ export default function ProjectForm() {
   const [busy, setBusy] = useState(false);
   const [confirmDelete, setConfirmDelete] = useState(false);
   const [retry, setRetry] = useState(0);
+  const user = getUser();
+  const lockState = user?.role === 'STATE_OFFICER' || user?.role === 'DISTRICT_OFFICER';
+  const lockDistrict = user?.role === 'DISTRICT_OFFICER';
   useEffect(() => {
-    if (!projectId) { setForm(empty); setLoading(false); return; }
+    if (!projectId) {
+      setForm({ ...empty, state: lockState ? (user?.state || '') : '', district: lockDistrict ? (user?.district || '') : '' });
+      setLoading(false);
+      return;
+    }
     const controller = new AbortController();
     setLoading(true); setLoadError('');
     api(`/projects/${projectId}`, { signal: controller.signal }).then(p => {
@@ -48,9 +56,14 @@ export default function ProjectForm() {
     }).catch(e => { if (e.name !== 'AbortError') setLoadError(e.message); })
       .finally(() => { if (!controller.signal.aborted) setLoading(false); });
     return () => controller.abort();
-  }, [projectId, retry]);
+  }, [projectId, retry, lockState, lockDistrict, user?.state, user?.district]);
   async function save(event) {
-    event.preventDefault(); setBusy(true); setError('');
+    event.preventDefault(); setError('');
+    if (form.latitude === '' || form.longitude === '' || !Number.isFinite(Number(form.latitude)) || !Number.isFinite(Number(form.longitude))) {
+      setError('Select the project location on the map before saving.');
+      return;
+    }
+    setBusy(true);
     const body = Object.fromEntries(fields.map(([key,,type,,,required=true]) => {
       const value = form[key];
       if (required === false && (value === '' || value == null)) return [key, null];
@@ -73,7 +86,7 @@ export default function ProjectForm() {
   if (loadError) return <ErrorState message={loadError} retry={() => setRetry(n => n + 1)}/>;
   const canDelete = getUser()?.role === 'STATE_OFFICER';
   return <><Link className="back" to={projectId ? `/projects/${projectId}` : returnTo} state={{ returnTo }}><ArrowLeft size={16}/> Back to projects</Link><div className="page-title"><div><div className="eyebrow">PROJECT REGISTRY</div><h1>{projectId ? 'Update project record' : 'Add a project'}</h1><p>Enter a project observation. Prediction-baseline fields are optional for registry use but required before running AI intelligence.</p></div></div>{error && <ErrorState message={error}/>}
-    <form className="panel detail" onSubmit={save}><fieldset disabled={busy}><div className="form-grid">{fields.map(([key,label,type,min,max,required=true]) => <label key={key}>{label}{required === false && <small className="field-hint">Prediction baseline</small>}{Array.isArray(type) ? <select required={required} value={form[key]} onChange={e => setForm(f => ({...f,[key]: e.target.value}))}>{type.map(v => <option key={v} value={v}>{pretty(v)}</option>)}</select> : <input required={required} type={type === 'integer' ? 'number' : type} min={min} max={max ?? (type === 'integer' ? 2147483647 : undefined)} step={type === 'integer' ? '1' : 'any'} maxLength={key === 'project_id' ? 40 : key === 'project_name' ? 200 : 100} pattern={key === 'project_id' ? '[A-Za-z0-9_\\-]+' : undefined} value={form[key]} onChange={e => setForm(f => ({...f,[key]: e.target.value}))}/>}</label>)}</div></fieldset><div className="form-actions"><Link className="button" to={projectId ? `/projects/${projectId}` : returnTo} state={{ returnTo }}>Cancel</Link><button className="primary" disabled={busy} type="submit"><Save size={16}/>{busy ? 'Saving…' : 'Save project'}</button></div></form>
+    <form className="panel detail" onSubmit={save}><fieldset disabled={busy}><div className="form-grid">{fields.filter(([key]) => !['latitude','longitude'].includes(key)).map(([key,label,type,min,max,required=true]) => <label key={key}>{label}{required === false && <small className="field-hint">Prediction baseline</small>}{Array.isArray(type) ? <select required={required} value={form[key]} onChange={e => setForm(f => ({...f,[key]: e.target.value}))}>{type.map(v => <option key={v} value={v}>{pretty(v)}</option>)}</select> : <input required={required} readOnly={(key === 'state' && lockState) || (key === 'district' && lockDistrict)} aria-readonly={(key === 'state' && lockState) || (key === 'district' && lockDistrict)} title={(key === 'state' && lockState) || (key === 'district' && lockDistrict) ? 'Assigned by your account scope' : undefined} type={type === 'integer' ? 'number' : type} min={min} max={max ?? (type === 'integer' ? 2147483647 : undefined)} step={type === 'integer' ? '1' : 'any'} maxLength={key === 'project_id' ? 40 : key === 'project_name' ? 200 : 100} pattern={key === 'project_id' ? '[A-Za-z0-9_\\-]+' : undefined} value={form[key]} onChange={e => setForm(f => ({...f,[key]: e.target.value}))}/>}</label>)}</div><LocationPicker latitude={form.latitude} longitude={form.longitude} state={form.state} district={form.district} disabled={busy} onChange={({ latitude, longitude }) => setForm(f => ({ ...f, latitude, longitude }))}/></fieldset><div className="form-actions"><Link className="button" to={projectId ? `/projects/${projectId}` : returnTo} state={{ returnTo }}>Cancel</Link><button className="primary" disabled={busy} type="submit"><Save size={16}/>{busy ? 'Saving…' : 'Save project'}</button></div></form>
     {projectId && canDelete && <div className="delete-area">{confirmDelete ? <><p>Delete this project permanently? This cannot be undone.</p><button disabled={busy} className="danger" onClick={remove}>Confirm deletion</button><button disabled={busy} onClick={() => setConfirmDelete(false)}>Keep project</button></> : <button className="danger" onClick={() => setConfirmDelete(true)}><Trash2 size={15}/> Delete project</button>}</div>}
   </>;
 }

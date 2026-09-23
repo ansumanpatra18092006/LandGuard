@@ -11,6 +11,7 @@ from app.db.session import get_db
 from app.models.intervention import Intervention, InterventionEvent
 from app.schemas.intervention import InterventionCreate, InterventionRead, InterventionUpdate
 from app.services.project_service import get_project
+from app.services.intervention_automation_service import apply_intervention_lifecycle
 
 router = APIRouter(prefix="/projects", tags=["interventions"])
 Database = Annotated[Session, Depends(get_db)]
@@ -38,6 +39,7 @@ def _serialize(db: Session, intervention: Intervention) -> dict:
 @router.get("/{project_id}/interventions", response_model=list[InterventionRead])
 def list_interventions(project_id: str, db: Database, user=Depends(require_roles(*OPERATIONAL_ROLES))):
     project = get_project(db, project_id); assert_project_access(project, user)
+    apply_intervention_lifecycle(db, project_id=project_id)
     rows = db.scalars(select(Intervention).where(Intervention.project_id == project_id)
                       .order_by(Intervention.status, Intervention.due_date, Intervention.id.desc())).all()
     return [_serialize(db, row) for row in rows]
@@ -91,6 +93,7 @@ summary_router = APIRouter(prefix="/interventions", tags=["interventions"])
 
 @summary_router.get("/summary", response_model=InterventionSummary)
 def intervention_summary(db: Database, user=Depends(require_roles(*OPERATIONAL_ROLES))):
+    apply_intervention_lifecycle(db)
     project_ids = list(db.scalars(scope_projects(select(Project.project_id), user)).all())
     if not project_ids:
         return InterventionSummary(open_count=0, overdue_count=0, in_progress_count=0, resolved_count=0)

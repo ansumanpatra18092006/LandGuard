@@ -10,6 +10,7 @@ class DashboardSummary(BaseModel):
     avg_compensation_pct: float | None
     illustrative_projects: int
     user_entered_projects: int
+    integrated_projects: int = 0
     high_risk: None = None
     medium_risk: None = None
     low_risk: None = None
@@ -48,3 +49,11 @@ class OperationalIndicators(BaseModel):
     projects_with_slow_stakeholder_response: int
     thresholds: OperationalThresholds
     interpretation: str = "Prototype thresholds, not ML risk factors. Counts overlap; each indicator counts projects once."
+
+
+class DelayTrendPoint(BaseModel):
+    period: str
+    group_label: str
+    avg_acquisition_risk_score: float
+    avg_delay_probability: float | None = None
+    project_count: int

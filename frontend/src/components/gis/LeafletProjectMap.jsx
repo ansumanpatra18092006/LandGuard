@@ -27,11 +27,16 @@ export default function LeafletProjectMap({
   onBoundsChange,
   locateRequest = 0,
   fitRequest = 0,
+  ownershipParcels = [],
+  showOwnership = true,
+  showRiskHeat = false,
 }) {
   const host = useRef(null);
   const mapRef = useRef(null);
   const markersRef = useRef(new Map());
   const layerRef = useRef(null);
+  const ownershipLayerRef = useRef(null);
+  const heatLayerRef = useRef(null);
 
   // Keep callbacks in refs so changing parent callback identities does not
   // destroy/recreate the Leaflet map.
@@ -67,7 +72,6 @@ export default function LeafletProjectMap({
 
     const map = L.map(host.current, {
       zoomControl: false,
-      preferCanvas: true,
     }).setView([20.5937, 78.9629], 5);
 
     L.control.zoom({ position: 'bottomright' }).addTo(map);
@@ -82,10 +86,19 @@ export default function LeafletProjectMap({
       }
     ).addTo(map);
 
+    const riskPane = map.createPane('mlRiskHeatPane');
+    riskPane.style.zIndex = '350';
+    riskPane.style.pointerEvents = 'none';
+    riskPane.classList.add('ml-risk-heat-pane');
+
+    const heatLayer = L.layerGroup().addTo(map);
+    const ownershipLayer = L.layerGroup().addTo(map);
     const layer = L.layerGroup().addTo(map);
 
     mapRef.current = map;
     layerRef.current = layer;
+    ownershipLayerRef.current = ownershipLayer;
+    heatLayerRef.current = heatLayer;
 
     const emitBounds = () => {
       // A queued move/zoom callback may run after React has started cleanup.
@@ -135,12 +148,116 @@ export default function LeafletProjectMap({
       if (layerRef.current === layer) {
         layerRef.current = null;
       }
+      if (ownershipLayerRef.current === ownershipLayer) {
+        ownershipLayerRef.current = null;
+      }
+      if (heatLayerRef.current === heatLayer) {
+        heatLayerRef.current = null;
+      }
 
       markersRef.current.clear();
       map.remove();
     };
   }, []);
 
+
+
+  useEffect(() => {
+    const layer = heatLayerRef.current;
+    if (!layer) return;
+    layer.clearLayers();
+    if (!showRiskHeat) return;
+
+    const heatColor = (probability) => {
+      if (probability >= 0.86) return '#991b1b';
+      if (probability >= 0.71) return '#dc2626';
+      if (probability >= 0.51) return '#f97316';
+      if (probability >= 0.31) return '#eab308';
+      return '#22a06b';
+    };
+
+    projects.forEach((project) => {
+      if (!Number.isFinite(project.latitude) || !Number.isFinite(project.longitude)) return;
+      if (project.delay_probability == null || Number.isNaN(Number(project.delay_probability))) return;
+      const probability = Math.max(0, Math.min(1, Number(project.delay_probability)));
+      const color = heatColor(probability);
+      const baseRadius = 1250 + probability * 2850;
+
+      [
+        { scale: 1.0, opacity: 0.055 },
+        { scale: 0.72, opacity: 0.085 },
+        { scale: 0.46, opacity: 0.13 },
+        { scale: 0.24, opacity: 0.18 },
+      ].forEach((ring) => {
+        L.circle([project.latitude, project.longitude], {
+          pane: 'mlRiskHeatPane',
+          radius: baseRadius * ring.scale,
+          stroke: false,
+          fillColor: color,
+          fillOpacity: ring.opacity + probability * 0.055,
+          interactive: false,
+          className: 'ml-risk-heat-spot',
+        }).addTo(layer);
+      });
+    });
+  }, [projects, showRiskHeat]);
+
+
+  useEffect(() => {
+    const map = mapRef.current;
+    const layer = ownershipLayerRef.current;
+    if (!map || !layer) return;
+    layer.clearLayers();
+    if (!showOwnership || !ownershipParcels.length) return;
+
+    const fillByOwnership = {
+      GOVERNMENT: '#d92d20',
+      PRIVATE: '#12b76a',
+      GOVERNMENT_LEASEHOLD: '#f79009',
+      INSTITUTIONAL: '#6172f3',
+      UNKNOWN: '#667085',
+    };
+    const parcelBounds = L.latLngBounds([]);
+
+    ownershipParcels.forEach((parcel) => {
+      if (!parcel.geometry) return;
+      const color = fillByOwnership[parcel.ownership_type] || fillByOwnership.UNKNOWN;
+      const unknown = parcel.ownership_type === 'UNKNOWN';
+      const feature = {
+        type: 'Feature',
+        geometry: parcel.geometry,
+        properties: parcel,
+      };
+      const geo = L.geoJSON(feature, {
+        style: {
+          color,
+          fillColor: color,
+          fillOpacity: unknown ? 0.12 : 0.3,
+          weight: parcel.ror_verified ? 1.8 : 1.35,
+          dashArray: parcel.ror_verified ? null : '5 4',
+        },
+      });
+      const verification = parcel.ror_verified ? 'AUTHORITY VERIFIED' : 'IMPORTED · NOT AUTHORITY VERIFIED';
+      const source = parcel.source_name || 'Unknown source';
+      const ownership = parcel.ownership_type.replaceAll('_', ' ');
+      geo.bindPopup(
+        `<div class="gis-popup ownership-popup"><strong>Plot ${parcel.plot_no || parcel.parcel_id}</strong>` +
+        `<span>${ownership}</span>` +
+        `<span>Khata: ${parcel.khata_no || '—'} · ${Number(parcel.area_acres || 0).toFixed(2)} acres</span>` +
+        `<span>${parcel.village || 'Village unavailable'}${parcel.tahasil ? ` · ${parcel.tahasil}` : ''}</span>` +
+        `<span>${parcel.kisam || 'Land class unavailable'}</span>` +
+        `<b class="ownership-verification ${parcel.ror_verified ? 'verified' : 'unverified'}">${verification}</b>` +
+        `<small>Source: ${source}</small></div>`,
+      );
+      geo.addTo(layer);
+      const bounds = geo.getBounds();
+      if (bounds.isValid()) parcelBounds.extend(bounds);
+    });
+
+    if (parcelBounds.isValid()) {
+      map.fitBounds(parcelBounds.pad(0.12), { maxZoom: 16, animate: true, duration: 0.55 });
+    }
+  }, [ownershipParcels, showOwnership]);
   useEffect(() => {
     const map = mapRef.current;
     const layer = layerRef.current;

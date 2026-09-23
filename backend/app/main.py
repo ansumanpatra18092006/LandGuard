@@ -20,10 +20,13 @@ from app.api.routes.alerts import router as alerts_router
 from app.api.routes.pipeline import router as pipeline_router
 from app.api.routes.interventions import router as interventions_router, summary_router as intervention_summary_router
 from app.api.routes.readiness import router as readiness_router
+from app.api.routes.automation import router as automation_router
+from app.api.routes.route_analysis import router as route_analysis_router
+from app.api.routes.integrations import router as integrations_router
 from app.core.config import settings
 from app.core.security import current_user
 from app.services.identity_service import IdentityError
-from app.db.session import get_db
+from app.db.session import get_db, SessionLocal
 
 app = FastAPI(title="LandGuard AI", version="0.3.0", description="Predictive land-acquisition delay intelligence prototype with GIS, authenticated decision support, and an explicitly labelled model pipeline.")
 app.add_middleware(CORSMiddleware, allow_origins=settings.allowed_origins, allow_credentials=True,
@@ -39,6 +42,9 @@ app.include_router(pipeline_router, prefix="/api/v1")
 app.include_router(interventions_router, prefix="/api/v1", dependencies=[Depends(current_user)])
 app.include_router(intervention_summary_router, prefix="/api/v1", dependencies=[Depends(current_user)])
 app.include_router(readiness_router, prefix="/api/v1", dependencies=[Depends(current_user)])
+app.include_router(automation_router, prefix="/api/v1", dependencies=[Depends(current_user)])
+app.include_router(route_analysis_router, prefix="/api/v1", dependencies=[Depends(current_user)])
+app.include_router(integrations_router, prefix="/api/v1", dependencies=[Depends(current_user)])
 
 
 @app.middleware("http")
@@ -93,6 +99,42 @@ async def start_paimana_monitor():
     global _pipeline_task
     if settings.paimana_auto_monitor_enabled and _pipeline_task is None:
         _pipeline_task = asyncio.create_task(_pipeline_monitor_loop())
+
+
+_automation_task = None
+
+
+async def _intervention_automation_loop():
+    from app.services.intervention_automation_service import evaluate_all_projects
+    await asyncio.sleep(settings.intervention_automation_startup_delay_seconds)
+    while True:
+        try:
+            def run_once():
+                with SessionLocal() as db:
+                    evaluate_all_projects(db)
+            await asyncio.to_thread(run_once)
+        except Exception:
+            logging.getLogger(__name__).exception("Intervention automation cycle failed")
+        await asyncio.sleep(settings.intervention_automation_interval_minutes * 60)
+
+
+@app.on_event("startup")
+async def start_intervention_automation():
+    global _automation_task
+    if settings.intervention_automation_enabled and _automation_task is None:
+        _automation_task = asyncio.create_task(_intervention_automation_loop())
+
+
+@app.on_event("shutdown")
+async def stop_intervention_automation():
+    global _automation_task
+    if _automation_task is not None:
+        _automation_task.cancel()
+        try:
+            await _automation_task
+        except asyncio.CancelledError:
+            pass
+        _automation_task = None
 
 
 @app.on_event("shutdown")

@@ -18,6 +18,9 @@ class Settings(BaseSettings):
     compensation_threshold_pct: float = Field(default=50, ge=0, le=100, allow_inf_nan=False)
     possession_threshold_pct: float = Field(default=50, ge=0, le=100, allow_inf_nan=False)
     slow_response_days: int = Field(default=30, ge=0)
+    intervention_automation_enabled: bool = False
+    intervention_automation_interval_minutes: int = Field(default=15, ge=5, le=1440)
+    intervention_automation_startup_delay_seconds: int = Field(default=20, ge=0, le=600)
     paimana_auto_monitor_enabled: bool = False
     paimana_check_interval_hours: int = Field(default=6, ge=1, le=168)
     paimana_startup_delay_seconds: int = Field(default=60, ge=0, le=3600)
@@ -46,6 +49,18 @@ class Settings(BaseSettings):
 
     @property
     def allowed_origins(self):
-        return list({self.frontend_origin.rstrip("/"), self.public_app_url.rstrip("/")})
+        # Keep production origins strict, but treat localhost and 127.0.0.1 as
+        # equivalent loopback origins during local Vite development. Vite may
+        # open either hostname, and POST requests (login, project updates, etc.)
+        # would otherwise be rejected by the CSRF origin check.
+        origins = {self.frontend_origin.rstrip("/"), self.public_app_url.rstrip("/")}
+        for origin in list(origins):
+            parsed = urlparse(origin)
+            if parsed.scheme == "http" and parsed.hostname in ("localhost", "127.0.0.1"):
+                port = parsed.port
+                suffix = f":{port}" if port else ""
+                origins.add(f"http://localhost{suffix}")
+                origins.add(f"http://127.0.0.1{suffix}")
+        return sorted(origins)
 
 settings = Settings()

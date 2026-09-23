@@ -10,6 +10,8 @@ from app.core.config import BACKEND_DIR
 from app.db.base import Base
 from app.db.session import engine
 from app.models.project import Project  # noqa: F401
+from app.models.land_parcel import LandParcel  # noqa: F401 - metadata registration
+from app.models.project_audit import ProjectSnapshot, ProjectAuditEvent  # noqa: F401 - metadata registration
 
 
 def migrate(connection, adopt_legacy: bool = False):

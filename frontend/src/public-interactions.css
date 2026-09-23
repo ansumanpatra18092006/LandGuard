@@ -91,3 +91,137 @@
  .public-header { min-height:100px; }
 }
 @media(prefers-reduced-motion:reduce) { .public-site *, .public-site *::before, .public-site *::after { animation:none!important; transition:none!important; scroll-behavior:auto!important; } }
+
+/* ============================================================================
+   Premium landing-page effects
+   This file already carries the marketing page's motion (scroll progress, reveal,
+   preview transitions). Unlike motion.css — which governs the internal, administrative
+   workspace and deliberately avoids anything ambient or looping — the public landing
+   page is allowed a little more presence: it exists to make a first impression once,
+   not to be read forty times a day. Everything below still obeys the same two rules
+   the rest of the app does: transform/opacity only (background-position and the
+   text-fill trick are the two narrow exceptions, both purely decorative), and every
+   hidden or looping state sits behind prefers-reduced-motion.
+   ========================================================================== */
+
+/* ---------- Hero aurora backdrop ---------- */
+/* Soft, slow-drifting color washes behind the hero copy. Decorative only — it never
+   affects layout or reads as content, so it stays out of the accessibility tree and
+   keeps still whenever motion is reduced. */
+.landing-hero { position: relative; isolation: isolate; }
+.hero-aurora {
+  position: absolute; inset: -140px -12% auto -12%; height: 560px; z-index: -1; pointer-events: none;
+  background:
+    radial-gradient(420px 320px at 18% 22%, rgba(20,107,100,.16), transparent 65%),
+    radial-gradient(380px 300px at 80% 6%, rgba(14,74,58,.14), transparent 60%),
+    radial-gradient(320px 260px at 52% 58%, rgba(20,107,100,.09), transparent 70%);
+  filter: blur(6px);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero-aurora { animation: aurora-drift 22s var(--ease) infinite alternate; }
+}
+@keyframes aurora-drift {
+  from { transform: translate3d(0, 0, 0) scale(1); }
+  to   { transform: translate3d(2%, 3%, 0) scale(1.06); }
+}
+
+/* ---------- Hero headline sheen ---------- */
+/* A single sweep across the emphasized line on load — not a loop, so it reads as a
+   flourish rather than a distraction sitting above the fold. */
+.hero-shine {
+  background-image: linear-gradient(100deg, var(--teal) 42%, #5fcdbd 50%, var(--teal) 58%);
+  background-size: 240% 100%;
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .hero-shine { animation: hero-shine-sweep 2.2s var(--ease-out) .3s 1 both; }
+}
+@keyframes hero-shine-sweep { from { background-position: 100% 0; } to { background-position: 0 0; } }
+
+/* ---------- Hero trust stats ---------- */
+.hero-stats { display: flex; gap: 30px; margin: 28px 0 4px; flex-wrap: wrap; }
+.hero-stats > div { min-width: 100px; }
+.hero-stats strong { display: block; font-size: 27px; letter-spacing: -.5px; color: var(--primary); font-variant-numeric: tabular-nums; }
+.hero-stats span { display: block; font-size: 11px; color: var(--text-muted); margin-top: 4px; line-height: 1.5; max-width: 150px; }
+
+/* ---------- Magnetic primary CTA ---------- */
+/* The nudge toward the pointer is a distinct spring, not the ease used for ordinary
+   hover states — that contrast is what reads as "this one button is special". */
+a[data-magnetic] { transform: translate3d(var(--magnet-x, 0px), var(--magnet-y, 0px), 0); }
+@media (prefers-reduced-motion: no-preference) {
+  /* Same background/border/shadow transitions as the base .button rule, plus a slower
+     spring specifically for the magnet's own transform — kept as one explicit list so
+     neither rule silently drops the other's properties via the transition shorthand. */
+  a[data-magnetic] {
+    transition: background var(--duration) var(--ease), border-color var(--duration) var(--ease),
+      box-shadow var(--duration-slow) var(--ease-spring), transform 500ms var(--ease-spring);
+  }
+}
+
+/* ---------- Spotlight + tilt: workspace cards ---------- */
+/* Same tinted-highlight recipe as the dashboard's .stat cards (motion.css), paired here
+   with a small pointer-following tilt for a more tactile, "premium" surface. */
+.public-cards { perspective: 1200px; }
+.public-cards > button { position: relative; }
+/* The base rule's plain "lift on hover" (public.css) is combined here with the tilt, so
+   hovering a tilt-capable card gets both the lift and the pointer-following rotation
+   instead of one transform silently replacing the other. */
+.public-cards > button[data-tilt] { transform: perspective(1200px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)); }
+.public-cards > button[data-tilt]:hover { transform: translate3d(0, -4px, 0) perspective(1200px) rotateX(var(--tilt-x, 0deg)) rotateY(var(--tilt-y, 0deg)); }
+@media (prefers-reduced-motion: no-preference) {
+  .public-cards > button[data-tilt] { transition: transform 220ms var(--ease-out), box-shadow .18s, border-color .18s; }
+  .public-cards > button[data-tilt]:hover { box-shadow: var(--shadow-hover); }
+}
+.public-cards > button[data-spotlight]::after {
+  content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: 0; border-radius: inherit;
+  background: radial-gradient(230px circle at var(--spot-x,50%) var(--spot-y,50%), rgba(20,107,100,.10), transparent 65%);
+  transition: opacity var(--motion-micro) var(--ease-out);
+}
+.public-cards > button[data-spotlight]:hover::after,
+.public-cards > button[data-spotlight]:focus-visible::after { opacity: 1; }
+.public-cards > button > * { position: relative; z-index: 1; }
+
+/* ---------- Spotlight: role-choice buttons ---------- */
+.role-choices button { position: relative; }
+.role-choices button[data-spotlight]::after {
+  content: ''; position: absolute; inset: 0; z-index: 0; pointer-events: none; opacity: 0; border-radius: inherit;
+  background: radial-gradient(180px circle at var(--spot-x,50%) var(--spot-y,50%), rgba(20,107,100,.10), transparent 65%);
+  transition: opacity var(--motion-micro) var(--ease-out);
+}
+.role-choices button[data-spotlight]:hover::after,
+.role-choices button[data-spotlight]:focus-visible::after { opacity: 1; }
+.role-choices button > * { position: relative; z-index: 1; }
+
+/* ---------- Staggered card entrance ---------- */
+/* Reuses the reveal that already wraps these sections (useRevealProps) — once the
+   section is on screen, the cards settle in one after another instead of as a block. */
+@media (prefers-reduced-motion: no-preference) {
+  .public-reveal.is-revealed .public-cards > button,
+  .public-reveal.is-revealed .role-choices button {
+    animation: preview-arrive 420ms var(--ease-out) both;
+    animation-delay: calc(var(--index, 0) * 70ms);
+  }
+}
+
+/* ---------- FAQ: rotating marker + smooth open ---------- */
+.public-faq summary { list-style: none; cursor: pointer; position: relative; padding-right: 30px; }
+.public-faq summary::-webkit-details-marker { display: none; }
+.public-faq summary::after { content: '+'; position: absolute; right: 2px; top: -2px; font-weight: 400; color: var(--teal); font-size: 19px; }
+@media (prefers-reduced-motion: no-preference) {
+  .public-faq summary::after { display: inline-block; transition: transform 260ms var(--ease-spring); }
+  .public-faq details[open] summary::after { transform: rotate(135deg); }
+  /* Progressive enhancement only: browsers that support ::details-content (Chrome/Edge
+     131+) get a smooth open/close; everywhere else the native instant toggle still
+     works exactly as before. */
+  .public-faq details::details-content {
+    overflow: hidden; height: 0; opacity: 0;
+    transition: height 320ms var(--ease-out), opacity 220ms var(--ease-out), content-visibility 320ms allow-discrete;
+  }
+  .public-faq details[open]::details-content { height: auto; opacity: 1; }
+  @starting-style { .public-faq details[open]::details-content { height: 0; opacity: 0; } }
+}
+
+@media (max-width: 650px) {
+  .hero-stats { gap: 20px; }
+  .hero-aurora { height: 420px; }
+}

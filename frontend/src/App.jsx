@@ -15,6 +15,7 @@ import Analytics from './pages/Analytics';
 import Users from './pages/Users';
 import AdminOverview from './pages/AdminOverview';
 import AcceptInvitation from './pages/AcceptInvitation';
+import RouteAnalysis from './pages/RouteAnalysis';
 
 const isSystemAdmin = () => getUser()?.role === 'SYSTEM_ADMIN';
 function RoleHome() { return isSystemAdmin() ? <Navigate to="/admin" replace/> : <Projects overview/>; }
@@ -32,6 +33,7 @@ function WorkspaceRoutes() {
     <Route path="/projects/:projectId/edit" element={<OperationalOnly><ProjectForm/></OperationalOnly>}/>
     <Route path="/projects/:projectId" element={<OperationalOnly><ProjectDetails/></OperationalOnly>}/>
     <Route path="/map" element={<OperationalOnly><GISMap/></OperationalOnly>}/>
+    <Route path="/route-analysis" element={<OperationalOnly><RouteAnalysis/></OperationalOnly>}/>
     <Route path="*" element={<section className="panel"><h1 className="sr-only">Page not found</h1><EmptyState title="This page could not be found." description="Return to your authorized home area." action={<Link className="button primary" to="/dashboard">Return home</Link>}/></section>}/>
   </Routes></AppShell>;
 }

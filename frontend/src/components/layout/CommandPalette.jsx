@@ -17,7 +17,7 @@ function Commands({ onClose }) {
   });
   const lower = query.trim().toLowerCase();
   const items = [
-    ...[['Dashboard','/dashboard'],['Projects','/projects'],['GIS Map','/map'],['Analytics','/analytics'],['Why LandGuard','/why-landguard']].filter(([label]) => label.toLowerCase().includes(lower)).map(([label,url]) => ({label,url,kind:'Page'})),
+    ...[['Dashboard','/dashboard'],['Projects','/projects'],['GIS Map','/map'],['Analytics','/analytics'],['Route analysis','/route-analysis'],['Why LandGuard','/why-landguard']].filter(([label]) => label.toLowerCase().includes(lower)).map(([label,url]) => ({label,url,kind:'Page'})),
     ...(data?.projects || []).map(p => ({label:p.project_id + ' · ' + p.project_name,url:'/projects/' + p.project_id,kind:'Project'})),
     ...(data?.districts || []).filter(d => (d.district + ' ' + d.state).toLowerCase().includes(lower)).slice(0,8).map(d => ({label:d.district + ', ' + d.state,url:'/projects?' + new URLSearchParams({district:d.district,state:d.state}),kind:'District'})),
   ];

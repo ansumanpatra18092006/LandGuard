@@ -13,10 +13,12 @@ export default function AuthGate({children}) {
     const update = () => { if (alive) setSession({loading:false,auth:getAuth(),error:''}); };
     const check = async () => {
       try {
-        const user = await api('/auth/me',{signal:controller.signal});
-        if (alive) setAuth({user});
+        const result = await api('/auth/session',{signal:controller.signal});
+        if (!alive) return;
+        if (result?.authenticated && result.user) setAuth({user:result.user});
+        else setAuth(null);
       } catch (error) {
-        if (alive && error.name !== 'AbortError') setSession({loading:false,auth:null,error:error.status===401?'':error.message});
+        if (alive && error.name !== 'AbortError') setSession({loading:false,auth:null,error:error.message});
       }
     };
     window.addEventListener('landguard:auth-changed',update);

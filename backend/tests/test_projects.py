@@ -75,3 +75,28 @@ def test_seed_idempotent(database, monkeypatch):
         rows = db.scalars(select(Project)).all()
         assert len(rows) == len(seed.SEEDS)
         assert all(row.data_source == "ILLUSTRATIVE" for row in rows)
+
+
+def test_project_history_persists_field_changes(client, payload):
+    assert client.post('/api/v1/projects', json=payload).status_code == 201
+    updated = {**payload, 'compensation_completion_pct': 72, 'pending_approvals': 1}
+    assert client.put('/api/v1/projects/TEST01', json=updated).status_code == 200
+    history = client.get('/api/v1/projects/TEST01/history')
+    assert history.status_code == 200
+    data = history.json()
+    assert len(data['snapshots']) >= 2
+    events = [row for row in data['events'] if row['event_type'] == 'PROJECT_UPDATED']
+    assert events
+    assert 'compensation_completion_pct' in events[0]['changed_fields']
+    assert 'pending_approvals' in events[0]['changed_fields']
+
+
+def test_dashboard_delay_trends_follow_project_snapshots(client, payload):
+    assert client.post('/api/v1/projects', json=payload).status_code == 201
+    assert client.put('/api/v1/projects/TEST01', json={**payload, 'legal_disputes': 2}).status_code == 200
+    response = client.get('/api/v1/dashboard/delay-trends?group_by=district&days=365')
+    assert response.status_code == 200
+    rows = response.json()
+    assert rows
+    assert all(row['group_label'] == 'Pune, Maharashtra' for row in rows)
+    assert all(0 <= row['avg_acquisition_risk_score'] <= 100 for row in rows)

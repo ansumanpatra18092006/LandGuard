@@ -74,7 +74,7 @@ class ProjectWrite(BaseModel):
 class ProjectRead(ProjectWrite):
     model_config = ConfigDict(from_attributes=True)
     id: int
-    data_source: Literal["ILLUSTRATIVE", "USER_ENTERED"]
+    data_source: Literal["ILLUSTRATIVE", "USER_ENTERED", "INTEGRATED"]
     created_at: datetime
     updated_at: datetime
 

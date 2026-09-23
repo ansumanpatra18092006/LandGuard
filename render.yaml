@@ -28,6 +28,10 @@ services:
         value: "120"
       - key: SEED_DEMO_DATA
         value: "true"
+      - key: INTERVENTION_AUTOMATION_ENABLED
+        value: "true"
+      - key: INTERVENTION_AUTOMATION_INTERVAL_MINUTES
+        value: "15"
       - key: PAIMANA_AUTO_MONITOR_ENABLED
         value: "false"
       - key: PAIMANA_VERIFY_SSL

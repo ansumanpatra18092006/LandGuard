@@ -34,6 +34,10 @@ class AuthUser(BaseModel):
 class SessionResponse(BaseModel):
     user: AuthUser
 
+class SessionProbeResponse(BaseModel):
+    authenticated: bool
+    user: AuthUser | None = None
+
 class InvitationRequest(EmailRequest):
     display_name: str = Field(min_length=2, max_length=100)
     role: AssignableRole

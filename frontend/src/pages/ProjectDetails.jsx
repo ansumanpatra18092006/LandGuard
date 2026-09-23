@@ -9,6 +9,7 @@ import { safeReturnTo, scopeLabel } from '../utils/projectScope';
 import IntelligencePanel from '../components/projects/IntelligencePanel';
 import ProjectDigitalTwin from '../components/projects/ProjectDigitalTwin';
 import InterventionLedger from '../components/projects/InterventionLedger';
+import ProjectHistoryPanel from '../components/projects/ProjectHistoryPanel';
 
 export default function ProjectDetails() {
   const { projectId } = useParams();
@@ -68,10 +69,7 @@ export default function ProjectDetails() {
       {tab === 'gis' && <SectionCard title="Geographic context" description={'Latitude ' + p.latitude + ' · Longitude ' + p.longitude} action={<MapPin size={18}/>}>
         <div className="geographic-placeholder"><div><Map size={30}/><strong>Coordinates connected to GIS workspace</strong><p>This project can now be opened in the geographic intelligence view.</p><Link className="button secondary" to="/map">Open GIS workspace</Link></div></div>
       </SectionCard>}
-      {tab === 'history' && <SectionCard title="Record history" description="Project record timestamps">
-        <div className="timeline"><div><strong>Record last updated</strong><p>{new Date(p.updated_at).toLocaleString()}</p></div><div><strong>Record created</strong><p>{new Date(p.created_at).toLocaleString()}</p></div></div>
-        <p className="panel-footnote">Authentication and intervention events are persisted. Full project-field change history remains a future hardening step.</p>
-      </SectionCard>}
+      {tab === 'history' && <ProjectHistoryPanel projectId={projectId}/>}
     </div>
     {tab === 'overview' && <details className="panel metadata-details"><summary>Project metadata</summary><dl className="quick-facts"><div><dt>Data source</dt><dd>{pretty(p.data_source)}</dd></div><div><dt>Record ID</dt><dd>{p.project_id}</dd></div><div><dt>Coordinates</dt><dd>{p.latitude}, {p.longitude}</dd></div></dl></details>}
     </div><div className="notice"><span>i</span><p>AI recommends; authorized officials decide. Illustrative records are fictional development data.</p></div>

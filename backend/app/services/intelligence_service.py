@@ -27,6 +27,7 @@ from app.services.recommendation_service import recommendations_for
 from app.services.readiness_service import readiness_for
 from app.services.friction_service import friction_for, intervention_priority
 from app.services.acquisition_risk_service import acquisition_delay_risk_for
+from app.services.stage_outlook_service import stage_delay_outlook
 
 ROOT = Path(__file__).resolve().parents[2]
 ARTIFACT_DIR = ROOT / "model_artifacts"
@@ -37,6 +38,40 @@ _CALIBRATOR = None
 _PANEL = None
 _DURATION_MODEL = None
 _DURATION_METADATA = None
+
+
+def _limit_parallelism(estimator) -> None:
+    """Keep persisted sklearn models lightweight during API inference.
+
+    Training may use all cores, but serving should not spawn a process/thread pool
+    for every request. We mutate only the runtime copy loaded from joblib.
+    """
+    if estimator is None:
+        return
+    seen = set()
+
+    def visit(obj):
+        if obj is None or id(obj) in seen:
+            return
+        seen.add(id(obj))
+        if hasattr(obj, "n_jobs"):
+            try:
+                obj.n_jobs = 1
+            except Exception:
+                pass
+        named_steps = getattr(obj, "named_steps", None)
+        if named_steps:
+            for child in named_steps.values():
+                visit(child)
+        for attr in ("estimator", "base_estimator", "final_estimator"):
+            visit(getattr(obj, attr, None))
+        transformers = getattr(obj, "transformers_", None) or getattr(obj, "transformers", None)
+        if transformers:
+            for item in transformers:
+                if isinstance(item, tuple) and len(item) >= 2:
+                    visit(item[1])
+
+    visit(estimator)
 
 
 def reset_model_cache():
@@ -64,6 +99,9 @@ def _load():
         duration_meta_path = ARTIFACT_DIR / "duration_metadata.json"
         _DURATION_MODEL = joblib.load(duration_path) if duration_path.exists() else None
         _DURATION_METADATA = json.loads(duration_meta_path.read_text(encoding="utf-8")) if duration_meta_path.exists() else None
+        _limit_parallelism(_MODEL)
+        _limit_parallelism(_CALIBRATOR)
+        _limit_parallelism(_DURATION_MODEL)
     return _MODEL, _METADATA, _CALIBRATOR
 
 
@@ -334,8 +372,8 @@ def _acquisition_risk_schema(project: Project, overrides: dict | None = None) ->
 
 def portfolio_risk_pulse(projects: list[Project]) -> RiskPulseResponse:
     """Summarise model-scored projects for the signed-in operational scope."""
-    _, metadata, _ = _load()
-    if metadata is None:
+    model, metadata, calibrator = _load()
+    if metadata is None or model is None:
         return RiskPulseResponse(
             model_available=False, scored_projects=0, unscored_projects=len(projects),
             high_risk=0, medium_risk=0, low_risk=0, intervention_candidates=0, projects=[]
@@ -348,6 +386,12 @@ def portfolio_risk_pulse(projects: list[Project]) -> RiskPulseResponse:
         if snapshot is None:
             unscored += 1
             continue
+        try:
+            explain_row = _frame(project)
+            raw_probability, _ = _probabilities(model, calibrator, explain_row)
+            ml_factors, ml_explanation_method = _perturbation_factors(model, explain_row, raw_probability)
+        except Exception:
+            ml_factors, ml_explanation_method = [], None
         issues = int(project.pending_approvals > 0) + int(project.legal_disputes > 0) + int(project.compensation_completion_pct < 100) + int(project.possession_pct < 100)
         readiness = readiness_for(project)
         friction = friction_for(project)
@@ -367,6 +411,7 @@ def portfolio_risk_pulse(projects: list[Project]) -> RiskPulseResponse:
             acquisition_friction_score=friction.score, acquisition_friction_label=friction.label,
             acquisition_delay_risk_score=acquisition_risk.score, acquisition_delay_risk_label=acquisition_risk.label,
             intervention_priority_score=priority_score, intervention_priority_category=priority_category,
+            ml_factors=ml_factors, ml_explanation_method=ml_explanation_method,
         ))
     scored.sort(key=lambda item: (item.intervention_priority_score or 0, item.acquisition_friction_score or 0, item.delay_probability), reverse=True)
     high = sum(item.risk_category == "HIGH" for item in scored)
@@ -404,6 +449,7 @@ def predict(project: Project) -> PredictionResult:
         acquisition_friction=_friction_schema(project), acquisition_delay_risk=_acquisition_risk_schema(project), acquisition_readiness_score=readiness.readiness_score,
         intervention_priority_score=priority_score, intervention_priority_category=priority_category,
         factors=factors, similar_cases=_similar_cases(row), recommendations=recommendations_for(factors, project=project),
+        stage_outlook=stage_delay_outlook(project),
         metadata=ModelMetadata(
             available=True, model_name=metadata.get("model_name"), training_data_kind=metadata.get("training_data_kind"),
             explanation_method=explanation_method,

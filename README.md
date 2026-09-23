@@ -1,286 +1,1205 @@
-# LandGuard AI
+# LandGuard AI — Consolidated README
 
-Predictive Land Acquisition Delay Intelligence System — operational analytics prototype for the supplied SIH 2026 brief (SIH26017).
+LandGuard AI is a predictive and operational decision-support platform for land-acquisition delay intelligence. It combines:
 
-**AI recommends; authorized officials decide. Current model artifacts use illustrative synthetic data, not validated government outcomes.**
+- acquisition-specific operational indicators,
+- a real PAIMANA-trained near-term schedule-slip model,
+- transparent readiness / friction / bottleneck logic,
+- GIS and portfolio analytics,
+- a Process Twin and Delay Cascade,
+- explainable AI and historical analogues,
+- intervention tracking,
+- policy-aware workflow automation,
+- role-based governance and auditability,
+- deployment on a React + FastAPI + PostgreSQL/PostGIS stack.
 
-The original presentation and handbook are preserved planning materials, not evidence of implemented government integrations.
+> **Core product idea:** move from **risk detection → explanation → prioritization → intervention → ownership → deadline → escalation → audit**.
 
-## Current implementation
+---
 
-Reviewed against the current files on 16 September 2026. Later sections retain phase-specific setup and implementation history; this section supersedes earlier claims that authentication, GIS previews, and a model pipeline do not exist.
-
-- Public entry: `/` explains the product and intended users; `/access` explains invitation-only enrollment; `/login` accepts a real Supabase email/password. `/accept-invitation` activates invited accounts. Administrators manage invitations at `/admin/users`.
-- Workspace: `/dashboard` provides operational KPIs, bottlenecks and the project queue; `/analytics` provides district comparisons and stage distributions; `/projects` manages individual records. Filters carry between these views.
-- GIS now uses an embedded Leaflet + OpenStreetMap basemap with synchronized project markers, filters, viewport context, fit-to-project controls, and scoped project drill-down. A model training/inference pipeline, synthetic model artifact, explanation methods, rule recommendations, and operational alert endpoint now exist. Synthetic results are not evidence of predictive validity on real acquisition projects.
-- Authentication now uses Supabase Auth, protected role profiles, hashed server sessions in HttpOnly cookies, CSRF checks, rate limiting and Brevo invitations. Project reads, writes, aggregates, maps and predictions enforce assigned jurisdiction. The demo login has been removed. **Cloud setup is required:** follow [real account setup](backend/supabase/README.md). MFA, SSO and self-service password recovery remain unimplemented.
-- Current backend verification: **79 passed, 1 PostgreSQL integration test skipped**. Identity tests use isolated Supabase/Brevo provider fixtures and verify session revocation, invitation activation, CSRF, rate limiting and jurisdiction enforcement. Existing synthetic model artifacts still emit dependency-version warnings. Hosted Supabase SQL and real email delivery require live verification after configuration.
-- Current frontend verification: `npm run build` and `node identity-smoke.cjs` pass. The identity browser suite uses isolated API fixtures, covers account administration, login/logout, invitation activation and expired links, and checks desktop/mobile layout. `product-smoke.cjs` and `experience-smoke.cjs` now require `LANDGUARD_TEST_EMAIL` and `LANDGUARD_TEST_PASSWORD` for a real activated test account; no default credentials remain in those scripts.
-
-### Real account setup
-
-Run `backend/supabase/001_identity.sql` in your Supabase SQL Editor, fill `backend/.env` with your Supabase server key and Brevo key/verified sender, then provision the first administrator using `python -m app.db.bootstrap_admin --email YOUR_EMAIL --name YOUR_NAME` from `backend`. The email invitation lets that person choose their own password. Full commands and deployment guidance: [Supabase + Brevo setup](backend/supabase/README.md). No live email delivery has been verified without those settings.
-
-### Intended users and secure enrollment design
-
-The public entry now contains an interactive walkthrough with three clearly fictional `EX-*` records, clickable approval filters, district comparisons, and inline record inspection. These examples never call the project API. Role choices explain a proposed journey and carry a destination to login; they do not assign privileges.
-
-The login page adds password visibility, Caps Lock feedback, field focus guidance, disabled duplicate submission, and inline error feedback. Workspace routes have restrained entrance transitions and a selection bar that links filtered analysis to records. Refresh retains the previous records while fetching the same scope; changing filters still clears stale-scope data. Reduced-motion preferences disable motion throughout.
-
-Run `node experience-smoke.cjs` for the walkthrough, role choices, login errors and controls, route motion, selection context, refresh continuity, responsive layout, and reduced-motion checks. It uses the same required test-credential environment variables as `product-smoke.cjs`.
-
-State officers oversee a state portfolio; district officers review local acquisition work; implementing agencies maintain assigned projects; administrators manage approved identities and assignments. Landowners and citizens are stakeholders, but the administrative portal is not a public compensation or land-claim submission service.
-
-For an institutional rollout, use **invitation or administrator-approved enrollment**. Verify the work identity and department/agency relationship; administrators assign role and state/district/project memberships. A work-email domain alone is insufficient and applicants must not self-assign elevated privileges. Invitations must expire and be single-use. Prefer an approved organization identity provider using OIDC, with MFA; local accounts need individual password hashes, recovery, rate limiting, and account lifecycle management.
-
-Serve over HTTPS, use revocable sessions in Secure/HttpOnly/SameSite cookies with CSRF protection, and enforce authorization at every API and database query. Check both action permissions and jurisdiction/assignment, including list queries, aggregates, maps, alerts, and direct project IDs. Record administrative changes, suspend accounts, and revoke sessions when assignments change. These are required next-phase controls, not features supplied by the landing page.
-
-References: [OWASP authorization guidance](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html), [authentication guidance](https://cheatsheetseries.owasp.org/cheatsheets/Authentication_Cheat_Sheet.html), and [session management guidance](https://cheatsheetseries.owasp.org/cheatsheets/Session_Management_Cheat_Sheet.html).
-
-### Earlier foundation phase
-
-- React, Vite, React Router and Recharts: operational dashboard, three charts, district progress table, filtered/paginated project registry, details and create/edit/delete forms.
-- FastAPI, Pydantic and SQLAlchemy 2: validated persistent project CRUD and SQL-backed analytics.
-- PostgreSQL is the intended database, configured through `DATABASE_URL`. SQLite remains an explicit local fallback and the default automated test database.
-- Alembic versions the original Project schema and prepares PostGIS point locations.
-- Twelve explicitly fictional illustrative seed records cover six districts, multiple project types and stages. Re-running seed inserts only missing IDs and preserves existing edits.
-- Operational thresholds are configurable and labeled as proposed prototype rules. They are not delay predictions or SHAP/model factors.
-- No ML training, predictions, SHAP, recommendations, authentication/RBAC, alerts, Leaflet, GeoServer or government integrations in this phase. Keep this unauthenticated prototype local until access controls are implemented.
-
-## Architecture
-
-Browser → React API client → FastAPI routes → SQLAlchemy aggregate/project queries → PostgreSQL + PostGIS.
+## 1. Current Product Architecture
 
 ```text
-backend/
-  alembic.ini
-  alembic/env.py                     shared configuration and model metadata
-  alembic/versions/0001_projects.py   frozen original schema
-  alembic/versions/0002_postgis.py    PostGIS extension and location view
-  alembic/versions/0003_gis_spatial_index.py  GiST spatial index for project points
-  app/api/filters.py                 common project/dashboard filters
-  app/api/routes/projects.py         existing CRUD
-  app/api/routes/dashboard.py        dashboard endpoints
-  app/schemas/dashboard.py           typed analytics responses
-  app/services/dashboard_service.py SQL aggregation and operational indicators
-  app/db/init_db.py                  migration entrypoint and legacy adoption
-  app/db/verify_postgres.py          opt-in isolated integration verification
-  tests/                            CRUD, analytics, migration and integration tests
-frontend/src/
-  pages/Projects.jsx                 dashboard/registry orchestration
-  pages/ProjectDetails.jsx           project observations and future map area
-  components/dashboard/             lazy-loaded analytics and Recharts
-  components/projects/              reusable filters and project table
-  services/api.js                    REST and error handling
-  services/dashboard.js              centralized analytics requests
+React frontend
+    ↓
+FastAPI REST API
+    ↓
+PostgreSQL + PostGIS
+    ↓
+Operational intelligence + ML services
+    ↓
+Intervention / audit workflow
 ```
 
-The Project model/API fields are preserved. Prototype project types and stages remain the validated existing values (including VALUATION); these are not claimed as official government taxonomies. No delayed-outcome field has been added without a defined labeling policy.
+Production deployment keeps the React SPA and FastAPI API on the same origin. Supabase provides authentication and PostgreSQL/PostGIS; Brevo is used for invitation email delivery.
 
-## PostgreSQL setup
+### Main technology stack
 
-Prerequisites: Python 3.11+, Node.js 20.19+ or 22.12+, and PostgreSQL with PostGIS (or Docker Desktop).
+- **Frontend:** React + Vite
+- **Backend:** FastAPI
+- **Database:** PostgreSQL
+- **Spatial layer:** PostGIS
+- **GIS UI:** Leaflet
+- **Authentication:** Supabase
+- **ML:** scikit-learn, XGBoost where available
+- **Deployment:** Docker + Render
+- **Email:** Brevo
 
-From PowerShell in `C:\LandGuard`:
+---
+
+# 2. Core Intelligence Layers
+
+LandGuard deliberately separates three different kinds of evidence.
+
+## A. Acquisition-specific operational intelligence
+
+This is based on current land-acquisition records such as:
+
+- compensation completion,
+- possession,
+- rehabilitation & resettlement progress,
+- pending approvals,
+- legal disputes,
+- stakeholder-response delay,
+- elapsed acquisition time,
+- land area,
+- affected families.
+
+These power transparent operational metrics such as:
+
+- Land-Acquisition Friction Index
+- Acquisition Readiness
+- Acquisition Delay Risk Index
+- Primary Bottleneck
+- Intervention Priority
+- Process Twin
+- Delay Cascade
+- Automation triggers
+
+These are **transparent decision-support rules / heuristics**, not ML probabilities.
+
+## B. PAIMANA ML schedule signal
+
+The current real trained ML baseline predicts:
+
+> **Will the reported project completion schedule move to a later date within the next 3 reporting months?**
+
+This is a **binary classification problem**.
+
+The current model uses:
+
+- project sector,
+- original approved project cost,
+- cumulative expenditure,
+- days to original deadline,
+- whether the deadline has already passed,
+- expenditure / original-cost ratio.
+
+It deliberately does **not** use land-acquisition operational fields such as compensation, possession, legal disputes or pending approvals, because those fields were not present in the PAIMANA training data.
+
+## C. Acquisition-specific ML — research / next-stage pipeline
+
+A second real-data path is being built from public Bhoomi Rashi and LACRRIS records.
+
+The target is acquisition-stage delay rather than wider project schedule slippage.
+
+This acquisition-specific ML pipeline is **experimental until data extraction, matching, validation and external quality checks are complete**.
+
+---
+
+# 3. Real PAIMANA ML Baseline
+
+## Prediction target
+
+For a project observed at month `T`:
+
+```text
+Will the reported effective completion schedule move later
+within the next 3 reporting months?
+```
+
+Target:
+
+```text
+0 = no near-term schedule revision
+1 = schedule moves later within 3 reporting months
+```
+
+## Source period
+
+Official monthly PAIMANA snapshots:
+
+```text
+July 2025 → May 2026
+```
+
+## Temporal evaluation split
+
+```text
+Training:
+2025-07 → 2025-12
+5,420 rows
+
+Validation:
+2026-01
+1,702 rows
+
+Held-out test:
+2026-02
+1,948 rows
+```
+
+This is a **time-based holdout**, not ordinary random K-fold cross-validation.
+
+The reason is that PAIMANA is longitudinal. Randomly mixing project-month observations can leak information from the same project across train and test.
+
+## Candidate models
+
+- Logistic Regression
+- Random Forest
+- Gradient Boosting
+- XGBoost
+
+Model selection used validation F1.
+
+**Selected model:** Random Forest.
+
+## Held-out test metrics
+
+Current documented PAIMANA baseline:
+
+```text
+Accuracy:          0.8244
+Balanced accuracy: 0.8303
+Precision:         0.7593
+Recall:            0.9078
+F1:                0.8269
+ROC-AUC:           0.9214
+Confusion matrix:  [[789, 259],
+                    [ 83, 817]]
+```
+
+These metrics describe the **PAIMANA schedule-slip baseline**. They are not validation of a production land-acquisition-specific model.
+
+## Probability calibration
+
+The PAIMANA classifier supports calibrated probabilities using a probability calibrator.
+
+## SHAP
+
+SHAP is used to explain the PAIMANA model locally.
+
+SHAP answers:
+
+> Which model inputs pushed this prediction upward or downward?
+
+SHAP values are **not direct probability percentage points**.
+
+## Historical analogues
+
+Historical analogues prefer same-sector PAIMANA project states first.
+
+Cross-sector analogues are only used as a labelled fallback when there are too few same-sector examples.
+
+The displayed similarity score is a **feature-space similarity measure**, not a probability.
+
+---
+
+# 4. Continuous-Learning PAIMANA Pipeline
+
+The PAIMANA ingestion / training pipeline supports monitored model refresh.
+
+Flow:
+
+```text
+new PAIMANA snapshot
+    ↓
+ingest and validate
+    ↓
+wait until 3-month outcome is mature
+    ↓
+rebuild longitudinal dataset
+    ↓
+train challenger
+    ↓
+chronological validation
+    ↓
+quality gates
+    ↓
+promote or reject
+```
+
+Default quality gates:
+
+```text
+ROC-AUC >= 0.75
+Recall >= 0.70
+F1 may not fall by > 0.03 vs incumbent
+ROC-AUC may not fall by > 0.03 vs incumbent
+At least 1,000 fully labelled project-month rows
+```
+
+The latest labelled month is used as held-out test, the previous labelled month as validation/calibration, and all earlier labelled months as training.
+
+For SIH demo deployment, automatic PAIMANA monitoring can be disabled to avoid unexpected retraining during presentation.
+
+---
+
+# 5. Conditional Delay-Duration Model
+
+A second PAIMANA model estimates:
+
+> **If a future schedule extension occurs, roughly how large might that extension be?**
+
+This is a regression model.
+
+Important:
+
+- it is conditional on a slip occurring,
+- it is a rough severity estimate,
+- its uncertainty is wide,
+- it should not be presented as an exact delay-day forecast.
+
+The likely range is based on validation residuals and is an uncertainty band, not a guarantee.
+
+> **Current presentation guidance:** emphasize the 3-month slip signal first. Treat extension magnitude as secondary evidence.
+
+---
+
+# 6. Land-Acquisition Operational Intelligence
+
+## 6.1 Land-Acquisition Friction Index
+
+Purpose:
+
+> How much operational obstruction exists right now?
+
+Inputs include:
+
+- legal disputes,
+- pending approvals,
+- compensation gap,
+- possession gap,
+- R&R gap,
+- stakeholder-response delay.
+
+This is a deterministic operational index.
+
+## 6.2 Acquisition Readiness
+
+Purpose:
+
+> How ready is the acquisition to progress toward handover?
+
+Current readiness components:
+
+```text
+30% compensation progress
+35% possession progress
+15% R&R progress
+20% administrative clearance
+```
+
+Administrative clearance is reduced by pending approvals and legal disputes.
+
+The system classifies readiness as:
+
+- READY
+- CONSTRAINED
+- BLOCKED
+
+Readiness is explicitly **rule-based decision support, not ML**.
+
+## 6.3 Acquisition Delay Risk Index
+
+Current transparent prototype:
+
+```text
+50% acquisition friction
+25% readiness gap
+15% elapsed acquisition pressure
+10% case-scale complexity
+```
+
+Case-scale complexity uses land area and affected families.
+
+This is a **0–100 operational risk index**, not a probability.
+
+## 6.4 Intervention Priority
+
+The current UI refinement makes acquisition risk the base priority.
+
+PAIMANA schedule evidence can **escalate** priority but cannot suppress a severe acquisition bottleneck.
+
+Conceptually:
+
+```text
+base priority = acquisition risk
+
+schedule escalation
+= remaining headroom to 100
+  × PAIMANA schedule signal
+  × escalation factor
+```
+
+The result is an officer-prioritization heuristic, not a probability.
+
+---
+
+# 7. Process Twin and Delay Cascade
+
+The Process Twin represents the acquisition workflow:
+
+```text
+Notification
+→ Survey
+→ Valuation / Award
+→ Compensation
+→ Rehabilitation
+→ Possession
+→ Handover
+```
+
+It overlays:
+
+- current acquisition progress,
+- readiness,
+- primary blocker,
+- next milestone,
+- deterministic downstream dependency reasoning,
+- independent PAIMANA schedule evidence.
+
+The Delay Cascade is a **workflow heuristic**, not a causal ML model.
+
+Example:
+
+```text
+Legal issue unresolved
+→ compensation constrained
+→ possession constrained
+→ handover delayed
+→ wider schedule pressure
+```
+
+---
+
+# 8. Scenario / Intervention Simulator
+
+The Scenario Lab is a **model sensitivity tool**, not a causal simulator.
+
+For PAIMANA it varies model-sensitive inputs such as:
+
+- hypothetical expenditure progress,
+- assumed days to original deadline.
+
+Administrative scenario controls operate in a separate lane.
+
+They can affect:
+
+- acquisition risk,
+- friction,
+- readiness,
+- intervention priority,
+
+but they do not change the PAIMANA ML probability unless a PAIMANA model input itself changes.
+
+Correct interpretation:
+
+> How would the already-trained model score a hypothetical project state?
+
+Incorrect interpretation:
+
+> This intervention will causally reduce delay probability by X%.
+
+---
+
+# 9. Policy-Aware Intervention Automation Engine
+
+LandGuard automates administrative follow-up, not statutory decisions.
+
+## Automatic triggers
+
+Recorded project conditions can create workflow actions:
+
+```text
+legal dispute
+→ Legal Review Required
+
+pending approvals
+→ Approval Clearance Required
+
+low possession
+→ Possession / Handover Review
+
+low compensation
+→ Compensation Follow-up
+
+low R&R
+→ R&R Follow-up
+
+slow stakeholder response
+→ Coordination Escalation
+
+critical acquisition risk
+→ High Acquisition-Risk Review
+```
+
+Each automated action can receive:
+
+- owner,
+- due date,
+- priority,
+- status,
+- audit events.
+
+Actions due soon receive a reminder event.
+
+Overdue actions can be escalated to HIGH priority.
+
+Cleared trigger conditions are recorded, but interventions are **not automatically resolved**.
+
+An authorized officer must verify and close them.
+
+LandGuard does **not** automatically:
+
+- make legal determinations,
+- approve compensation,
+- transfer possession,
+- clear disputes,
+- close cases without officer verification.
+
+Core governance principle:
+
+> **AI recommends; authorized officials decide.**
+
+---
+
+# 10. Intervention Ledger
+
+Interventions are persisted as accountable administrative actions.
+
+Lifecycle:
+
+```text
+OPEN
+→ IN PROGRESS
+→ RESOLVED
+```
+
+Tracked fields include:
+
+- action,
+- owner,
+- due date,
+- priority,
+- current status,
+- creator,
+- resolution note,
+- event history.
+
+Every intervention change is written to the audit trail.
+
+---
+
+# 11. Analytics Command Center
+
+The Analytics page is designed as an acquisition-intelligence command center rather than a generic chart dashboard.
+
+It includes:
+
+- portfolio KPI strip,
+- Acquisition Risk × Readiness matrix,
+- dominant bottleneck ranking,
+- acquisition-stage pipeline,
+- generated portfolio insight,
+- ranked priority-project queue,
+- intervention health,
+- compensation / possession / approval / dispute context,
+- clear separation between acquisition indices and PAIMANA schedule signals.
+
+No synthetic analytics metrics are introduced; the command center derives its values from existing dashboard, Risk Pulse and intervention APIs.
+
+## Recharts sizing fix
+
+The Risk × Readiness matrix uses explicit container measurement.
+
+The chart renders only after the container reports positive width and height, preventing the Recharts `width(0) / height(0)` warning.
+
+---
+
+# 12. GIS
+
+LandGuard uses Leaflet on the frontend and PostgreSQL/PostGIS for spatial storage/query support.
+
+Current GIS is primarily **project-point based**.
+
+It supports:
+
+- project location mapping,
+- risk / priority visualization,
+- project inspection from the map,
+- links to intelligence / intervention views.
+
+Do not describe the current implementation as a full cadastral parcel-mapping system unless parcel geometry is actually integrated.
+
+---
+
+# 13. UX / Command Surfaces
+
+The current product experience includes:
+
+- Project Quick View,
+- Command Palette,
+- Scope Dock,
+- Role Journey,
+- Why LandGuard,
+- Project Command Center,
+- Analytics Command Center,
+- Process Twin,
+- AI Intelligence,
+- Intervention Ledger,
+- GIS,
+- Officer Brief.
+
+Quick View shows current acquisition-readiness context, including primary blocker and next milestone.
+
+---
+
+# 14. Role-Based Governance
+
+## SYSTEM_ADMIN
+
+Separate administration workspace.
+
+Primary responsibilities:
+
+- user management,
+- invitation management,
+- access oversight,
+- audit visibility,
+- pipeline / system monitoring.
+
+System Admin should not gain operational project intelligence simply because they are an admin.
+
+## Operational roles
+
+- STATE_OFFICER
+- DISTRICT_OFFICER
+- IMPLEMENTING_AGENCY
+
+These roles use the same operational interface but differ in backend-enforced scope and permissions.
+
+Authentication determines **who the user is**.
+
+Backend authorization determines **what they may access or modify**.
+
+---
+
+# 15. Canonical Demo Dataset
+
+The SIH demo includes eight deterministic Rayagada project records.
+
+They are explicitly:
+
+```text
+ILLUSTRATIVE / FICTIONAL DEVELOPMENT DATA
+```
+
+They include:
+
+- coordinates,
+- acquisition indicators,
+- PAIMANA model baseline inputs,
+- LOW / MEDIUM / HIGH demo cases.
+
+Do not present these as real Rayagada government projects.
+
+---
+
+# 16. Bhoomi Rashi Acquisition-ML Pipeline
+
+This is the strongest current path toward a **real acquisition-specific ML model**.
+
+## Public-source strategy
+
+The pipeline uses public Bhoomi Rashi detailed project reports and does not automate or bypass the CAPTCHA-protected search form.
+
+The latest bulk acquisition result set contains a large set of public projects obtained through a legitimate portal search and exported for downstream processing.
+
+## Notification-level extraction
+
+The pipeline:
+
+1. follows public 3A and 3D `View Details` links,
+2. extracts notification information,
+3. extracts village / survey-number information where available,
+4. matches 3A and 3D records using overlapping geography,
+5. rejects weak/unmatched pairs instead of force-pairing,
+6. calculates 3A→3D stage duration,
+7. creates a research delay label.
+
+This is stronger than simply pairing the earliest project-level 3A with the earliest 3D.
+
+## Current research target
+
+```text
+delay_over_365d
+```
+
+Interpretation:
+
+```text
+0 = matched 3A→3D stage <= 365 days
+1 = matched 3A→3D stage > 365 days
+```
+
+This is a **research acquisition-stage delay label**.
+
+It must **not** be described as a statutory-compliance classifier because court-stay periods and other legal exceptions are not reliably encoded in the public summary data.
+
+## Candidate models
+
+- Logistic Regression
+- Random Forest
+- Gradient Boosting
+
+## Leakage control
+
+Rows from the same project must stay together during validation.
+
+The notification-level trainer uses grouped splitting by `project_id`.
+
+Do not allow notification rows from the same project to appear in both train and test sets.
+
+## Minimum data guidance
+
+The current trainer refuses to train below 100 matched pairs.
+
+Recommended:
+
+```text
+100 = hard minimum
+500+ = meaningful prototype target
+thousands = preferred
+```
+
+The model should only be treated seriously if both target classes are represented.
+
+## Intended LandGuard use
+
+After validation, the acquisition ML model can produce:
+
+> **Acquisition-stage delay probability**
+
+This would become the acquisition-specific predictive layer.
+
+The existing operational fields still remain useful for readiness, friction, bottleneck detection and automation.
+
+---
+
+# 17. LACRRIS Acquisition-ML Research Path
+
+LACRRIS is another potential acquisition-specific data source.
+
+Public project reports can include:
+
+- project / segment,
+- Act,
+- requiring body,
+- district,
+- rural / urban classification,
+- land extent,
+- SIA,
+- preliminary notification,
+- declaration / publication,
+- award,
+- payment,
+- possession,
+- family counts,
+- compensation,
+- R&R amounts.
+
+Two exploratory derived targets were designed:
+
+```text
+declaration_over_12m
+award_over_30m
+```
+
+These are **published evaluation-band-derived labels**, not universal statutory definitions.
+
+The LACRRIS extraction path has been affected by public-site availability / timeout issues, so Bhoomi Rashi is currently the more practical acquisition-ML route.
+
+---
+
+# 18. How Bhoomi Rashi ML Will Map to LandGuard Project Inputs
+
+LandGuard's project form contains richer fields than Bhoomi Rashi.
+
+Current project inputs include:
+
+- Project ID
+- Project name
+- Project type
+- State
+- District
+- Acquisition stage
+- Latitude / Longitude
+- Land area
+- Affected families
+- Compensation %
+- Possession %
+- Rehabilitation %
+- Pending approvals
+- Legal disputes
+- Stakeholder response days
+- Elapsed acquisition days
+- Original approved cost
+- Cumulative expenditure
+- Original completion date
+
+Not all of these are available in Bhoomi Rashi training data.
+
+Therefore the model must use a clearly defined shared feature contract.
+
+### Acquisition ML features can include fields available in real historical acquisition data
+
+Examples:
+
+- project / road category,
+- state / region,
+- land area / land required,
+- acquisition stage,
+- elapsed stage time,
+- earlier notification counts,
+- previous-stage duration,
+- land available / acquisition ratio,
+- objection-related features where reliably extractable.
+
+### Operational LandGuard-only fields remain in the rule-based layer
+
+Examples:
+
+- compensation %,
+- possession %,
+- R&R %,
+- pending approvals,
+- legal disputes,
+- stakeholder response,
+- affected families where unavailable in the chosen real training source.
+
+### PAIMANA-only baseline fields remain in the schedule model
+
+- original approved cost,
+- cumulative expenditure,
+- original completion date / deadline features.
+
+The core rule is:
+
+> **Prediction-time features must match the features used during training.**
+
+---
+
+# 19. Recommended Final Intelligence Hierarchy
+
+The long-term LandGuard design is:
+
+```text
+REAL ACQUISITION HISTORY
+Bhoomi Rashi / LACRRIS
+        ↓
+Acquisition-specific ML
+        ↓
+Acquisition-stage delay probability
+        ↓
+SHAP explanation
+        │
+        ├─────────────────────────────┐
+        │                             │
+CURRENT OPERATIONAL RECORD      PAIMANA HISTORY
+        ↓                             ↓
+Friction / Readiness             3-month schedule-slip ML
+Bottleneck / Process Twin        wider-project evidence
+        │                             │
+        └──────────────┬──────────────┘
+                       ↓
+              Intervention Priority
+                       ↓
+              Automation Engine
+                       ↓
+        Owner → Due Date → Reminder
+              → Escalation → Audit
+```
+
+---
+
+# 20. Data Honesty Rules
+
+LandGuard deliberately separates:
+
+## Real data
+
+- official PAIMANA monthly history,
+- public Bhoomi Rashi / LACRRIS acquisition records where extracted.
+
+## Derived values
+
+- acquisition readiness,
+- friction,
+- acquisition delay risk index,
+- intervention priority,
+- process dependencies.
+
+## Illustrative data
+
+- canonical Rayagada demo project records.
+
+Never present illustrative Rayagada records as government observations.
+
+Never present a transparent index as a trained probability.
+
+Never describe PAIMANA as directly trained on compensation, possession, disputes, R&R or approvals.
+
+---
+
+# 21. Local Development
+
+## Backend
 
 ```powershell
-py -m venv .venv
-.\.venv\Scripts\python.exe -m pip install -r backend\requirements.txt
-Copy-Item .env.example .env
-# Edit POSTGRES_PASSWORD in root .env before starting the database.
-docker compose up -d db
-Copy-Item backend\.env.example backend\.env
-# Edit DATABASE_URL to match your local PostgreSQL user/password/database.
-cd backend
-..\.venv\Scripts\alembic.exe upgrade head
-..\.venv\Scripts\python.exe -m app.db.seed
-..\.venv\Scripts\python.exe -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000
+cd C:\LandGuard\backend
+C:\LandGuard\.venv\Scripts\activate
+uvicorn app.main:app --reload
 ```
 
-The expected URL is `postgresql+psycopg://user:password@localhost:5432/landguard`. Use your own credentials; URL-encode special characters in passwords. The examples are local development placeholders, not production credentials. The Docker database port binds to loopback only.
-
-For an existing PostgreSQL server, skip Docker and set `DATABASE_URL` directly. The migration user needs table/view creation permissions and permission to enable PostGIS, or a DBA must pre-enable it. The Python package alone does not install the server-side PostGIS extension. Database migration failures are not silently replaced with SQLite.
-
-The backend always loads `backend/.env`; environment variables override it. Without either setting, it explicitly falls back to the absolute `backend/landguard.db` SQLite file. A relative SQLite URL in the environment is relative to the working directory; run backend commands from `backend`.
-
-## PostGIS support
-
-Migration `0002_postgis` enables PostGIS in the public schema and creates the PostgreSQL-only `project_locations` view. It exposes `id`, `project_id`, `state`, `district`, and `location` as a Point geometry in SRID 4326, derived from `longitude, latitude` in that order.
-
-This live view always follows coordinate edits and deletions, without triggers or duplicate stored coordinates. Migration `0003_gis_spatial_index` adds a GiST expression index over the same SRID 4326 point expression, so PostgreSQL/PostGIS can accelerate spatial viewport queries without duplicating coordinates. SQLite skips PostgreSQL-only spatial objects while retaining latitude/longitude fallbacks for tests.
-
-Verify from the repository root:
+## Frontend
 
 ```powershell
-docker compose exec db psql -U landguard -d landguard -c "SELECT PostGIS_Version();"
-docker compose exec db psql -U landguard -d landguard -c "SELECT project_id, ST_AsText(location), ST_SRID(location) FROM project_locations LIMIT 5;"
+cd C:\LandGuard\frontend
+npm run dev
 ```
 
-Downgrading the spatial revision removes the view, not the potentially shared PostGIS extension. Downgrading the initial revision removes the projects table and its data; use downgrades only with an appropriate backup.
-
-## GIS workspace
-
-The operational `/map` route now uses Leaflet 1.9.4 with OpenStreetMap raster tiles. It provides state/district/stage/search filters, project marker selection, fit-to-project controls, browser geolocation, operational marker context, project drill-down, and responsive mobile behavior. Marker data is still permission-scoped by the FastAPI backend, so a district officer cannot obtain markers outside their assigned district simply by changing frontend filters.
-
-`GET /api/v1/map-data` also supports optional spatial parameters:
-
-- `min_lat`, `max_lat`, `min_lon`, `max_lon` for a bounding box. PostgreSQL uses PostGIS `ST_Intersects`; SQLite uses latitude/longitude range fallback for tests.
-- `near_lat`, `near_lon`, `radius_km` for radius lookup. PostgreSQL filters with `ST_DistanceSphere`; SQLite uses a Haversine fallback.
-
-After applying this patch run `alembic upgrade head` so the GiST spatial index is created in Supabase/PostgreSQL.
-
-## Alembic and existing databases
-
-Run from `backend`:
-
-```powershell
-..\.venv\Scripts\alembic.exe upgrade head
-..\.venv\Scripts\alembic.exe current
-..\.venv\Scripts\alembic.exe check
-..\.venv\Scripts\alembic.exe revision --autogenerate -m "description"
-```
-
-Review generated revisions before applying them. Alembic uses the same settings and SQLAlchemy metadata as the application. The initial migration is a frozen schema snapshot; importing the live model into historical migrations would make old revisions change over time. Extension-owned PostGIS tables are excluded from autogeneration; the spatial view is managed explicitly by its revision.
-
-The previous prototype used `create_all` without version tracking. For that existing SQLite database, stop the backend, make a backup, then run:
-
-```powershell
-Copy-Item landguard.db landguard.before-migrations.db
-..\.venv\Scripts\python.exe -m app.db.init_db --adopt-legacy
-..\.venv\Scripts\python.exe -m app.db.seed
-```
-
-Legacy adoption compares metadata and check constraints before stamping the original revision; it rejects schema drift. It does not blindly stamp an arbitrary database. PostgreSQL legacy adoption requires manual schema review before stamping `0001_projects`, because PostgreSQL normalizes constraint expressions. Fresh databases use `alembic upgrade head` normally.
-
-The local demo was backed up as `backend/landguard.pre-alembic.db`, adopted successfully, and extended to twelve illustrative projects. Both database files are ignored by Git. Changing the URL does not transfer SQLite records into PostgreSQL.
-
-## Frontend startup
-
-### Interface design and verification
-
-The frontend uses a shared forest/teal and slate design system in `frontend/src/tokens.css`. It uses the system sans-serif stack, with no remote font request or new UI framework. Shared cards, buttons, progress bars, badges, skeletons and focus styles use these tokens.
-
-The shell now offers a collapsible desktop sidebar, native modal navigation drawer on mobile, global project search, page context, and explicit demo/profile and notification status. Dashboard, Projects and Analytics are working routes. GIS Map and Settings remain coming soon. Review notices open an interactive prototype inbox based on current database observations.
-
-The dashboard pairs a compensation/possession comparison chart with an Administrative Bottlenecks card, followed by district and stage charts. All inputs remain API-backed; bottleneck percentages are derived from returned project counts, not invented trends. Detailed district figures are expandable. Project filters are URL-backed and collapsible, with removable chips and a clear action. Desktop project tables have sticky headers and a visible details action; mobile uses project cards with progress and administrative observations.
-
-Project details now group metadata, land/family/duration information, progress and administrative counts into a command-center layout. The three-part AI intelligence panel and geographic map area are explicitly unavailable placeholders. No prediction, map, alert or authentication functionality has been fabricated.
-
-New files: `components/layout/AppShell.jsx`, `components/dashboard/ProgressComparison.jsx`, `components/dashboard/BottleneckCard.jsx`, `components/projects/IntelligencePanel.jsx`, `tokens.css` (all under `frontend/src`), and `frontend/ui-smoke.cjs`.
-
-Modified frontend files: `App.jsx`, `components/common.jsx`, `pages/Projects.jsx`, `pages/ProjectDetails.jsx`, `pages/ProjectForm.jsx`, `components/dashboard/DashboardAnalytics.jsx`, `components/dashboard/DistributionChart.jsx`, `components/projects/ProjectFilters.jsx`, `components/projects/ProjectTable.jsx`, `services/api.js`, `styles.css`, and `dashboard.css`. The existing browser smoke scripts and this README were updated. The interaction phase below extends the filtering and district-summary contracts.
-
-Accessibility includes a skip link, native focus containment/Escape handling in the mobile dialog, restored opener focus, semantic table headings/captions, labeled form controls, screen-reader progress labels, focus-visible styles, keyboard-readable metric explanations and reduced-motion support. Errors from the server are mapped to safe, useful messages instead of exposing raw response text.
-
-`node ui-smoke.cjs` checks dashboard, details and form layouts at **1440, 1280, 1024, 768, 430 and 390 pixels**, chart dimensions, global search, all filter types, chips, pagination, desktop collapse, mobile navigation/focus, planned features and the unknown-route state. The existing dashboard/CRUD suites also verify loading, empty results, safe error/retry behavior and create/edit/delete persistence. Screenshots use ignored `*-smoke.png` files. All three suites passed; the viewport suite reported no browser JavaScript errors or warnings.
-
-### Commands
-
-In a second terminal:
+## Production build check
 
 ```powershell
 cd C:\LandGuard\frontend
 npm ci
-npm run dev -- --strictPort
-```
-
-Open [the dashboard](http://127.0.0.1:5173) and [API documentation](http://127.0.0.1:8000/docs). Vite proxies `/api` to port 8000 for development. A hosted frontend or build preview requires `VITE_API_URL` and a matching backend `FRONTEND_ORIGIN`, or a reverse proxy; preview does not use the development proxy. Chart code loads separately from the registry/detail interface.
-
-For a local demo without PostgreSQL, leave PostgreSQL settings unset (or explicitly choose SQLite), run `python -m app.db.init_db` using the virtual environment and seed it before starting the backend.
-
-## APIs and analytics semantics
-
-Existing endpoints under `/api/v1` are preserved:
-
-- `GET /health`: database connectivity and explicit untrained-model status.
-- `GET /projects`: `{items,total,page,page_size}`; page starts at 1 and page size is 1–100.
-- `POST /projects`: validated creation (201), duplicate ID (409), invalid input (422).
-- `GET /projects/{project_id}`, `PUT /projects/{project_id}`, `DELETE /projects/{project_id}`: detail, full update and permanent delete (204); missing records return 404.
-
-New endpoints:
-
-- `GET /review-notices?limit=20`: current projects with pending approvals or disputes, ordered by record update time, with a 1–100 row limit. Prototype observations, not an alert event stream.
-- `GET /dashboard/summary`: total projects, sum of pending approvals, number of projects with disputes, unweighted average compensation, provenance counts. `high_risk`, `medium_risk`, `low_risk` are **null**, not zero-valued model results.
-- `GET /dashboard/district-summary`: grouped by **state and district**, with project count, compensation/possession averages, sums of approvals and disputes, and counts of projects with each condition.
-- `GET /dashboard/stage-distribution`: database counts by acquisition stage.
-- `GET /dashboard/operational-risks`: **Operational indicators**, counting projects with disputes, approvals, progress below thresholds, or response time above threshold. Counts overlap and must not be summed as unique projects.
-
-All analytics and the registry share `search` (name/ID substring), exact `state`, exact `district`, `project_type`, `acquisition_stage`, and `indicator` filters. The indicator enum is `pending_approvals`, `legal_disputes`, `compensation_lag`, `possession_lag`, or `slow_response`; filtering and dashboard counts use the same SQL predicates. Analytics cover all matching records, regardless of table pagination. Each endpoint runs a database aggregation; the frontend does not derive totals from downloaded project pages. Separate endpoint requests are not a transactional snapshot during concurrent edits.
-
-On empty results, counts are zero, averages are null, and distributions are empty arrays. The frontend displays skeletons during requests, an explicit empty state, and a retriable dashboard error instead of fake zero metrics.
-
-Prototype threshold settings in `backend/.env.example`:
-
-- `COMPENSATION_THRESHOLD_PCT=50`: strictly below 50%.
-- `POSSESSION_THRESHOLD_PCT=50`: strictly below 50%.
-- `SLOW_RESPONSE_DAYS=30`: strictly above 30 days.
-
-Responses include the effective thresholds. These are configurable administrative indicators, not scientifically validated delay classifications. Progress averages are unweighted by land area or affected families. Land area uses hectares; timestamps serialize as explicit UTC.
-
-## Testing and verification
-
-```powershell
-cd C:\LandGuard\backend
-..\.venv\Scripts\python.exe -m pytest -q -p no:cacheprovider
-cd ..\frontend
 npm run build
 ```
 
-Unit tests use isolated SQLite databases and do not require PostgreSQL. They check CRUD, validation, duplicate handling, all shared filters, pagination, analytics, empty data, thresholds and boundaries, schema upgrades/downgrades, drift rejection, legacy record preservation, seed idempotency and PostgreSQL migration SQL generation.
+---
 
-Verified in this workspace: **48 tests passed, 1 PostgreSQL integration test skipped**, production build passed without bundle-size warnings, all five browser smoke suites passed, and Alembic reports head with no model/schema drift. Two third-party Starlette/httpx/AnyIO deprecation warnings remain in the test tooling; they do not affect the API or test outcomes.
+# 22. Database / Migration / Demo Seed
 
-For an actual PostgreSQL integration run, set a development connection string (not a production database):
+Typical setup:
 
 ```powershell
 cd C:\LandGuard\backend
-$env:TEST_POSTGRES_URL = "postgresql+psycopg://user:password@localhost:5432/landguard"
-..\.venv\Scripts\python.exe -m app.db.verify_postgres
-# Or:
-..\.venv\Scripts\python.exe -m pytest tests/test_postgres.py -q
+pip install -r requirements.txt
+alembic upgrade head
+python -m app.db.seed
+python -m app.db.verify_demo
 ```
 
-The integration check creates a uniquely named temporary schema, migrates it, seeds twice, exercises API CRUD and all dashboard endpoints, checks PostGIS coordinates after an update, and removes only its own schema. It may enable PostGIS in public if absent and leaves that shared extension installed. It needs schema-creation permissions. Without `TEST_POSTGRES_URL`, the integration test is explicitly skipped; the CLI can also use a PostgreSQL `DATABASE_URL`.
+The project pins the scikit-learn version used by the deployed artifacts.
 
-**PostgreSQL runtime verification could not be completed because the service was unavailable.** No PostgreSQL/Docker installation or configured PostgreSQL URL was found, and localhost:5432 did not accept a connection. PostgreSQL SQL generation checks are not runtime verification.
+If you intentionally retrain under a different version, update the version pin and artifacts together.
 
-Browser checks are `frontend/browser-smoke.cjs` (CRUD) and `frontend/dashboard-smoke.cjs` (metrics against API responses, shared filters, loading, empty results, failure/retry, pagination and mobile layout). They require running servers, the illustrative seeds, Playwright available to Node and installed Microsoft Edge. For this Codex workspace:
+---
+
+# 23. PAIMANA Training
+
+Rebuild / retrain:
 
 ```powershell
-cd C:\LandGuard\frontend
-$env:NODE_PATH = "C:\Users\ansum\.cache\codex-runtimes\codex-primary-runtime\dependencies\node\node_modules"
-node dashboard-smoke.cjs
-node browser-smoke.cjs
+cd C:\LandGuard\backend
+python -m app.ml.build_paimana_panel
+python -m app.ml.train_paimana
 ```
 
+Typical generated artifacts include:
 
-## Interaction phase
+```text
+backend/model_artifacts/classifier.joblib
+backend/model_artifacts/probability_calibrator.joblib
+backend/model_artifacts/metadata.json
+backend/model_artifacts/model_comparison.json
+backend/model_artifacts/delay_duration_regressor.joblib
+backend/model_artifacts/duration_metadata.json
+```
 
-The existing visual identity is preserved. KPI cards, bottleneck buttons, district bars and acquisition-stage bars now update a shared URL scope. Charts, metrics and table use the same backend filters; chips show the active selection. Search is debounced and obsolete requests are aborted. Pagination is URL-backed, and project detail/edit links retain a safe return URL so Back to results restores filters and the selected page.
+---
 
-Select a row or Quick view to open a project drawer (bottom sheet on mobile), with recorded progress, administrative counts and coordinates. The three-dot menu offers quick view, details, edit, geographic context and copy ID. Detail sections use keyboard-accessible tabs; secondary metadata expands on demand. GIS and ML remain explicitly unavailable. Record history contains only actual creation/update timestamps.
+# 24. Bhoomi Rashi Notification-Level Pipeline
 
-Ctrl/Cmd+K opens project, district and route search with arrow-key navigation, Enter and Escape. The header bell and sidebar Review notices open a prototype inbox. Its unread count covers the records shown; read state is stored in this browser and keyed to each record's update timestamp. No alert severity, prediction or event history is invented. Successful project mutations and notice read actions provide restrained toast feedback.
+Activate the acquisition-data environment:
 
-Refresh fetches current data without reloading the page and reports the successful fetch time. A shared abortable resource hook handles loading, errors, retry and mutation invalidation without adding another dependency. No offline cache or cross-tab/server read synchronization is claimed. Sidebar collapse persists locally. Motion is limited to brief state transitions, initial progress fill and KPI values, and honors reduced-motion preferences.
+```powershell
+cd C:\LandGuard
+.\.lacrris-venv\Scripts\activate
+```
 
-Additional checks: `node interaction-smoke.cjs` covers all five requested flows, active URL scope, tooltips, context menu, detail-tab keyboard handling, Ctrl+K, local notice read state, refresh and mobile sheets. `node ui-smoke.cjs` checks six viewport widths. Run alongside the dashboard and CRUD smoke suites with the same Playwright setup above.
+Extract project / notification records:
 
-## Recommended next phase
+```powershell
+python bhoomirashi_notification_extract_resume.py `
+  --input bhoomirashi_1745_seed_urls.csv `
+  --projects-out bhoomirashi_projects.csv `
+  --notifications-out bhoomirashi_notifications.csv `
+  --delay 0.4 `
+  --detail-delay 0.25
+```
 
-`node motion-smoke.cjs` additionally verifies rendered progress percentages, reduced-motion behavior, and restoration of pagination after viewing details.
+The resume-safe extractor checkpoints completed project IDs so interrupted runs can continue without reprocessing completed projects.
 
-First run the prepared PostgreSQL/PostGIS integration check once a service and development connection are available. Then establish the ML data contract and evaluation infrastructure: define project-observation timestamps and delayed-outcome labels, audit dataset provenance/leakage, and prepare preprocessing and candidate-model validation. Train only when an appropriate labeled dataset exists. No training command or model-performance claims exist yet. Authentication/RBAC remains necessary before shared deployment.
+Then pair notifications:
 
-## System administrator role separation
+```powershell
+python match_3A_3D_notifications.py
+```
 
-LandGuard now separates technical account administration from land-acquisition operations.
+Check matched rows and class balance:
 
-- `SYSTEM_ADMIN`: manages users, invitations, account status, and account activity only. It cannot read project records, dashboards, GIS data, operational alerts, or AI intelligence.
-- `STATE_OFFICER`: operational access to projects within the assigned state; state officers can delete projects within that state scope.
-- `DISTRICT_OFFICER`: operational access to projects within the assigned state/district.
-- `IMPLEMENTING_AGENCY`: operational access only to explicitly assigned project IDs.
+```powershell
+python -c "import pandas as pd; d=pd.read_csv('bhoomirashi_notification_pairs.csv'); print('Matched rows:',len(d)); print(d['delay_over_365d'].value_counts(dropna=False))"
+```
 
-If `backend/supabase/001_identity.sql` was already applied before this change, run `backend/supabase/002_system_admin_role.sql` once in the Supabase SQL Editor. This migrates the legacy `ADMIN` profile to `SYSTEM_ADMIN` and updates the role constraint/bootstrap function.
+Train only after the dataset is large enough and contains both classes:
 
-For a new Supabase project, use the updated `backend/supabase/001_identity.sql`; do not also run `002_system_admin_role.sql` unless you are upgrading an older installation.
+```powershell
+python train_notification_level_model.py
+```
+
+---
+
+# 25. Render Deployment
+
+Production architecture:
+
+```text
+Render Web Service
+├── React production build
+└── FastAPI
+
+Supabase
+├── Auth
+└── PostgreSQL / PostGIS
+
+Brevo
+└── invitation email
+```
+
+Required environment variables include:
+
+```text
+DATABASE_URL
+SUPABASE_URL
+SUPABASE_SERVICE_ROLE_KEY
+BREVO_API_KEY
+BREVO_SENDER_EMAIL
+PUBLIC_APP_URL
+FRONTEND_ORIGIN
+```
+
+Keep secrets out of Git.
+
+Use a persistent PostgreSQL database in production.
+
+Startup flow:
+
+```text
+alembic upgrade head
+    ↓
+optional demo seed
+    ↓
+uvicorn
+```
+
+Health endpoint:
+
+```text
+/api/v1/health
+```
+
+---
+
+# 26. Demo Flow
+
+Recommended SIH demo:
+
+```text
+District Officer login
+    ↓
+War Room / Analytics
+    ↓
+Top-priority project
+    ↓
+Project Quick View
+    ↓
+Process Twin
+    ↓
+Acquisition Risk + Readiness + Bottleneck
+    ↓
+PAIMANA 3-month schedule signal
+    ↓
+SHAP + Historical Analogues
+    ↓
+Scenario / Intervention Simulator
+    ↓
+Automation-created Intervention
+    ↓
+Intervention Ledger
+    ↓
+Owner + Due Date + Status + Audit
+    ↓
+Officer Brief
+    ↓
+GIS
+```
+
+System Admin can be shown separately for:
+
+- user management,
+- invitations,
+- access / audit,
+- pipeline monitoring.
+
+---
+
+# 27. Recommended Presentation Language
+
+## Main product line
+
+> **LandGuard does not stop at predicting risk. It explains the bottleneck, prioritizes the case, converts qualifying conditions into accountable interventions, assigns an owner and deadline, and preserves an audit trail while keeping the authorized officer in control.**
+
+## AI explanation
+
+> **The current real ML baseline uses longitudinal PAIMANA history to predict whether the wider project schedule may move later within the next three reporting months. Acquisition-specific operational indicators remain transparent and separate. A dedicated acquisition-stage ML model is being built from public Bhoomi Rashi / LACRRIS histories.**
+
+## Automation explanation
+
+> **LandGuard automates administrative follow-up and accountability, not statutory decision-making.**
+
+## Process Twin explanation
+
+> **The Process Twin shows where acquisition currently stands, what is blocking the next milestone, and what downstream stages may be affected.**
+
+## GIS explanation
+
+> **GIS connects project location with risk, readiness and intervention priority for spatial monitoring.**
+
+---
+
+# 28. Current Limitations
+
+- PAIMANA predicts wider schedule movement, not direct acquisition delay.
+- Acquisition-specific ML is still experimental until the Bhoomi Rashi / LACRRIS dataset is fully extracted and validated.
+- Current Rayagada project records are illustrative demo data.
+- GIS is project-point based rather than full cadastral parcel mapping.
+- Acquisition indices are transparent expert-prior / deterministic decision-support logic, not government standards.
+- Scenario analysis is sensitivity analysis, not causal estimation.
+- Conditional extension-day estimates have wide uncertainty.
+- Public government data portals may be incomplete, inconsistent or temporarily unavailable.
+
+---
+
+# 29. Future Scope
+
+- validated acquisition-specific ML from real longitudinal records,
+- stage-wise acquisition-delay probabilities,
+- richer objection / litigation / compensation history,
+- integration with departmental systems,
+- cadastral parcel GIS,
+- automatic document ingestion,
+- mobile officer workflow,
+- multilingual interface,
+- external validation across states,
+- monitored acquisition-model retraining,
+- stronger intervention-effect evaluation.
+
+---
+
+# 30. What Is Current vs Superseded / Experimental
+
+This README consolidates multiple patches created at different stages of the project.
+
+The current interpretation should be:
+
+### Current / active concepts
+
+- PAIMANA 3-month schedule-slip classifier
+- acquisition readiness
+- acquisition friction / delay-risk index
+- intervention priority
+- Process Twin
+- Delay Cascade
+- SHAP for PAIMANA
+- historical analogues
+- GIS
+- Intervention Ledger
+- policy-aware automation
+- analytics command center
+- role-based governance
+- Render deployment
+
+### De-emphasized
+
+- exact delay-duration predictions
+- expected-delay-exposure style headline metrics
+
+These may still exist in older patch documentation or code, but should not be the main presentation story because duration uncertainty is wide.
+
+### Experimental / research
+
+- Bhoomi Rashi acquisition-specific ML
+- LACRRIS acquisition-specific ML
+- stage-wise real acquisition-delay probability
+
+---
+
+# 31. Core One-Line Summary
+
+> **LandGuard combines real-data schedule intelligence, transparent acquisition-process reasoning, explainable evidence, GIS and human-authorized workflow automation to turn land-acquisition risk into accountable administrative action.**
+
+## GIS cadastral / land-record workflow
+
+LandGuard supports parcel-level cadastral overlays, but it deliberately **does not fabricate parcel geometry or infer legal ownership from imagery**.
+
+- Bhuvan remains thematic/geospatial context only (`GET /api/v1/gis/bhuvan/config`).
+- Odisha BhuNaksha and Bhulekh are exposed in the GIS UI as official reference/validation portals (`GET /api/v1/gis/land-records/config`).
+- Parcel geometry must be imported from a real cadastral export as WGS84 / EPSG:4326 GeoJSON.
+- Ownership is read only from supplied source attributes such as `ownership_type`; missing ownership stays `UNKNOWN`.
+- Supported classes: `GOVERNMENT`, `PRIVATE`, `GOVERNMENT_LEASEHOLD`, `INSTITUTIONAL`, `UNKNOWN`.
+- The GIS distinguishes `AUTHORITY_VERIFIED`, `IMPORTED_DATASET`, and `UNAVAILABLE` states.
+- The seed process creates **no cadastral ownership polygons**. Migration `0007_remove_synthetic_cadastral_data` removes the old rectangular demo parcels from existing databases.
+- The GIS page can import/replace a selected project's cadastral GeoJSON, remove it, render true source geometry, and calculate parcel areas when the file omits acreage.
+
+Recommended GeoJSON properties are `plot_no`, `khata_no`, `unique_plot_id`, `ownership_type`, `kisam`, `village`, `tahasil`, and optional `area_acres`. Mark a file as authority-verified only when its provenance has actually been confirmed by the competent land-record authority.
+
+After pulling this version into an existing database, run:
+
+```powershell
+cd backend
+python -m app.db.init_db
+python -m app.db.seed
+```
+
+`init_db` applies migration `0007`, which deletes only the old `ILLUSTRATIVE_SIH_DEMO` / `DEMO-*` ownership rows. Your project records are preserved.
+
+---
+
+## SIH 25017 compliance pass (v8)
+
+The latest build adds the requirements that were missing or weak against the supplied SIH problem statement:
+
+- persisted project-field audit events and historical snapshots,
+- district/state historical delay-risk trend analytics,
+- seven-stage acquisition lifecycle delay outlook,
+- predictive model alerts in the Notice Center,
+- GIS risk-intensity overlay for high-risk projects,
+- bulk REST integration endpoint for external land-acquisition systems,
+- integrated-record provenance,
+- near-real-time dashboard refresh,
+- audit events for cadastral dataset import/removal.
+
+See `SIH_REQUIREMENTS_COVERAGE.md` for the requirement-by-requirement matrix and the remaining evidence/deployment dependencies that the prototype must not overclaim.

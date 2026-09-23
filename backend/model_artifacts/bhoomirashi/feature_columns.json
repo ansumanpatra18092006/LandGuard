@@ -1,0 +1,16 @@
+{
+  "numeric_features": [
+    "land_required_ha",
+    "land_available_ha",
+    "land_to_be_acquired_ha",
+    "land_available_ratio",
+    "three_A_year",
+    "three_A_month",
+    "prior_3A_count",
+    "days_since_previous_3A"
+  ],
+  "categorical_features": [
+    "derived_project_type",
+    "ro_pd_category"
+  ]
+}

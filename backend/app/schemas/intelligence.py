@@ -127,6 +127,15 @@ class ModelMetadata(BaseModel):
     disclaimer: str
 
 
+class StageDelayOutlook(BaseModel):
+    stage: str
+    status: Literal["PASSED", "CURRENT", "UPCOMING"]
+    screening_score: int = Field(ge=0, le=100)
+    risk_label: Literal["LOW", "MODERATE", "HIGH", "CRITICAL"]
+    top_drivers: list[str] = []
+    interpretation: str
+
+
 class PredictionResult(BaseModel):
     project_id: str
     delay_probability: float = Field(ge=0, le=1)
@@ -143,7 +152,31 @@ class PredictionResult(BaseModel):
     factors: list[FactorContribution]
     similar_cases: list[SimilarHistoricalCase] = []
     recommendations: list[Recommendation]
+    stage_outlook: list[StageDelayOutlook] = []
     metadata: ModelMetadata
+
+
+
+
+class BhoomiRashiSignal(BaseModel):
+    available: bool
+    project_id: str
+    probability: float | None = Field(default=None, ge=0, le=1)
+    label: Literal["LOW", "MODERATE", "HIGH", "UNAVAILABLE"]
+    model_name: str | None = None
+    dataset_rows: int = Field(default=0, ge=0)
+    unique_projects: int = Field(default=0, ge=0)
+    mean_roc_auc: float | None = Field(default=None, ge=0, le=1)
+    mean_f1: float | None = Field(default=None, ge=0, le=1)
+    mean_recall: float | None = Field(default=None, ge=0, le=1)
+    input_coverage_pct: int = Field(default=0, ge=0, le=100)
+    proxy_fields: list[str] = []
+    imputed_fields: list[str] = []
+    target_definition: str | None = None
+    validation: str | None = None
+    pairing_method: str | None = None
+    geography_verified: bool = False
+    disclaimer: str
 
 
 class ModelStatus(BaseModel):
@@ -181,6 +214,8 @@ class RiskPulseProject(BaseModel):
     acquisition_delay_risk_label: Literal["LOW", "MODERATE", "HIGH", "CRITICAL"] | None = None
     intervention_priority_score: int | None = Field(default=None, ge=0, le=100)
     intervention_priority_category: Literal["ROUTINE", "WATCH", "HIGH", "CRITICAL"] | None = None
+    ml_factors: list[FactorContribution] = []
+    ml_explanation_method: str | None = None
 
 
 class RiskPulseResponse(BaseModel):

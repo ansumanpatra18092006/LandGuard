@@ -4,7 +4,9 @@ from sqlalchemy import select
 
 from app.db.session import SessionLocal
 from app.models.project import Project
+from app.models.project_audit import ProjectSnapshot
 from app.schemas.project import ProjectWrite
+from app.services.project_history_service import record_snapshot
 
 # Canonical SIH demo dataset. Every row is fictional/illustrative, but each row is
 # model-ready so the full prediction workflow works immediately after seeding.
@@ -74,8 +76,14 @@ def main():
                 for field, value in payload.model_dump().items():
                     setattr(existing, field, value)
                 updated += 1
+        db.flush()
+        for row in SEEDS:
+            project = db.scalar(select(Project).where(Project.project_id == row["project_id"]))
+            has_snapshot = db.scalar(select(ProjectSnapshot.id).where(ProjectSnapshot.project_id == row["project_id"]).limit(1))
+            if project is not None and has_snapshot is None:
+                record_snapshot(db, project)
         db.commit()
-    print(f"Canonical SIH demo dataset ready: {created} created, {updated} refreshed. All records are fictional illustrative data.")
+    print(f"Canonical SIH demo project dataset ready: {created} projects created, {updated} refreshed. No cadastral ownership parcels are fabricated by the seed process.")
 
 
 if __name__ == "__main__":

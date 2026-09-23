@@ -2,8 +2,8 @@ from uuid import UUID
 from fastapi import APIRouter, Depends, Request, Response
 from app.core.config import settings
 from app.core.security import SESSION_COOKIE, current_user, require_roles
-from app.schemas.auth import AuditEvent, AuthUser, LoginRequest, SessionResponse, InvitationRequest, InvitationAcceptRequest, ManagedUser, UserStatusRequest
-from app.services.identity_service import IdentityService, get_identity_service
+from app.schemas.auth import AuditEvent, AuthUser, LoginRequest, SessionResponse, SessionProbeResponse, InvitationRequest, InvitationAcceptRequest, ManagedUser, UserStatusRequest
+from app.services.identity_service import IdentityError, IdentityService, get_identity_service
 
 router = APIRouter(prefix="/auth", tags=["authentication"])
 
@@ -26,6 +26,28 @@ def logout(request: Request, response: Response, identity: IdentityService = Dep
     if token:
         identity.logout(token)
     response.delete_cookie(SESSION_COOKIE, path="/api/v1", secure=settings.cookie_secure, httponly=True, samesite="lax")
+
+@router.get("/session", response_model=SessionProbeResponse)
+def session_probe(request: Request, response: Response, identity: IdentityService = Depends(get_identity_service)):
+    """Return session state without using 401 for an anonymous browser.
+
+    `/auth/me` intentionally remains protected and still returns 401 when a caller
+    explicitly asks for an authenticated identity without a valid session. The
+    frontend uses this probe on startup/focus so a normal signed-out state does
+    not appear as a failed request in DevTools.
+    """
+    token = request.cookies.get(SESSION_COOKIE, "")
+    if not token or len(token) > 128:
+        return {"authenticated": False, "user": None}
+    try:
+        user = identity.session_user(token)
+    except IdentityError as exc:
+        if exc.status == 401:
+            response.delete_cookie(SESSION_COOKIE, path="/api/v1", secure=settings.cookie_secure, httponly=True, samesite="lax")
+            return {"authenticated": False, "user": None}
+        raise
+    return {"authenticated": True, "user": user}
+
 
 @router.get("/me", response_model=AuthUser)
 def me(user=Depends(current_user)):

@@ -139,4 +139,23 @@ temp/
 # =========================
 # Optional local-only files
 # =========================
-*.local
+*.local.venv/
+.lacrris-venv/
+venv/
+node_modules/
+frontend/node_modules/
+backend/__pycache__/
+**/__pycache__/
+*.pyc
+.env
+.env.*
+dist/
+build/
+.pytest_cache/
+
+# Local/private/demo files
+video/
+College-Authorization-letter-SIH2026.docx
+LandGuard_SIH2026 (1).pptx
+
+bhoomirashi_model_artifacts/

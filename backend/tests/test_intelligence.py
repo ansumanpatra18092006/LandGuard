@@ -46,6 +46,9 @@ def test_prediction_with_loaded_demo_artifact(client, payload):
     assert data['metadata']['training_data_kind'] == 'OFFICIAL_PAIMANA_LONGITUDINAL_BASELINE'
     assert 'PAIMANA' in data['metadata']['disclaimer']
     assert data['metadata']['target_definition']
+    assert len(data['stage_outlook']) == 7
+    assert any(row['status'] == 'CURRENT' for row in data['stage_outlook'])
+    assert all(0 <= row['screening_score'] <= 100 for row in data['stage_outlook'])
 
 
 def test_prediction_exposes_advanced_evidence(client, payload):
@@ -82,6 +85,7 @@ def test_portfolio_risk_pulse(client, payload):
     assert data['high_risk'] + data['medium_risk'] + data['low_risk'] == 1
     assert data['projects'][0]['project_id'] == payload['project_id']
     assert 0 <= data['projects'][0]['delay_probability'] <= 1
+    assert isinstance(data['projects'][0]['ml_factors'], list)
 
 
 def test_map_data_contains_predictive_risk_when_model_inputs_exist(client, payload):
@@ -126,3 +130,17 @@ def test_schedule_signal_cannot_suppress_acquisition_priority(client, payload):
     assert client.post('/api/v1/projects', json=payload).status_code == 201
     data = client.post('/api/v1/projects/TEST01/predict').json()
     assert data['intervention_priority_score'] >= data['acquisition_delay_risk']['score']
+
+
+def test_predictive_alerts_are_added_without_replacing_operational_alerts(client, payload, monkeypatch):
+    assert client.post('/api/v1/projects', json=payload).status_code == 201
+    from app.api.routes import alerts as alert_routes
+    class PulseProject:
+        project_id='TEST01'; risk_category='HIGH'; slip_alert=True; delay_probability=.82; suggested_action='Review approvals'; primary_bottleneck='Pending approvals'
+    class Pulse:
+        projects=[PulseProject()]
+    monkeypatch.setattr(alert_routes, 'portfolio_risk_pulse', lambda projects: Pulse())
+    rows = client.get('/api/v1/alerts').json()
+    assert any(row['source'] == 'OPERATIONAL_RULE' for row in rows)
+    predictive = [row for row in rows if row['source'] == 'PREDICTIVE_MODEL']
+    assert predictive and predictive[0]['project_id'] == 'TEST01'
