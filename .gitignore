@@ -159,3 +159,9 @@ College-Authorization-letter-SIH2026.docx
 LandGuard_SIH2026 (1).pptx
 
 bhoomirashi_model_artifacts/
+
+# Generated/raw research data
+bhoomirashi_notifications.csv
+bhoomirashi_projects.csv
+bhoomirashi_completed_projects.txt
+data/raw/
